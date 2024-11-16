@@ -11,6 +11,7 @@ from PyPaperBot.utils.log import (
     log_message,
     render_log_sidebar
 )
+from PyPaperBot.Downloader import Downloader
 
 # 设置页面配置
 st.set_page_config(
@@ -198,7 +199,7 @@ with main_area:
                                 )
                             }
                             
-                            # 显示表格
+                            # 显示表��
                             st.data_editor(
                                 table_data,
                                 column_config=col_config,
@@ -241,14 +242,78 @@ with main_area:
                             # 下载按钮和选择信息显示
                             col1, col2 = st.columns([1, 4])
                             if col1.button("下载选中论文", disabled=len(selected_papers) == 0):
-                                for paper in selected_papers:
-                                    citations_info = f"(引用: {paper.cites_num}次)" if hasattr(paper, 'cites_num') and paper.cites_num else ""
-                                    log_message(
-                                        f"添加论文到下载队列: {paper.title} {citations_info}", 
-                                        "info", 
-                                        "下载队列"
+                                try:
+                                    # 检查下载目录
+                                    if not download_dir:
+                                        st.error("请先设置下载目录")
+                                        log_message("未设置下载目录", "error", "下载")
+                                        return
+                                        
+                                    # 创建下载器实例
+                                    downloader = Downloader(
+                                        download_dir=download_dir,
+                                        use_doi_as_filename=use_doi_filename,
+                                        scihub_mirror=scihub_mirror
                                     )
-                                st.success(f"已添加 {len(selected_papers)} 篇论文到下载队列")
+                                    log_message(f"初始化下载器: 目录={download_dir}, DOI文件名={use_doi_filename}", "info", "下载")
+                                    
+                                    # 创建进度条
+                                    progress_bar = st.progress(0)
+                                    status_text = st.empty()
+                                    
+                                    # 开始下载
+                                    total_papers = len(selected_papers)
+                                    successful_downloads = 0
+                                    failed_downloads = []
+                                    
+                                    for i, paper in enumerate(selected_papers, 1):
+                                        try:
+                                            status_text.text(f"正在下载 ({i}/{total_papers}): {paper.title}")
+                                            log_message(f"开始下载论文: {paper.title}", "info", "下载")
+                                            
+                                            # 记录论文信息
+                                            log_message(f"论文信息:", "debug", "下载")
+                                            log_message(f"  标题: {paper.title}", "debug", "下载")
+                                            log_message(f"  DOI: {paper.DOI if hasattr(paper, 'DOI') else 'N/A'}", "debug", "下载")
+                                            log_message(f"  URL: {paper.scholar_link if hasattr(paper, 'scholar_link') else 'N/A'}", "debug", "下载")
+                                            
+                                            # 尝试下载
+                                            result = downloader.download_paper(paper)
+                                            
+                                            if result:
+                                                successful_downloads += 1
+                                                log_message(f"论文下载成功: {paper.title}", "success", "下载")
+                                            else:
+                                                failed_downloads.append(paper.title)
+                                                log_message(f"论文下载失败: {paper.title}", "error", "下载")
+                                            
+                                            # 更新进度
+                                            progress = int((i / total_papers) * 100)
+                                            progress_bar.progress(progress)
+                                            
+                                        except Exception as e:
+                                            failed_downloads.append(paper.title)
+                                            log_message(f"下载过程出错: {paper.title} - {str(e)}", "error", "下载")
+                                            continue
+                                        
+                                    # 显示下载结果
+                                    if successful_downloads > 0:
+                                        st.success(f"成功下载 {successful_downloads} 篇论文")
+                                        log_message(f"下载完成: 成功 {successful_downloads} 篇", "success", "下载")
+                                    
+                                    if failed_downloads:
+                                        st.error(f"下载失败 {len(failed_downloads)} 篇论文")
+                                        log_message(f"下载失败论文列表:", "error", "下载")
+                                        for title in failed_downloads:
+                                            log_message(f"  - {title}", "error", "下载")
+                                    
+                                    # 清理进度显示
+                                    progress_bar.empty()
+                                    status_text.empty()
+                                    
+                                except Exception as e:
+                                    log_message(f"下载功能发生错误: {str(e)}", "error", "下载", exc_info=True)
+                                    st.error(f"下载功能发生错误: {str(e)}")
                             
                             # 显示选中论文的详细信息
                             if selected_papers:

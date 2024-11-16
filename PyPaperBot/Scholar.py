@@ -9,6 +9,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 from .Paper import Paper
+import os
+from datetime import datetime
 
 class ScholarSearcher:
     def __init__(self, chrome_version: int = None):
@@ -110,13 +112,34 @@ class ScholarSearcher:
                 except:
                     pass
                 
-                # 保存页面截图（可选）
+                # 保存页面截图
                 try:
-                    screenshot_path = f"scholar_page_{page}.png"
+                    # 确保log目录存在
+                    log_dir = "log"
+                    os.makedirs(log_dir, exist_ok=True)
+                    
+                    # 生成带时间戳的文件名
+                    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+                    screenshot_path = os.path.join(log_dir, f"scholar_page_{page}_{timestamp}.png")
+                    
+                    # 保存截图
                     driver.save_screenshot(screenshot_path)
                     self.logger.info(f"页面截图已保存: {screenshot_path}")
-                except:
-                    self.logger.warning("无法保存页面截图")
+                    
+                    # 如果检测到验证码，保存处理后的验证码图像
+                    if "验证" in driver.page_source or "robot" in driver.page_source.lower():
+                        captcha_path = os.path.join(log_dir, f"captcha_{timestamp}.png")
+                        try:
+                            # 找到验证码元素
+                            captcha_elem = driver.find_element(By.ID, "gs_captcha_img")
+                            # 保存验证码图像
+                            with open(captcha_path, "wb") as f:
+                                f.write(captcha_elem.screenshot_as_png)
+                            self.logger.warning(f"验证码图像已保存: {captcha_path}")
+                        except Exception as e:
+                            self.logger.error(f"保存验证码图像失败: {str(e)}")
+                except Exception as e:
+                    self.logger.warning(f"无法保存页面截图: {str(e)}")
                 
                 self.logger.info("==================================================")
                 
@@ -283,7 +306,7 @@ class ScholarSearcher:
                     self.logger.error(f"解析第 {i} 个搜索结果时出错: {str(e)}", exc_info=True)
                     continue
             
-            self.logger.info(f"页面解析完成，共解析 {len(papers)} 篇论文")
+            self.logger.info(f"页��解析完成，共解析 {len(papers)} 篇论文")
             return papers
             
         except Exception as e:
