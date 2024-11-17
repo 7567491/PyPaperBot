@@ -102,8 +102,8 @@ def query_crossref_papers(conn: sqlite3.Connection):
                 hide_index=True
             )
             
-            # 导出功能
-            if st.button("导出到Excel"):
+            # 导出功能 - 添加唯一key
+            if st.button("导出到Excel", key="export_crossref_results"):
                 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
                 filename = f"crossref_papers_{timestamp}.xlsx"
                 df.to_excel(f"db/export/{filename}", index=False)

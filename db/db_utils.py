@@ -285,56 +285,143 @@ def save_crossref_papers(conn: sqlite3.Connection, papers: List[Paper]) -> bool:
 
 def save_verified_papers(conn: sqlite3.Connection, papers: List[Paper]) -> bool:
     """保存验证结果到数据库"""
+    logger = logging.getLogger(__name__)
+    status_text = st.empty()
+    
     try:
+        # 检查连接是否有效
+        if not conn:
+            error_msg = "数据库连接无效"
+            logger.error(error_msg)
+            log_message(error_msg, "error", "数据库")
+            status_text.error(error_msg)
+            return False
+            
+        # 检查papers是否有效
+        if not papers:
+            error_msg = "没有要保存的论文数据"
+            logger.error(error_msg)
+            log_message(error_msg, "error", "数据库")
+            status_text.error(error_msg)
+            return False
+            
         cursor = conn.cursor()
         total = len(papers)
-        status_text = st.empty()  # 创建一个空的文本区域
         
-        status_text.text("开始保存验证论文...")
+        # 记录开始保存
+        start_msg = f"开始保存 {total} 篇验证论文到数据库"
+        logger.info(start_msg)
+        log_message(start_msg, "info", "数据库")
+        status_text.text(start_msg)
+        
+        # 检查表是否存在
+        cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='verified_papers'")
+        if not cursor.fetchone():
+            error_msg = "verified_papers表不存在"
+            logger.error(error_msg)
+            log_message(error_msg, "error", "数据库")
+            status_text.error(error_msg)
+            return False
+        
+        success_count = 0
         for i, paper in enumerate(papers, 1):
-            # 查找scholar_id
-            cursor.execute(
-                "SELECT id FROM scholar_papers WHERE doi = ? OR title = ?",
-                (getattr(paper, 'DOI', None), paper.title)
-            )
-            scholar_result = cursor.fetchone()
-            scholar_id = scholar_result[0] if scholar_result else None
-            
-            # 查找crossref_id
-            cursor.execute(
-                "SELECT id FROM crossref_papers WHERE doi = ?",
-                (getattr(paper, 'DOI', None),)
-            )
-            crossref_result = cursor.fetchone()
-            crossref_id = crossref_result[0] if crossref_result else None
-            
-            cursor.execute("""
-                INSERT OR REPLACE INTO verified_papers (
-                    doi, scholar_id, crossref_id, title,
-                    authors, year, journal, citations_count,
-                    url, verification_status, match_score
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-            """, (
-                getattr(paper, 'DOI', None),
-                scholar_id,
-                crossref_id,
-                paper.title,
-                paper.authors,
-                paper.year,
-                getattr(paper, 'jurnal', None),
-                getattr(paper, 'cites_num', 0),
-                getattr(paper, 'url', None),
-                1 if getattr(paper, 'validated', False) else 0,
-                getattr(paper, 'match_score', 0.0)
-            ))
-            status_text.text(f"已保存 {i}/{total} 篇论文")
-            st.session_state.log_message(f"保存验证论文: {paper.title}", "debug", "数据库")
-            
+            try:
+                # 记录每篇论文的保存
+                paper_msg = f"正在保存第 {i}/{total} 篇验证论文: {paper.title}"
+                logger.debug(paper_msg)
+                log_message(paper_msg, "debug", "数据库")
+                status_text.text(paper_msg)
+                
+                # 查找scholar_id
+                cursor.execute(
+                    "SELECT id FROM scholar_papers WHERE doi = ? OR title = ?",
+                    (getattr(paper, 'DOI', None), paper.title)
+                )
+                scholar_result = cursor.fetchone()
+                scholar_id = scholar_result[0] if scholar_result else None
+                
+                # 查找crossref_id
+                cursor.execute(
+                    "SELECT id FROM crossref_papers WHERE doi = ?",
+                    (getattr(paper, 'DOI', None),)
+                )
+                crossref_result = cursor.fetchone()
+                crossref_id = crossref_result[0] if crossref_result else None
+                
+                # 执行插入
+                cursor.execute("""
+                    INSERT OR REPLACE INTO verified_papers (
+                        doi, scholar_id, crossref_id, title,
+                        authors, year, journal, citations_count,
+                        url, verification_status, match_score,
+                        verification_timestamp
+                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)
+                """, (
+                    getattr(paper, 'DOI', None),
+                    scholar_id,
+                    crossref_id,
+                    paper.title,
+                    paper.authors,
+                    paper.year,
+                    getattr(paper, 'jurnal', None),
+                    getattr(paper, 'cites_num', 0),
+                    getattr(paper, 'url', None),
+                    1 if getattr(paper, 'validated', False) else 0,
+                    getattr(paper, 'match_score', 0.0)
+                ))
+                
+                success_count += 1
+                # 记录成功
+                success_msg = f"成功保存验证论文: {paper.title}"
+                logger.debug(success_msg)
+                log_message(success_msg, "debug", "数据库")
+                
+            except sqlite3.Error as e:
+                # 记录SQL错误
+                error_msg = f"SQL错误: {str(e)}, 论文: {paper.title}"
+                logger.error(error_msg)
+                log_message(error_msg, "error", "数据库")
+                continue
+                
+            except Exception as e:
+                # 记录其他错误
+                error_msg = f"保存验证论文失败: {paper.title} - {str(e)}"
+                logger.error(error_msg, exc_info=True)
+                log_message(error_msg, "error", "数据库")
+                continue
+        
+        # 提交事务
         conn.commit()
-        status_text.success(f"成功保存 {total} 篇验证论文到数据库")
+        
+        # 记录完成
+        final_msg = f"成功保存 {success_count}/{total} 篇验证论文到数据库"
+        logger.info(final_msg)
+        log_message(final_msg, "success", "数据库")
+        status_text.success(final_msg)
+        
+        # 验证保存结果
+        cursor.execute("SELECT COUNT(*) FROM verified_papers WHERE verification_timestamp >= datetime('now', '-1 minute')")
+        saved_count = cursor.fetchone()[0]
+        verify_msg = f"数据库验证: 最近一分钟内保存了 {saved_count} 条记录"
+        logger.info(verify_msg)
+        log_message(verify_msg, "info", "数据库")
+        
         return True
         
-    except Exception as e:
+    except sqlite3.Error as e:
+        # 记录SQL错误
         conn.rollback()
-        st.session_state.log_message(f"保存验证论文失败: {str(e)}", "error", "数据库")
-        raise e 
+        error_msg = f"数据库错误: {str(e)}"
+        logger.error(error_msg)
+        log_message(error_msg, "error", "数据库")
+        status_text.error(error_msg)
+        return False
+        
+    except Exception as e:
+        # 记录其他错误
+        conn.rollback()
+        error_msg = f"保存验证论文到数据库失败: {str(e)}"
+        logger.error(error_msg, exc_info=True)
+        log_message(error_msg, "error", "数据库")
+        status_text.error(error_msg)
+        return False
