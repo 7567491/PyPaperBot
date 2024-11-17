@@ -11,11 +11,23 @@ def query_scholar_papers(conn: sqlite3.Connection):
     col1, col2 = st.columns(2)
     
     with col1:
-        title_query = st.text_input("标题关键词", key="scholar_title_query")
-        year_from = st.number_input("发表年份从", min_value=1900, max_value=2024, value=2000)
+        title_query = st.text_input("标题关键词", key="scholar_db_title_query")
+        year_from = st.number_input(
+            "发表年份从", 
+            min_value=1900, 
+            max_value=2024, 
+            value=2000,
+            key="scholar_db_year_from"  # 添加唯一key
+        )
     with col2:
-        author_query = st.text_input("作者关键词", key="scholar_author_query")
-        year_to = st.number_input("到", min_value=1900, max_value=2024, value=2024)
+        author_query = st.text_input("作者关键词", key="scholar_db_author_query")
+        year_to = st.number_input(
+            "到", 
+            min_value=1900, 
+            max_value=2024, 
+            value=2024,
+            key="scholar_db_year_to"  # 添加唯一key
+        )
     
     # 构建查询
     query = """

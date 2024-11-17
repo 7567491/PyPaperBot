@@ -11,11 +11,23 @@ def query_verified_papers(conn: sqlite3.Connection):
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        title_query = st.text_input("标题关键词", key="verified_title_query")
-        year_from = st.number_input("发表年份从", min_value=1900, max_value=2024, value=2000)
+        title_query = st.text_input("标题关键词", key="verified_db_title_query")
+        year_from = st.number_input(
+            "发表年份从", 
+            min_value=1900, 
+            max_value=2024, 
+            value=2000,
+            key="verified_db_year_from"
+        )
     with col2:
-        author_query = st.text_input("作者关键词", key="verified_author_query")
-        year_to = st.number_input("到", min_value=1900, max_value=2024, value=2024)
+        author_query = st.text_input("作者关键词", key="verified_db_author_query")
+        year_to = st.number_input(
+            "到", 
+            min_value=1900, 
+            max_value=2024, 
+            value=2024,
+            key="verified_db_year_to"
+        )
     with col3:
         verification_status = st.selectbox(
             "验证状态",

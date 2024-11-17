@@ -14,6 +14,10 @@ from PyPaperBot.CrossRefConnector import CrossRefConnector
 from collections import deque
 from PyPaperBot.utils.cross import CrossValidator
 from db.db_main import render_database_management
+import sqlite3
+from db.db_utils import save_scholar_papers, save_crossref_papers, save_verified_papers
+import traceback
+import os
 
 # 设置页面配置
 st.set_page_config(
@@ -30,6 +34,32 @@ if 'log_queue' not in st.session_state:
 # 配置日志系统
 setup_logging()
 init_log_queue()
+
+# 在文件开头添加session_state初始化
+if 'search_results' not in st.session_state:
+    st.session_state.search_results = {
+        'scholar': None,
+        'crossref': None,
+        'verified': None
+    }
+
+# 在文件开头添加状态变量
+if 'save_states' not in st.session_state:
+    st.session_state.save_states = {
+        'scholar': {'clicked': False, 'status': None},
+        'crossref': {'clicked': False, 'status': None},
+        'verified': {'clicked': False, 'status': None}
+    }
+
+# 定义回调函数
+def handle_save_scholar():
+    st.session_state.save_states['scholar']['clicked'] = True
+
+def handle_save_crossref():
+    st.session_state.save_states['crossref']['clicked'] = True
+
+def handle_save_verified():
+    st.session_state.save_states['verified']['clicked'] = True
 
 # 创建两列布局
 main_area, right_sidebar = st.columns([5, 1])  # 5:1 的比例
@@ -75,67 +105,91 @@ with main_area:
             )
             
             if st.button("开始搜索", key="scholar_search"):
-                result = handle_scholar_search(query, scholar_pages, min_year)
-                
-                if result and result['success']:
-                    papers = result['papers']
-                    total_pages, items_per_page = calculate_pagination(papers)
+                with st.spinner("正在搜索..."):
+                    # 显示进度条
+                    progress_bar = st.progress(0)
+                    progress_text = st.empty()
                     
-                    # 添加页码选择
-                    if total_pages > 1:
-                        current_page = st.selectbox(
-                            "选择页码",
-                            range(1, total_pages + 1),
-                            format_func=lambda x: f"第 {x} 页"
-                        )
-                    else:
-                        current_page = 1
+                    # 更新进度 - 开始搜索
+                    progress_bar.progress(0.3)
+                    progress_text.text("正在连接Google Scholar...")
                     
-                    # 获取当前页的论文
-                    current_papers, start_idx, end_idx = get_page_papers(papers, current_page, items_per_page)
+                    result = handle_scholar_search(query, scholar_pages, min_year)
                     
-                    # 创建表格数据
-                    table_data = create_table_data(current_papers, start_idx)
-                    
-                    # 显示表格
-                    if table_data:
-                        st.data_editor(
-                            table_data,
-                            column_config=get_table_column_config(),
-                            disabled=True,
-                            hide_index=True
-                        )
+                    if result and result['success']:
+                        # 保存到session_state
+                        st.session_state.search_results['scholar'] = result['papers']
                         
-                        # 显示分页信息
-                        st.markdown(f"显示 {start_idx + 1} 到 {end_idx} 条，共 {len(papers)} 条")
+                        # 更新进度 - 获取结果
+                        progress_bar.progress(0.6)
+                        progress_text.text("正在处理搜索结果...")
                         
-                        # 添加下载选择和按钮
-                        st.markdown("### 下载选项")
+                        papers = result['papers']
+                        total_pages, items_per_page = calculate_pagination(papers)
                         
-                        # 找出默认论文
-                        default_paper, max_citations = find_default_paper(current_papers)
-                        
-                        # 创建多选框
-                        selected_papers = st.multiselect(
-                            "选择要下载的论文",
-                            options=current_papers,
-                            default=[default_paper] if default_paper else None,
-                            format_func=format_paper_display,
-                            help="默认选择引用次数最高的论文。可以选择多篇论文一起下载。"
-                        )
-                        
-                        # 下载按钮和选择信息显示
-                        col1, col2 = st.columns([1, 4])
-                        if col1.button("下载选中论文", disabled=len(selected_papers) == 0):
-                            handle_download(selected_papers, "downloads")
-                        
-                        # 显示选中论文的详细信息
-                        if selected_papers:
-                            col2.markdown(
-                                f"已选择 {len(selected_papers)} 篇论文 "
-                                f"(包含引用次数最高的论文: {max_citations} 次)" if max_citations > 0 else 
-                                f"已选择 {len(selected_papers)} 篇论文"
+                        # 添加页码选择
+                        if total_pages > 1:
+                            current_page = st.selectbox(
+                                "选择页码",
+                                range(1, total_pages + 1),
+                                format_func=lambda x: f"第 {x} 页"
                             )
+                        else:
+                            current_page = 1
+                        
+                        # 获取当前页的论文
+                        current_papers, start_idx, end_idx = get_page_papers(papers, current_page, items_per_page)
+                        
+                        # 创建表格数据
+                        table_data = create_table_data(current_papers, start_idx)
+                        
+                        # 更新进度 - 完成
+                        progress_bar.progress(1.0)
+                        progress_text.text("搜索完成")
+                        
+                        # 显示表格
+                        if table_data:
+                            st.data_editor(
+                                table_data,
+                                column_config=get_table_column_config(),
+                                disabled=True,
+                                hide_index=True
+                            )
+                            
+                            # 显示分页信息
+                            st.markdown(f"显示第 {start_idx + 1} 到 {end_idx} 条，共 {len(papers)} 条")
+                            
+                            # 添加存入数据库按钮和结果显示区域
+                            save_container = st.container()
+                            col1, col2 = save_container.columns([1, 3])
+                            
+                            # 使用callback方式处理按钮点击
+                            col1.button("存入数据库", key="save_scholar", on_click=handle_save_scholar)
+                            status_area = col2.empty()
+                            
+                            # 检查状态并执行保存
+                            if st.session_state.save_states['scholar']['clicked']:
+                                try:
+                                    papers_to_save = st.session_state.search_results.get('scholar')
+                                    if not papers_to_save:
+                                        status_area.error("没有可保存的论文数据")
+                                    else:
+                                        status_area.info("正在连接数据库...")
+                                        os.makedirs("db", exist_ok=True)
+                                        db_path = os.path.join("db", "paper.db")
+                                        conn = sqlite3.connect(db_path)
+                                        
+                                        if save_scholar_papers(conn, papers_to_save, query):
+                                            status_area.success(f"成功保存 {len(papers_to_save)} 篇论文到数据库")
+                                        conn.close()
+                                        
+                                except Exception as e:
+                                    error_msg = f"保存失败: {str(e)}"
+                                    status_area.error(error_msg)
+                                    log_message(error_msg, "error", "数据库")
+                                
+                                # 重置状态
+                                st.session_state.save_states['scholar']['clicked'] = False
 
         with tabs[1]:  # CrossRef查询
             st.subheader("CrossRef查询")
@@ -192,100 +246,144 @@ with main_area:
                     st.error("请输入论文标题")
                 else:
                     try:
-                        # 创建CrossRef连接器实例
-                        crossref = CrossRefConnector()
-                        log_message(f"开始CrossRef搜索，标题: {title_query}", "info", "CrossRef")
-                        
-                        # 构建搜索参数
-                        search_params = {
-                            'title': title_query,
-                            'author': author_query,
-                            'year': year_query,
-                            'journal': journal_query,
-                            'doi': doi_query,
-                            'max_results': max_results
-                        }
-                        log_message(f"搜索参数: {search_params}", "debug", "CrossRef")
-                        
-                        # 执行搜索
-                        papers = crossref.search_with_filters(**search_params)
-                        
-                        if papers:
-                            if len(papers) == 1 and papers[0].title.lower() == title_query.lower():
-                                # 精确匹配的情况，使用清单模式显示
-                                st.success("找到精确匹配的论文")
-                                paper = papers[0]
-                                
-                                # 使用列表显示详细元数据
-                                st.markdown("### 论文详细信息")
-                                
-                                # 基础书目信息
-                                st.markdown("#### 基础书目信息")
-                                col1, col2 = st.columns(2)
-                                with col1:
-                                    st.markdown(f"**标题：** {paper.title}")
-                                    st.markdown(f"**作者：** {paper.authors}")
-                                    st.markdown(f"**DOI：** {paper.DOI if paper.DOI else 'N/A'}")
-                                with col2:
-                                    st.markdown(f"**年份：** {paper.year if paper.year else 'N/A'}")
-                                    st.markdown(f"**期刊：** {paper.jurnal if paper.jurnal else 'N/A'}")
-                                    st.markdown(f"**元数据完整度：** {paper.metadata_count} 个有效字段")
-                                
-                                # 添加下载按钮
-                                if st.button("下载此论文"):
-                                    handle_download([paper], "downloads")
+                        with st.spinner("正在搜索..."):
+                            # 显示进度条
+                            progress_bar = st.progress(0)
+                            progress_text = st.empty()
+                            
+                            # 更新进度 - 开始搜索
+                            progress_bar.progress(0.3)
+                            progress_text.text("正在连接CrossRef...")
+                            
+                            # 创建CrossRef连接器实例
+                            crossref = CrossRefConnector()
+                            log_message(f"开始CrossRef搜索，标题: {title_query}", "info", "CrossRef")
+                            
+                            # 构建搜索参数
+                            search_params = {
+                                'title': title_query,
+                                'author': author_query,
+                                'year': year_query,
+                                'journal': journal_query,
+                                'doi': doi_query,
+                                'max_results': max_results
+                            }
+                            
+                            # 更新进度 - 执行搜索
+                            progress_bar.progress(0.6)
+                            progress_text.text("正在搜索论文...")
+                            
+                            # 执行搜索
+                            papers = crossref.search_with_filters(**search_params)
+                            # 保存到session_state
+                            st.session_state.search_results['crossref'] = papers
+                            
+                            # 更新进度 - 完成
+                            progress_bar.progress(1.0)
+                            progress_text.text("搜索完成")
+                            
+                            if papers:
+                                if len(papers) == 1 and papers[0].title.lower() == title_query.lower():
+                                    # 精确匹配的情况，使用清单模式显示
+                                    st.success("找到精确匹配的论文")
+                                    paper = papers[0]
                                     
+                                    # 使用列表显示详细元数据
+                                    st.markdown("### 论文详细信息")
+                                    
+                                    # 基础书目信息
+                                    st.markdown("#### 基础书目信息")
+                                    col1, col2 = st.columns(2)
+                                    with col1:
+                                        st.markdown(f"**标题：** {paper.title}")
+                                        st.markdown(f"**作者：** {paper.authors}")
+                                        st.markdown(f"**DOI：** {paper.DOI if paper.DOI else 'N/A'}")
+                                    with col2:
+                                        st.markdown(f"**年份：** {paper.year if paper.year else 'N/A'}")
+                                        st.markdown(f"**期刊：** {paper.jurnal if paper.jurnal else 'N/A'}")
+                                        st.markdown(f"**元数据完整度：** {paper.metadata_count} 个有效字段")
+                                    
+                                    # 添加存入数据库按钮和结果显示区域
+                                    save_container = st.container()
+                                    col1, col2 = save_container.columns([1, 3])
+                                    
+                                    # 使用callback方式处理按钮点击
+                                    col1.button("存入数据库", key="save_crossref", on_click=handle_save_crossref)
+                                    status_area = col2.empty()
+                                    
+                                    # 检查状态并执行保存
+                                    if st.session_state.save_states['crossref']['clicked']:
+                                        try:
+                                            papers_to_save = st.session_state.search_results.get('crossref')
+                                            if not papers_to_save:
+                                                status_area.error("没有可保存的论文数据")
+                                            else:
+                                                status_area.info("正在连接数据库...")
+                                                os.makedirs("db", exist_ok=True)
+                                                db_path = os.path.join("db", "paper.db")
+                                                conn = sqlite3.connect(db_path)
+                                                
+                                                if save_crossref_papers(conn, papers_to_save):
+                                                    status_area.success(f"成功保存 {len(papers_to_save)} 篇论文到数据库")
+                                                conn.close()
+                                                
+                                        except Exception as e:
+                                            error_msg = f"保存失败: {str(e)}"
+                                            status_area.error(error_msg)
+                                            log_message(error_msg, "error", "数据库")
+                                        
+                                        # 重置状态
+                                        st.session_state.save_states['crossref']['clicked'] = False
+                                else:
+                                    # 相关匹配的情况，使用表格模式显示
+                                    st.info(f"未找到精确匹配，显示 {len(papers)} 篇相关论文")
+                                    
+                                    # 创建表格数据
+                                    table_data = create_table_data(papers)
+                                    
+                                    # 显示表格
+                                    if table_data:
+                                        st.data_editor(
+                                            table_data,
+                                            column_config=get_table_column_config(),
+                                            disabled=True,
+                                            hide_index=True
+                                        )
+                                        
+                                        # 显示结果数量
+                                        st.markdown(f"共找到 {len(papers)} 篇论文")
+                                        
+                                        # 添加存入数据库按钮和结果显示区域
+                                        save_container = st.container()
+                                        col1, col2 = save_container.columns([1, 3])
+                                        save_button = col1.button("存入数据库", key="save_crossref")
+                                        status_area = col2.empty()
+                                        
+                                        if save_button:
+                                            try:
+                                                # 显示正在保存
+                                                status_area.info("正在连接数据库...")
+                                                
+                                                # 连接数据库
+                                                conn = sqlite3.connect("db/paper.db")
+                                                
+                                                # 保存论文
+                                                status_area.info(f"正在保存 {len(papers)} 篇论文...")
+                                                if save_crossref_papers(conn, papers):
+                                                    status_area.success(f"成功保存 {len(papers)} 篇论文到数据库")
+                                                conn.close()
+                                                    
+                                            except Exception as e:
+                                                error_msg = f"保存失败: {str(e)}"
+                                                status_area.error(error_msg)
+                                                log_message(error_msg, "error", "数据库")
                             else:
-                                # 相关匹配的情况，使用表格模式显示
-                                st.info(f"未找到精确匹配，显示 {len(papers)} 篇相关论文")
-                                
-                                # 创建表格数据
-                                table_data = create_table_data(papers)
-                                
-                                # 显示表格
-                                if table_data:
-                                    st.data_editor(
-                                        table_data,
-                                        column_config=get_table_column_config(),
-                                        disabled=True,
-                                        hide_index=True
-                                    )
-                                    
-                                    # 显示结果数量
-                                    st.markdown(f"共找到 {len(papers)} 篇论文")
-                                    
-                                    # 添加下载选择和按钮
-                                    st.markdown("### 下载选项")
-                                    
-                                    # 找出默认论文（第一篇）
-                                    default_paper = papers[0] if papers else None
-                                    
-                                    # 创建多选框
-                                    selected_papers = st.multiselect(
-                                        "选择要下载的论文",
-                                        options=papers,
-                                        default=[default_paper] if default_paper else None,
-                                        format_func=lambda x: (
-                                            f"{x.title} "
-                                            f"({x.year if x.year else 'N/A'}) "
-                                            f"[DOI: {x.DOI if hasattr(x, 'DOI') else 'N/A'}]"
-                                        ),
-                                        help="可以选择多篇论文一起下载"
-                                    )
-                                    
-                                    # 下载按钮和选择信息显示
-                                    col1, col2 = st.columns([1, 4])
-                                    if col1.button("下载选中论文", 
-                                                 disabled=len(selected_papers) == 0,
-                                                 key="crossref_download"):
-                                        handle_download(selected_papers, "downloads")
-                                    
-                                    # 显示选中数量
-                                    if selected_papers:
-                                        col2.markdown(f"已选择 {len(selected_papers)} 篇论文")
-                        else:
-                            st.warning("未找到任何结果")
-                            log_message("CrossRef搜索未返回结果", "warning", "CrossRef")
+                                st.warning("未找到任何结果")
+                                log_message("CrossRef搜索未返回结果", "warning", "CrossRef")
+                            
+                            # 清理进度显示
+                            progress_bar.empty()
+                            progress_text.empty()
                             
                     except Exception as e:
                         error_msg = f"CrossRef搜索出错: {str(e)}"
@@ -327,6 +425,9 @@ with main_area:
                     result = validator.validate_papers(query, max_results, min_year)
                     
                     if result['success']:
+                        # 保存到session_state
+                        st.session_state.search_results['verified'] = result
+                        
                         # 首先显示Scholar搜索结果
                         st.subheader("Google Scholar搜索结果")
                         scholar_table = create_table_data(result['scholar_papers'])
@@ -347,22 +448,40 @@ with main_area:
                             hide_index=True
                         )
                         
-                        # 显示��证统计
+                        # 显示验证统计
                         st.success(result['message'])
                         
-                        # 添加下载选项
-                        validated_papers = [p for p in result['validated_papers'] if p.validated]
-                        if validated_papers:
-                            st.markdown("### 下载选项")
-                            selected_papers = st.multiselect(
-                                "选择要下载的论文",
-                                options=validated_papers,
-                                format_func=lambda x: f"{x.title} ({x.year if x.year else 'N/A'})",
-                                help="只显示已通过验证的论文"
-                            )
+                        # 添加存入数据库按钮和结果显示区域
+                        save_container = st.container()
+                        col1, col2 = save_container.columns([1, 3])
+                        
+                        # 使用callback方式处理按钮点击
+                        col1.button("存入数据库", key="save_verified", on_click=handle_save_verified)
+                        status_area = col2.empty()
+                        
+                        # 检查状态并执行保存
+                        if st.session_state.save_states['verified']['clicked']:
+                            try:
+                                papers_to_save = result.get('validated_papers')
+                                if not papers_to_save:
+                                    status_area.error("没有可保存的论文数据")
+                                else:
+                                    status_area.info("正在连接数据库...")
+                                    os.makedirs("db", exist_ok=True)
+                                    db_path = os.path.join("db", "paper.db")
+                                    conn = sqlite3.connect(db_path)
+                                    
+                                    if save_verified_papers(conn, papers_to_save):
+                                        status_area.success(f"成功保存 {len(papers_to_save)} 篇论文到数据库")
+                                    conn.close()
+                                    
+                            except Exception as e:
+                                error_msg = f"保存失败: {str(e)}"
+                                status_area.error(error_msg)
+                                log_message(error_msg, "error", "数据库")
                             
-                            if st.button("下载选中论文", disabled=len(selected_papers) == 0):
-                                handle_download(selected_papers, "downloads")
+                            # 重置状态
+                            st.session_state.save_states['verified']['clicked'] = False
                     else:
                         st.error(result['message'])
                         
@@ -372,17 +491,20 @@ with main_area:
                     log_message(error_msg, "error", "验证")
 
     elif st.session_state.current_function == "论文下载功能":
-        # [保持原有的论文下载功能代码不变...]
+        st.subheader("论文下载功能")
+        st.info("此功能正在开发中...")
         
     elif st.session_state.current_function == "论文过滤功能":
-        # [保持原有的论文过滤功能代码不变...]
+        st.subheader("论文过滤功能")
+        st.info("此功能正在开发中...")
         
     elif st.session_state.current_function == "论文数据管理":
         # 调用数据库管理功能
         render_database_management()
         
     elif st.session_state.current_function == "配置管理":
-        # [保持原有的配置管理功能代码不变...]
+        st.subheader("配置管理")
+        st.info("此功能正在开发中...")
 
 # 右侧日志面板
 with right_sidebar:

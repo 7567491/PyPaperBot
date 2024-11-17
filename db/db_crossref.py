@@ -11,14 +11,31 @@ def query_crossref_papers(conn: sqlite3.Connection):
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        title_query = st.text_input("标题关键词", key="crossref_title_query")
-        year_from = st.number_input("发表年份从", min_value=1900, max_value=2024, value=2000)
+        title_query = st.text_input("标题关键词", key="crossref_db_title_query")
+        year_from = st.number_input(
+            "发表年份从", 
+            min_value=1900, 
+            max_value=2024, 
+            value=2000,
+            key="crossref_db_year_from"
+        )
     with col2:
-        author_query = st.text_input("作者关键词", key="crossref_author_query")
-        year_to = st.number_input("到", min_value=1900, max_value=2024, value=2024)
+        author_query = st.text_input("作者关键词", key="crossref_db_author_query")
+        year_to = st.number_input(
+            "到", 
+            min_value=1900, 
+            max_value=2024, 
+            value=2024,
+            key="crossref_db_year_to"
+        )
     with col3:
-        journal_query = st.text_input("期刊关键词", key="crossref_journal_query")
-        min_metadata = st.number_input("最小元数据数量", min_value=0, value=0)
+        journal_query = st.text_input("期刊关键词", key="crossref_db_journal_query")
+        min_metadata = st.number_input(
+            "最小元数据数量", 
+            min_value=0, 
+            value=0,
+            key="crossref_db_min_metadata"
+        )
     
     # 构建查询
     query = """

@@ -8,6 +8,7 @@ from .db_scholar import query_scholar_papers
 from .db_crossref import query_crossref_papers
 from .db_verified import query_verified_papers
 from .db_fulltext import query_paper_fulltext
+from PyPaperBot.utils.log import log_message
 
 class DatabaseManager:
     def __init__(self, db_path="db/paper.db"):
@@ -15,86 +16,138 @@ class DatabaseManager:
         self.ensure_db_exists()
         
     def ensure_db_exists(self):
-        """确保数据库文件存在"""
-        if not os.path.exists(self.db_path):
-            os.makedirs(os.path.dirname(self.db_path), exist_ok=True)
-            self.init_database()
+        """确保数据库文件存在，只在第一次运行时初始化"""
+        try:
+            if not os.path.exists(self.db_path):
+                log_message("数据库文件不存在，开始初始化...", "info", "数据库")
+                os.makedirs(os.path.dirname(self.db_path), exist_ok=True)
+                init_database(self.db_path)
+                log_message("数据库初始化完成", "success", "数据库")
+            else:
+                # 检查数据库是否可以正常连接
+                try:
+                    conn = sqlite3.connect(self.db_path)
+                    cursor = conn.cursor()
+                    # 检查是否存在所需的表
+                    cursor.execute("SELECT name FROM sqlite_master WHERE type='table'")
+                    tables = {row[0] for row in cursor.fetchall()}
+                    required_tables = {
+                        'scholar_papers', 'crossref_papers', 
+                        'verified_papers', 'paper_fulltext'
+                    }
+                    
+                    if not required_tables.issubset(tables):
+                        missing_tables = required_tables - tables
+                        log_message(f"数据库缺少必要的表: {missing_tables}，需要初始化", "warning", "数据库")
+                        init_database(self.db_path)
+                        log_message("数据库表初始化完成", "success", "数据库")
+                    else:
+                        log_message("数据库结构完整，可以正常使用", "info", "数据库")
+                    
+                    conn.close()
+                except sqlite3.Error as e:
+                    log_message(f"数据库连接测试失败: {str(e)}", "error", "数据库")
+                    raise
+                    
+        except Exception as e:
+            error_msg = f"数据库初始化失败: {str(e)}"
+            log_message(error_msg, "error", "数据库")
+            raise
     
     def get_connection(self):
         """获取数据库连接"""
-        return sqlite3.connect(self.db_path)
+        try:
+            conn = sqlite3.connect(self.db_path)
+            log_message(f"成功连接数据库: {self.db_path}", "debug", "数据库")
+            return conn
+        except Exception as e:
+            error_msg = f"数据库连接失败: {str(e)}"
+            log_message(error_msg, "error", "数据库")
+            raise
     
     def render_db_management(self):
         """渲染数据库管理界面"""
         st.title("论文数据管理")
         
-        # 显示数据库基本信息
-        self.show_db_info()
-        
-        # 创建二级功能标签页
-        tabs = st.tabs([
-            "数据库初始化", 
-            "数据库备份与恢复", 
-            "Scholar论文查询",
-            "CrossRef论文查询",
-            "验证论文查询",
-            "已下载论文全文"
-        ])
-        
-        # 数据库初始化
-        with tabs[0]:
-            st.subheader("数据库初始化")
-            if st.button("初始化数据库", key="init_db"):
-                with st.spinner("正在初始化数据库..."):
-                    init_database(self.db_path)
-                st.success("数据库初始化完成")
-        
-        # 数据库备份与恢复
-        with tabs[1]:
-            st.subheader("数据库备份与恢复")
-            col1, col2 = st.columns(2)
+        try:
+            # 显示数据库基本信息
+            self.show_db_info()
             
-            with col1:
-                st.markdown("##### 数据库备份")
-                if st.button("创建备份", key="create_backup"):
-                    backup_file = backup_database(self.db_path)
-                    if backup_file:
-                        st.success(f"备份创建成功: {backup_file}")
+            # 创建二级功能标签页
+            tabs = st.tabs([
+                "数据库初始化", 
+                "数据库备份与恢复", 
+                "Scholar论文查询",
+                "CrossRef论文查询",
+                "验证论文查询",
+                "已下载论文全文"
+            ])
+            
+            # 数据库初始化
+            with tabs[0]:
+                st.subheader("数据库初始化")
+                if st.button("初始化数据库", key="init_db"):
+                    try:
+                        with st.spinner("正在初始化数据库..."):
+                            init_database(self.db_path)
+                            log_message("数据库初始化成功", "success", "数据库")
+                        st.success("数据库初始化完成")
+                    except Exception as e:
+                        error_msg = f"数据库初始化失败: {str(e)}"
+                        log_message(error_msg, "error", "数据库")
+                        st.error(error_msg)
+            
+            # 数据库备份与恢复
+            with tabs[1]:
+                st.subheader("数据库备份与恢复")
+                col1, col2 = st.columns(2)
+                
+                with col1:
+                    st.markdown("##### 数据库备份")
+                    if st.button("创建备份", key="create_backup"):
+                        backup_file = backup_database(self.db_path)
+                        if backup_file:
+                            st.success(f"备份创建成功: {backup_file}")
                     
-            with col2:
-                st.markdown("##### 数据库恢复")
-                backup_files = self.get_backup_files()
-                if backup_files:
-                    selected_backup = st.selectbox(
-                        "选择要恢复的备份文件",
-                        backup_files,
-                        format_func=lambda x: os.path.basename(x)
-                    )
-                    if st.button("恢复数据库", key="restore_db"):
-                        if restore_database(selected_backup, self.db_path):
-                            st.success("数据库恢复成功")
-                else:
-                    st.info("没有可用的备份文件")
-        
-        # Scholar论文查询
-        with tabs[2]:
-            st.subheader("Scholar论文查询")
-            query_scholar_papers(self.get_connection())
-        
-        # CrossRef论文查询
-        with tabs[3]:
-            st.subheader("CrossRef论文查询")
-            query_crossref_papers(self.get_connection())
-        
-        # 验证论文查询
-        with tabs[4]:
-            st.subheader("验证论文查询")
-            query_verified_papers(self.get_connection())
-        
-        # 已下载论文全文
-        with tabs[5]:
-            st.subheader("已下载论文全文")
-            query_paper_fulltext(self.get_connection())
+                with col2:
+                    st.markdown("##### 数据库恢复")
+                    backup_files = self.get_backup_files()
+                    if backup_files:
+                        selected_backup = st.selectbox(
+                            "选择要恢复的备份文件",
+                            backup_files,
+                            format_func=lambda x: os.path.basename(x)
+                        )
+                        if st.button("恢复数据库", key="restore_db"):
+                            if restore_database(selected_backup, self.db_path):
+                                st.success("数据库恢复成功")
+                    else:
+                        st.info("没有可用的备份文件")
+            
+            # Scholar论文查询
+            with tabs[2]:
+                st.subheader("Scholar论文查询")
+                query_scholar_papers(self.get_connection())
+            
+            # CrossRef论文查询
+            with tabs[3]:
+                st.subheader("CrossRef论文查询")
+                query_crossref_papers(self.get_connection())
+            
+            # 验证论文查询
+            with tabs[4]:
+                st.subheader("验证论文查询")
+                query_verified_papers(self.get_connection())
+            
+            # 已下载论文全文
+            with tabs[5]:
+                st.subheader("已下载论文全文")
+                query_paper_fulltext(self.get_connection())
+            
+        except Exception as e:
+            error_msg = f"数据库管理界面渲染失败: {str(e)}"
+            log_message(error_msg, "error", "数据库")
+            st.error(error_msg)
     
     def show_db_info(self):
         """显示数据库基本信息"""
@@ -112,9 +165,14 @@ class DatabaseManager:
             ]
             
             for table in tables:
-                cursor.execute(f"SELECT COUNT(*) FROM {table}")
-                count = cursor.fetchone()[0]
-                stats[table] = count
+                try:
+                    cursor.execute(f"SELECT COUNT(*) FROM {table}")
+                    count = cursor.fetchone()[0]
+                    stats[table] = count
+                    log_message(f"表 {table} 记录数: {count}", "debug", "数据库")
+                except Exception as e:
+                    log_message(f"获取表 {table} 记录数失败: {str(e)}", "error", "数据库")
+                    stats[table] = 0
             
             # 显示统计信息
             st.markdown("#### 数据库统计")
@@ -132,7 +190,9 @@ class DatabaseManager:
             conn.close()
             
         except Exception as e:
-            st.error(f"获取数据库信息失败: {str(e)}")
+            error_msg = f"获取数据库信息失败: {str(e)}"
+            log_message(error_msg, "error", "数据库")
+            st.error(error_msg)
     
     def get_backup_files(self):
         """获取备份文件列表"""
@@ -147,5 +207,10 @@ class DatabaseManager:
 
 def render_database_management():
     """渲染数据库管理界面的入口函数"""
-    db_manager = DatabaseManager()
-    db_manager.render_db_management() 
+    try:
+        db_manager = DatabaseManager()
+        db_manager.render_db_management()
+    except Exception as e:
+        error_msg = f"数据库管理功能初始化失败: {str(e)}"
+        log_message(error_msg, "error", "数据库")
+        st.error(error_msg) 
