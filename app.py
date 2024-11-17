@@ -157,11 +157,11 @@ with main_area:
         # 左侧边栏按钮
         if st.button("论文搜索功能"):
             st.session_state.current_function = "论文搜索功能"
-        if st.button("论文下载功能"):
-            st.session_state.current_function = "论文下载功能"
-        if st.button("论文过滤功能"):
-            st.session_state.current_function = "论文过滤功能"
-        if st.button("论数据管理"):
+        if st.button("单个论文下载"):
+            st.session_state.current_function = "单个论文下载"
+        if st.button("论文批量下载"):
+            st.session_state.current_function = "论文批量下载"
+        if st.button("论文据管理"):
             st.session_state.current_function = "论文数据管理"
         if st.button("配置管理"):
             st.session_state.current_function = "配置管理"
@@ -243,7 +243,7 @@ with main_area:
                             # 显示分页信息
                             st.markdown(f"显示第 {start_idx + 1} 到 {end_idx} 条，共 {len(papers)} 条")
                             
-                            # 直接存储到数据库
+                            # 直接��储到数据库
                             try:
                                 status_area = st.empty()
                                 status_area.info("正在保存到数据库...")
@@ -329,7 +329,7 @@ with main_area:
                             progress_bar.progress(0.3)
                             progress_text.text("正在连接CrossRef...")
                             
-                            # 创建CrossRef连接器实例
+                            # ���建CrossRef连接器实例
                             crossref = CrossRefConnector()
                             log_message(f"开始CrossRef搜索，标题: {title_query}", "info", "CrossRef")
                             
@@ -574,8 +574,22 @@ with main_area:
         st.info("此功能正在开发中...")
         
     elif st.session_state.current_function == "论文数据管理":
-        # 直接调用db_main.py中的render_database_management函数
-        render_database_management()
+        try:
+            # 导入数据库管理模块
+            from db.db_main import DatabaseManager
+            
+            # 创建数据库管理器实例
+            db_manager = DatabaseManager()
+            
+            # 渲染数据库管理界面
+            db_manager.render_db_management()
+            
+        except Exception as e:
+            error_msg = f"数据库管理功能出错: {str(e)}"
+            log_message(error_msg, "error", "数据库")
+            st.error(error_msg)
+            # 显示详细错误信息
+            st.error(f"错误详情: {traceback.format_exc()}")
 
     elif st.session_state.current_function == "配置管理":
         st.subheader("配置管理")
