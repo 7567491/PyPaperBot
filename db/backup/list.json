@@ -1,0 +1,88 @@
+{
+  "main_db": {
+    "file_info": {
+      "size": "0.18 MB",
+      "modified": "2024-11-17 14:50:32"
+    },
+    "tables": {
+      "scholar_papers": {
+        "description": "搜索论文",
+        "count": 109,
+        "latest": "2024-11-17 06:50:32"
+      },
+      "crossref_papers": {
+        "description": "CrossRef论文",
+        "count": 1,
+        "latest": "2024-11-17 06:21:33"
+      },
+      "verified_papers": {
+        "description": "验证论文",
+        "count": 49,
+        "latest": "2024-11-17 06:50:32"
+      },
+      "paper_fulltext": {
+        "description": "全文下载",
+        "count": 0,
+        "latest": "N/A"
+      }
+    }
+  },
+  "backups": {
+    "paper-20241117-143505.db": {
+      "file_info": {
+        "size": "0.09 MB",
+        "modified": "2024-11-17 14:21:33"
+      },
+      "tables": {
+        "scholar_papers": {
+          "description": "搜索论文",
+          "count": 30,
+          "latest": "2024-11-17 06:20:41"
+        },
+        "crossref_papers": {
+          "description": "CrossRef论文",
+          "count": 1,
+          "latest": "2024-11-17 06:21:33"
+        },
+        "verified_papers": {
+          "description": "验证论文",
+          "count": 10,
+          "latest": "2024-11-17 06:20:41"
+        },
+        "paper_fulltext": {
+          "description": "全文下载",
+          "count": 0,
+          "latest": "N/A"
+        }
+      }
+    },
+    "paper_db_backup_20241117_113947.db": {
+      "file_info": {
+        "size": "0.06 MB",
+        "modified": "2024-11-17 10:34:35"
+      },
+      "tables": {
+        "scholar_papers": {
+          "description": "搜索论文",
+          "count": 0,
+          "latest": "N/A"
+        },
+        "crossref_papers": {
+          "description": "CrossRef论文",
+          "count": 0,
+          "latest": "N/A"
+        },
+        "verified_papers": {
+          "description": "验证论文",
+          "count": 0,
+          "latest": "N/A"
+        },
+        "paper_fulltext": {
+          "description": "全文下载",
+          "count": 0,
+          "latest": "N/A"
+        }
+      }
+    }
+  }
+}

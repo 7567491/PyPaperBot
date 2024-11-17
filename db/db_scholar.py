@@ -2,6 +2,8 @@ import streamlit as st
 import sqlite3
 import pandas as pd
 from datetime import datetime
+import os
+from PyPaperBot.utils.log import log_message
 
 def query_scholar_papers(conn: sqlite3.Connection):
     """Scholar论文查询界面"""
@@ -83,18 +85,31 @@ def query_scholar_papers(conn: sqlite3.Connection):
                     "scholar_link": "Scholar链接",
                     "citations_count": "引用数",
                     "search_query": "搜索关键词",
-                    "search_timestamp": "搜索时间",
+                    "search_timestamp": "���索时间",
                     "download_status": "下载状态"
                 },
                 hide_index=True
             )
             
             # 导出功能
-            if st.button("导出到Excel"):
-                timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-                filename = f"scholar_papers_{timestamp}.xlsx"
-                df.to_excel(f"db/export/{filename}", index=False)
-                st.success(f"数据已导出到: {filename}")
+            if st.button("导出到Excel", key="export_scholar_results"):
+                try:
+                    # 创建导出目录
+                    export_dir = os.path.join("db", "export")
+                    os.makedirs(export_dir, exist_ok=True)
+                    
+                    # 导出文件
+                    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+                    filename = f"scholar_papers_{timestamp}.xlsx"
+                    export_path = os.path.join(export_dir, filename)
+                    
+                    df.to_excel(export_path, index=False)
+                    st.success(f"数据已导出到: {filename}")
+                    log_message(f"Scholar论文数据导出成功: {filename}", "success", "数据库")
+                except Exception as e:
+                    error_msg = f"导出失败: {str(e)}"
+                    st.error(error_msg)
+                    log_message(error_msg, "error", "数据库")
                 
         else:
             st.info("未找到匹配的记录")

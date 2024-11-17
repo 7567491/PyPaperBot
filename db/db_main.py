@@ -4,7 +4,7 @@ import os
 from datetime import datetime
 import traceback
 from .db_init import init_database
-from .db_backup import backup_database, restore_database
+from .db_backup import backup_database, restore_database, get_backup_info, update_database_stats, display_db_stats
 from .db_scholar import query_scholar_papers
 from .db_crossref import query_crossref_papers
 from .db_verified import query_verified_papers
@@ -13,6 +13,8 @@ from .db_utils import save_scholar_papers, save_crossref_papers, save_verified_p
 from PyPaperBot.utils.log import log_message
 from typing import List
 import pandas as pd
+import json
+from .db_dup import deduplicate_database
 
 class DatabaseManager:
     def __init__(self, db_path="db/paper.db"):
@@ -74,13 +76,11 @@ class DatabaseManager:
         st.title("论文数据管理")
         
         try:
-            # 显示数据库基本信息
-            self.show_db_info()
-            
             # 创建二级功能标签页
             tabs = st.tabs([
                 "数据库查询", 
                 "数据库备份与恢复", 
+                "数据库去重",
                 "Scholar论文查询",
                 "CrossRef论文查询",
                 "验证论文查询",
@@ -91,13 +91,58 @@ class DatabaseManager:
             with tabs[0]:
                 st.subheader("数据库查询")
                 
-                # 显示最近保存的记录
-                st.markdown("#### 最近保存的记录")
+                # 首先显示数据库统计
+                st.markdown("#### 数据库统计")
                 try:
                     conn = self.get_connection()
                     cursor = conn.cursor()
                     
-                    # Scholar论文
+                    # 获取各表的统计信息
+                    tables = {
+                        'scholar_papers': ('Scholar论文', 'search_timestamp'),
+                        'crossref_papers': ('CrossRef论文', 'verification_timestamp'),
+                        'verified_papers': ('验证论文', 'verification_timestamp'),
+                        'paper_fulltext': ('已下载全文', 'download_timestamp')
+                    }
+                    
+                    # 创建四列布局显示统计数据
+                    cols = st.columns(len(tables))
+                    
+                    for i, (table, (desc, timestamp_col)) in enumerate(tables.items()):
+                        # 获取记录数
+                        cursor.execute(f"SELECT COUNT(*) FROM {table}")
+                        count = cursor.fetchone()[0]
+                        
+                        # 获取最新记录时间
+                        cursor.execute(f"SELECT MAX({timestamp_col}) FROM {table}")
+                        latest_time = cursor.fetchone()[0]
+                        
+                        # 在对应列显示统计信息
+                        with cols[i]:
+                            st.metric(
+                                label=desc,
+                                value=count,
+                                help=f"最新记录: {latest_time if latest_time else 'N/A'}"
+                            )
+                    
+                    conn.close()
+                    
+                    # 显示分割线
+                    st.markdown("---")
+                    
+                except Exception as e:
+                    error_msg = f"获取数据库统计信息失败: {str(e)}"
+                    log_message(error_msg, "error", "数据库")
+                    st.error(error_msg)
+                
+                # 然后显示最近保存的记录
+                st.markdown("#### 最近保存的记录")
+                
+                try:
+                    conn = self.get_connection()
+                    cursor = conn.cursor()
+                    
+                    # 显示最近保存的Scholar论文
                     with st.expander("最近保存的Scholar论文", expanded=True):
                         cursor.execute("""
                             SELECT title, authors, year, doi, search_timestamp 
@@ -114,7 +159,7 @@ class DatabaseManager:
                         else:
                             st.info("暂无Scholar论文记录")
                     
-                    # CrossRef论文
+                    # 显示最近保存的CrossRef论文
                     with st.expander("最近保存的CrossRef论文", expanded=True):
                         cursor.execute("""
                             SELECT title, authors, year, doi, verification_timestamp 
@@ -131,7 +176,7 @@ class DatabaseManager:
                         else:
                             st.info("暂无CrossRef论文记录")
                     
-                    # 验证论文
+                    # 显示最近保存的验证论文
                     with st.expander("最近保存的验证论文", expanded=True):
                         cursor.execute("""
                             SELECT title, authors, year, doi, verification_timestamp,
@@ -153,122 +198,172 @@ class DatabaseManager:
                             st.dataframe(df_verified, hide_index=True)
                         else:
                             st.info("暂无验证论文记录")
-                    
+                        
                     conn.close()
                     
                 except Exception as e:
                     error_msg = f"获取最近保存记录失败: {str(e)}"
                     log_message(error_msg, "error", "数据库")
                     st.error(error_msg)
-                
-                # 显示数据库表结构
-                st.markdown("#### 数据库表结构")
-                
-                # 定义所有表
-                tables = {
-                    "scholar_papers": "Scholar搜索结果表",
-                    "crossref_papers": "CrossRef验证结果表",
-                    "verified_papers": "验证匹配的论文表",
-                    "paper_fulltext": "论文全文表"
-                }
-                
-                # 显示每个表的信息
-                for table_name, description in tables.items():
-                    with st.expander(f"{description} ({table_name})"):
-                        # 获取表结构
-                        schema = self.get_table_schema(table_name)
-                        
-                        # 获取记录数
-                        count = self.get_table_count(table_name)
-                        
-                        # 显示表信息
-                        st.markdown(f"##### 表结构")
-                        
-                        # 创建表结构数据
-                        schema_data = []
-                        for col in schema:
-                            schema_data.append({
-                                "序号": col[0],
-                                "字段名": col[1],
-                                "类型": col[2],
-                                "是否可空": "否" if col[3] else "是",
-                                "默认值": col[4] if col[4] is not None else "无",
-                                "主键": "是" if col[5] else "否"
-                            })
-                        
-                        # 显示表结构
-                        st.dataframe(
-                            schema_data,
-                            column_config={
-                                "序号": st.column_config.NumberColumn("序号", width=70),
-                                "字段名": st.column_config.TextColumn("字段名", width=150),
-                                "类型": st.column_config.TextColumn("类型", width=100),
-                                "是否可空": st.column_config.TextColumn("是否可空", width=100),
-                                "默认值": st.column_config.TextColumn("默认值", width=100),
-                                "主键": st.column_config.TextColumn("主键", width=70)
-                            },
-                            hide_index=True
-                        )
-                        
-                        # 显示记录数
-                        st.info(f"当前记录数: {count}")
-                        
-                        # 显示表索引
-                        st.markdown("##### 表索引")
-                        cursor = self.get_connection().cursor()
-                        cursor.execute(f"SELECT * FROM sqlite_master WHERE type='index' AND tbl_name='{table_name}'")
-                        indexes = cursor.fetchall()
-                        
-                        if indexes:
-                            for idx in indexes:
-                                st.code(idx[4], language="sql")  # 显示索引创建语句
-                        else:
-                            st.text("无索引")
             
-            # 数据库备份与恢复
+            # 数据库备份与恢复标签页
             with tabs[1]:
                 st.subheader("数据库备份与恢复")
+                
+                # 显示数据库统计信息
+                try:
+                    stats_file = os.path.join("db", "backup", "list.json")
+                    if os.path.exists(stats_file):
+                        with open(stats_file, 'r', encoding='utf-8') as f:
+                            stats = json.load(f)
+                        display_db_stats(stats)
+                    else:
+                        # 首次创建统计信息
+                        update_database_stats(self.db_path, os.path.join("db", "backup"))
+                        with open(stats_file, 'r', encoding='utf-8') as f:
+                            stats = json.load(f)
+                        display_db_stats(stats)
+                except Exception as e:
+                    st.error(f"读取数据库统计信息失败: {str(e)}")
+                
+                st.markdown("---")
+                
+                # 备份和恢复操作
                 col1, col2 = st.columns(2)
                 
                 with col1:
-                    st.markdown("##### 数据库备份")
-                    if st.button("创建备份", key="create_backup"):
-                        backup_file = backup_database(self.db_path)
-                        if backup_file:
-                            st.success(f"备份创建成功: {backup_file}")
-                    
+                    st.markdown("#### 创建备份")
+                    if st.button("创建新备份", key="create_backup"):
+                        try:
+                            backup_file = backup_database(self.db_path)
+                            if backup_file:
+                                # 更新统计信息
+                                update_database_stats(self.db_path, os.path.join("db", "backup"))
+                                st.success(f"备份创建成功: {os.path.basename(backup_file)}")
+                                st.rerun()  # 刷新显示
+                        except Exception as e:
+                            st.error(f"备份创建失败: {str(e)}")
+                
                 with col2:
-                    st.markdown("##### 数据库恢复")
-                    backup_files = self.get_backup_files()
+                    st.markdown("#### 恢复数据库")
+                    backup_files = [
+                        f for f in os.listdir("db/backup") 
+                        if f.endswith('.db')
+                    ] if os.path.exists("db/backup") else []
+                    
                     if backup_files:
                         selected_backup = st.selectbox(
                             "选择要恢复的备份文件",
                             backup_files,
-                            format_func=lambda x: os.path.basename(x)
+                            format_func=lambda x: x
                         )
+                        
+                        # 显示选中备份的详细信息
+                        if selected_backup and 'backups' in stats:
+                            backup_info = stats['backups'].get(selected_backup, {})
+                            if backup_info:
+                                st.markdown("**备份信息：**")
+                                file_info = backup_info.get('file_info', {})
+                                st.markdown(f"- 文件大小：{file_info.get('size', 'N/A')}")
+                                st.markdown(f"- 备份时间：{file_info.get('modified', 'N/A')}")
+                                
+                                tables = backup_info.get('tables', {})
+                                total_records = sum(table.get('count', 0) for table in tables.values())
+                                st.markdown(f"- 总记录数：{total_records}")
+                        
                         if st.button("恢复数据库", key="restore_db"):
-                            if restore_database(selected_backup, self.db_path):
-                                st.success("数据库恢复成功")
+                            try:
+                                backup_path = os.path.join("db/backup", selected_backup)
+                                if restore_database(backup_path, self.db_path):
+                                    # 更新统计信息
+                                    update_database_stats(self.db_path, os.path.join("db", "backup"))
+                                    st.success("数据库恢复成功")
+                                    st.rerun()  # 刷新显示
+                            except Exception as e:
+                                st.error(f"数据库恢复失败: {str(e)}")
                     else:
                         st.info("没有可用的备份文件")
             
-            # Scholar论文查询
+            # 数据库去重标签页
             with tabs[2]:
+                st.subheader("数据库去重")
+                
+                # 显示当前数据库状态
+                try:
+                    conn = self.get_connection()
+                    cursor = conn.cursor()
+                    
+                    # 获取各表的记录数
+                    tables = {
+                        'scholar_papers': 'Scholar论文',
+                        'crossref_papers': 'CrossRef论文',
+                        'verified_papers': '验证论文'
+                    }
+                    
+                    # 显示当前状态
+                    st.markdown("#### 当前数据库状态")
+                    cols = st.columns(len(tables))
+                    
+                    for i, (table, desc) in enumerate(tables.items()):
+                        cursor.execute(f"SELECT COUNT(*) FROM {table}")
+                        count = cursor.fetchone()[0]
+                        cols[i].metric(desc, count)
+                    
+                    conn.close()
+                    
+                    # 去重说明
+                    st.markdown("""
+                    #### 去重规则
+                    1. **Scholar论文表**
+                       - 优先使用DOI进行去重
+                       - 对于没有DOI的记录，使用标题进行去重
+                       - 保留最早保存的记录
+                       
+                    2. **CrossRef论文表**
+                       - 使用DOI作为唯一标识进行去重
+                       - 保留最新的元数据记
+                       
+                    3. **验证论文表**
+                       - 使用DOI和Scholar ID的组合进行去重
+                       - 保留验证分数最高的记录
+                       
+                    **注意：** 
+                    - 去重操作前会自动备份数据库
+                    - 去重操作不可撤销
+                    - 建议在去重前检查数据库备份
+                    """)
+                    
+                    # 去重操作
+                    st.markdown("#### 执行去重")
+                    col1, col2 = st.columns([1, 2])
+                    with col1:
+                        if st.button("开始去重", key="start_dedup", type="primary"):
+                            deduplicate_database(self.db_path)
+                    with col2:
+                        st.info("点击按钮开始去重操作，过程中请勿刷新页面")
+                    
+                except Exception as e:
+                    error_msg = f"获取数据库状态失败: {str(e)}"
+                    log_message(error_msg, "error", "数据库")
+                    st.error(error_msg)
+            
+            # Scholar论文查询标签页
+            with tabs[3]:
                 st.subheader("Scholar论文查询")
                 query_scholar_papers(self.get_connection())
             
-            # CrossRef论文查询
-            with tabs[3]:
+            # CrossRef论文查询标签页
+            with tabs[4]:
                 st.subheader("CrossRef论文查询")
                 query_crossref_papers(self.get_connection())
             
-            # 验证论文查询
-            with tabs[4]:
+            # 验证论文查询标签页
+            with tabs[5]:
                 st.subheader("验证论文查询")
                 query_verified_papers(self.get_connection())
             
-            # 已下载论文全文
-            with tabs[5]:
+            # 已下载论文全文标签页
+            with tabs[6]:
                 st.subheader("已下载论文全文")
                 query_paper_fulltext(self.get_connection())
             
@@ -276,6 +371,8 @@ class DatabaseManager:
             error_msg = f"数据库管理界面渲染失败: {str(e)}"
             log_message(error_msg, "error", "数据库")
             st.error(error_msg)
+            # 显示详细错误信息
+            st.error(f"错误详情: {traceback.format_exc()}")
     
     def show_db_info(self):
         """显示数据库基本信息"""
@@ -411,6 +508,114 @@ class DatabaseManager:
                 status_area.error(error_msg)
                 log_message(error_msg, "error", "数据库")
                 log_message(f"错误详情: {traceback.format_exc()}", "error", "数据库")
+    
+    def deduplicate_database(self):
+        """数据库去重"""
+        try:
+            # 自动备份
+            backup_file = backup_database(self.db_path)
+            if not backup_file:
+                raise Exception("自动备份失败，中止去重操作")
+            log_message(f"数据库已备份: {backup_file}", "info", "数据库")
+            
+            conn = self.get_connection()
+            cursor = conn.cursor()
+            
+            # 显示进度条和状态
+            progress_bar = st.progress(0)
+            status_text = st.empty()
+            
+            # 获取原始记录数
+            original_counts = {}
+            tables = {
+                'scholar_papers': ('title', 'doi'),
+                'crossref_papers': ('title', 'doi'),
+                'verified_papers': ('title', 'doi')
+            }
+            
+            for table, (title_col, doi_col) in tables.items():
+                cursor.execute(f"SELECT COUNT(*) FROM {table}")
+                original_counts[table] = cursor.fetchone()[0]
+            
+            total_original = sum(original_counts.values())
+            status_text.text("开始去重...")
+            log_message("开始数据库去重操作", "info", "数据库")
+            
+            # 去重处理
+            dedup_counts = {}
+            current_progress = 0
+            
+            for i, (table, (title_col, doi_col)) in enumerate(tables.items()):
+                status_text.text(f"正在处理 {table}...")
+                log_message(f"开始处理表 {table}", "info", "数据库")
+                
+                # 基于DOI去重
+                cursor.execute(f"""
+                    DELETE FROM {table} 
+                    WHERE rowid NOT IN (
+                        SELECT MIN(rowid) 
+                        FROM {table} 
+                        WHERE {doi_col} IS NOT NULL 
+                        GROUP BY {doi_col}
+                    )
+                    AND {doi_col} IS NOT NULL
+                """)
+                
+                # 基于标题去重（对于没有DOI的记录）
+                cursor.execute(f"""
+                    DELETE FROM {table} 
+                    WHERE rowid NOT IN (
+                        SELECT MIN(rowid) 
+                        FROM {table} 
+                        WHERE {doi_col} IS NULL 
+                        GROUP BY {title_col}
+                    )
+                    AND {doi_col} IS NULL
+                """)
+                
+                # 获取去重后的记录数
+                cursor.execute(f"SELECT COUNT(*) FROM {table}")
+                current_count = cursor.fetchone()[0]
+                dedup_counts[table] = current_count
+                
+                # 更新进度
+                current_progress = (i + 1) / len(tables)
+                progress_bar.progress(current_progress)
+                
+                removed_count = original_counts[table] - current_count
+                status_text.text(f"表 {table} 去重完成: 删除了 {removed_count} 条重复记录")
+                log_message(f"表 {table} 去重完成: 原有 {original_counts[table]} 条记录，删除了 {removed_count} 条重复记录，剩余 {current_count} 条记录", "info", "数据库")
+            
+            # 提交更改
+            conn.commit()
+            conn.close()
+            
+            # 显示最终结果
+            total_removed = sum(original_counts.values()) - sum(dedup_counts.values())
+            final_msg = f"""
+            去重完成！
+            原始记录总数: {total_original}
+            删除重复记录: {total_removed}
+            剩余记录总数: {sum(dedup_counts.values())}
+            
+            详细统计:
+            - Scholar论文: {original_counts['scholar_papers']} -> {dedup_counts['scholar_papers']} (-{original_counts['scholar_papers'] - dedup_counts['scholar_papers']})
+            - CrossRef论文: {original_counts['crossref_papers']} -> {dedup_counts['crossref_papers']} (-{original_counts['crossref_papers'] - dedup_counts['crossref_papers']})
+            - 验证论文: {original_counts['verified_papers']} -> {dedup_counts['verified_papers']} (-{original_counts['verified_papers'] - dedup_counts['verified_papers']})
+            """
+            
+            progress_bar.progress(1.0)
+            status_text.success(final_msg)
+            log_message("数据库去重操作完成", "success", "数据库")
+            
+            return True
+            
+        except Exception as e:
+            error_msg = f"数据库去重失败: {str(e)}"
+            log_message(error_msg, "error", "数据库")
+            if 'status_text' in locals():
+                status_text.error(error_msg)
+            return False
 
 def render_database_management():
     """渲染数据库管理界面的入口函数"""
@@ -418,6 +623,6 @@ def render_database_management():
         db_manager = DatabaseManager()
         db_manager.render_db_management()
     except Exception as e:
-        error_msg = f"数据库管理功能初始化失败: {str(e)}"
+        error_msg = f"数据库管理功��初始化失败: {str(e)}"
         log_message(error_msg, "error", "数据库")
         st.error(error_msg) 

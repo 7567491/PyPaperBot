@@ -374,7 +374,7 @@ with main_area:
                                     st.markdown("#### 基础书目信息")
                                     col1, col2 = st.columns(2)
                                     with col1:
-                                        st.markdown(f"**标题：** {paper.title}")
+                                        st.markdown(f"**题：** {paper.title}")
                                         st.markdown(f"**作者：** {paper.authors}")
                                         st.markdown(f"**DOI：** {paper.DOI if paper.DOI else 'N/A'}")
                                     with col2:
@@ -434,7 +434,7 @@ with main_area:
                                             
                                             # 保存论文
                                             if save_crossref_papers(conn, papers):
-                                                status_area.success(f"成功保存 {len(papers)} 篇论文到数据库")
+                                                status_area.success(f"成��保存 {len(papers)} 篇论文到数据库")
                                                 log_message(f"成功保存 {len(papers)} 篇CrossRef论文", "success", "数据库")
                                             conn.close()
                                             
@@ -574,177 +574,8 @@ with main_area:
         st.info("此功能正在开发中...")
         
     elif st.session_state.current_function == "论文数据管理":
-        st.title("论文数据管理")
-        
-        try:
-            # 创建二级功能标签页
-            tabs = st.tabs([
-                "最近保存", 
-                "数据库备份与恢复", 
-                "数据库查询", 
-                "Scholar论文查询",
-                "CrossRef论文查询",
-                "验证论文查询",
-                "已下载论文全文"
-            ])
-            
-            # 连接数据库
-            db_path = "db/paper.db"
-            conn = sqlite3.connect(db_path)
-            
-            # 近保存标签页
-            with tabs[0]:
-                st.subheader("最近保存的记录")
-                try:
-                    # Scholar论文
-                    st.markdown("##### 最近保存的Scholar论文")
-                    cursor = conn.cursor()
-                    cursor.execute("""
-                        SELECT title, authors, year, doi, search_timestamp 
-                        FROM scholar_papers 
-                        ORDER BY search_timestamp DESC 
-                        LIMIT 5
-                    """)
-                    recent_scholar = cursor.fetchall()
-                    if recent_scholar:
-                        df_scholar = pd.DataFrame(recent_scholar, 
-                            columns=["标题", "作者", "年份", "DOI", "保存时间"])
-                        df_scholar["保存时间"] = pd.to_datetime(df_scholar["保存时间"])
-                        st.dataframe(df_scholar, hide_index=True)
-                    else:
-                        st.info("暂无Scholar论文记录")
-                    
-                    # CrossRef论文
-                    st.markdown("##### 最近保存的CrossRef论文")
-                    cursor.execute("""
-                        SELECT title, authors, year, doi, verification_timestamp 
-                        FROM crossref_papers 
-                        ORDER BY verification_timestamp DESC 
-                        LIMIT 5
-                    """)
-                    recent_crossref = cursor.fetchall()
-                    if recent_crossref:
-                        df_crossref = pd.DataFrame(recent_crossref, 
-                            columns=["标题", "作者", "年份", "DOI", "保存时间"])
-                        df_crossref["保存时间"] = pd.to_datetime(df_crossref["保存时间"])
-                        st.dataframe(df_crossref, hide_index=True)
-                    else:
-                        st.info("暂无CrossRef论文记录")
-                    
-                    # 验证论文
-                    st.markdown("##### 最近保存的验证论文")
-                    cursor.execute("""
-                        SELECT title, authors, year, doi, verification_timestamp,
-                               CASE verification_status
-                                   WHEN 0 THEN '待验证'
-                                   WHEN 1 THEN '完全匹配'
-                                   WHEN 2 THEN '部分匹配'
-                                   WHEN 3 THEN '不匹配'
-                               END as status
-                        FROM verified_papers 
-                        ORDER BY verification_timestamp DESC 
-                        LIMIT 5
-                    """)
-                    recent_verified = cursor.fetchall()
-                    if recent_verified:
-                        df_verified = pd.DataFrame(recent_verified, 
-                            columns=["标题", "作者", "年份", "DOI", "保存时间", "验证状态"])
-                        df_verified["保存时间"] = pd.to_datetime(df_verified["保存时间"])
-                        st.dataframe(df_verified, hide_index=True)
-                    else:
-                        st.info("暂无验证论文记录")
-                except Exception as e:
-                    st.error(f"获取最近保存记录失败: {str(e)}")
-            
-            # 数据库备份与恢复
-            with tabs[1]:
-                st.subheader("数据库备份与恢复")
-                col1, col2 = st.columns(2)
-                
-                with col1:
-                    st.markdown("##### 数据库备份")
-                    if st.button("创建备份", key="create_backup"):
-                        try:
-                            backup_file = backup_database(db_path)
-                            if backup_file:
-                                st.success(f"备份创建成功: {backup_file}")
-                                log_message(f"数据库备份成功: {backup_file}", "success", "数据库")
-                            else:
-                                st.error("备份创建失败")
-                                log_message("数据库备份失败", "error", "数据库")
-                        except Exception as e:
-                            error_msg = f"备份创建失败: {str(e)}"
-                            st.error(error_msg)
-                            log_message(error_msg, "error", "数据库")
-                
-                with col2:
-                    st.markdown("##### 数据库恢复")
-                    backup_files = [
-                        f for f in os.listdir("db/backup") 
-                        if f.endswith('.db')
-                    ] if os.path.exists("db/backup") else []
-                    
-                    if backup_files:
-                        selected_backup = st.selectbox(
-                            "选择要恢复的备份文件",
-                            backup_files,
-                            format_func=lambda x: x
-                        )
-                        if st.button("恢复数据库", key="restore_db"):
-                            try:
-                                backup_path = os.path.join("db/backup", selected_backup)
-                                if restore_database(backup_path, db_path):
-                                    st.success("数据库恢复成功")
-                                    log_message(f"数据库恢复成功: {selected_backup}", "success", "数据库")
-                                else:
-                                    st.error("数据库恢复失败")
-                                    log_message("数据库恢复失败", "error", "数据库")
-                            except Exception as e:
-                                error_msg = f"数据库恢复失败: {str(e)}"
-                                st.error(error_msg)
-                                log_message(error_msg, "error", "数据库")
-                    else:
-                        st.info("没有可用的备份文件")
-                        log_message("没有找到可用的备份文件", "info", "数据库")
-            
-            # 数据库查询
-            with tabs[2]:
-                st.subheader("数据库查询")
-                # 调db_main.py中的查询功能
-                from db.db_main import DatabaseManager
-                db_manager = DatabaseManager()
-                db_manager.show_db_info()
-            
-            # Scholar论文查询
-            with tabs[3]:
-                st.subheader("Scholar论文查询")
-                from db.db_scholar import query_scholar_papers
-                query_scholar_papers(conn)
-            
-            # CrossRef论文查询
-            with tabs[4]:
-                st.subheader("CrossRef论文查询")
-                from db.db_crossref import query_crossref_papers
-                query_crossref_papers(conn)
-            
-            # 验证论文查询
-            with tabs[5]:
-                st.subheader("验证论文查询")
-                from db.db_verified import query_verified_papers
-                query_verified_papers(conn)
-            
-            # 已下载论文全文
-            with tabs[6]:
-                st.subheader("已下载论文全文")
-                from db.db_fulltext import query_paper_fulltext
-                query_paper_fulltext(conn)
-            
-            # 关闭数据库连接
-            conn.close()
-            
-        except Exception as e:
-            st.error(f"数据库管理功能出错: {str(e)}")
-            log_message(f"数据库管理功能出错: {str(e)}", "error", "数据库")
+        # 直接调用db_main.py中的render_database_management函数
+        render_database_management()
 
     elif st.session_state.current_function == "配置管理":
         st.subheader("配置管理")

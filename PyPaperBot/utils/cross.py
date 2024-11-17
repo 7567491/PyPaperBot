@@ -25,12 +25,49 @@ class CrossValidator:
             # 第一步：Google Scholar搜索
             st.info("正在执行Google Scholar搜索...")
             progress_bar = st.progress(0)
-            self.logger.info(f"开始Google Scholar搜索: {query}")
+            self.logger.info(f"开始Google Scholar搜索: {query}, 目标数量: {max_results}")
             
-            scholar_papers = self.scholar.search_page(query, 1)
-            if min_year:
-                scholar_papers = [p for p in scholar_papers if p.year and int(p.year) >= min_year]
-            scholar_papers = scholar_papers[:max_results]
+            # 限制最大结果数
+            max_results = min(max_results, 100)
+            
+            # 计算需要搜索的页数
+            page_size = 10  # Scholar每页10条结果
+            max_pages = (max_results + page_size - 1) // page_size
+            
+            # 分页搜索
+            scholar_papers = []
+            for page in range(1, max_pages + 1):
+                try:
+                    self.logger.info(f"搜索第 {page} 页...")
+                    st.text(f"正在搜索第 {page}/{max_pages} 页")
+                    
+                    # 更新进度条
+                    search_progress = (page - 1) / max_pages * 0.5  # 搜索占总进度的50%
+                    progress_bar.progress(search_progress)
+                    
+                    # 搜索当前页
+                    page_papers = self.scholar.search_page(query, page)
+                    if not page_papers:
+                        self.logger.info(f"第 {page} 页没有更多结果")
+                        break
+                        
+                    # 过滤年份
+                    if min_year:
+                        page_papers = [p for p in page_papers if p.year and int(p.year) >= min_year]
+                    
+                    scholar_papers.extend(page_papers)
+                    
+                    # 检查是否已达到目标数量
+                    if len(scholar_papers) >= max_results:
+                        scholar_papers = scholar_papers[:max_results]
+                        break
+                        
+                    # 记录进度
+                    self.logger.info(f"当前已获取 {len(scholar_papers)} 篇论文")
+                    
+                except Exception as e:
+                    self.logger.error(f"搜索第 {page} 页时出错: {str(e)}")
+                    break
             
             # 显示Scholar搜索结果
             st.success(f"Google Scholar搜索完成，找到 {len(scholar_papers)} 篇论文")
@@ -44,7 +81,7 @@ class CrossValidator:
             for i, paper in enumerate(scholar_papers):
                 try:
                     # 更新进度条
-                    progress = (i + 1) / len(scholar_papers)
+                    progress = 0.5 + (i + 1) / len(scholar_papers) * 0.5  # 验证占总进度的50%
                     progress_bar.progress(progress)
                     st.text(f"正在验证第 {i+1}/{len(scholar_papers)} 篇论文")
                     
