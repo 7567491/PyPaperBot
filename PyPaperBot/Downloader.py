@@ -1,107 +1,109 @@
-from os import path
+import os
 import requests
-import time
-from .HTMLparsers import getSchiHubPDF, SciHubUrls
-import random
-from .NetInfo import NetInfo
-from .Utils import URLjoin
+import logging
+from urllib.parse import urljoin
+from .Paper import Paper
 
-
-def setSciHubUrl():
-    print("Searching for a sci-hub mirror")
-    r = requests.get(NetInfo.SciHub_URLs_repo, headers=NetInfo.HEADERS)
-    links = SciHubUrls(r.text)
-
-    for l in links:
+class Downloader:
+    def __init__(self, download_dir="downloads", use_doi_as_filename=False, scihub_mirror="https://sci-hub.se"):
+        self.logger = logging.getLogger(__name__)
+        self.download_dir = download_dir
+        self.use_doi_as_filename = use_doi_as_filename
+        self.scihub_mirror = scihub_mirror
+        
+        # 确保下载目录存在
+        os.makedirs(download_dir, exist_ok=True)
+        self.logger.info(f"初始化下载器: 目录={download_dir}")
+    
+    def download_paper(self, paper: Paper) -> bool:
+        """
+        下载论文，尝试多个来源
+        
+        Args:
+            paper: Paper对象
+            
+        Returns:
+            bool: 下载是否成功
+        """
+        if not paper.canBeDownloaded():
+            self.logger.warning(f"论文无法下载: {paper.title} (缺少DOI或URL)")
+            return False
+            
+        self.logger.info(f"开始下载论文: {paper.title}")
+        
+        # 首先尝试从Scholar链接下载
+        if paper.scholar_link:
+            self.logger.info("尝试从Scholar链接下载...")
+            if self._download_from_scholar(paper):
+                return True
+                
+        # 然后尝试从SciHub下载
+        if paper.DOI:
+            self.logger.info("尝试从SciHub下载...")
+            if self._download_from_scihub(paper):
+                return True
+                
+        self.logger.error(f"所有下载尝试均失败: {paper.title}")
+        return False
+    
+    def _download_from_scholar(self, paper: Paper) -> bool:
+        """从Scholar链接下载"""
         try:
-            print("Trying with {}...".format(l))
-            r = requests.get(l, headers=NetInfo.HEADERS)
-            if r.status_code == 200:
-                NetInfo.SciHub_URL = l
-                break
-        except:
-            pass
-    else:
-        print(
-            "\nNo working Sci-Hub instance found!\nIf in your country Sci-Hub is not available consider using a VPN or a proxy\nYou can use a specific mirror mirror with the --scihub-mirror argument")
-        NetInfo.SciHub_URL = "https://sci-hub.st"
-
-
-def getSaveDir(folder, fname):
-    dir_ = path.join(folder, fname)
-    n = 1
-    while path.exists(dir_):
-        n += 1
-        dir_ = path.join(folder, f"({n}){fname}")
-
-    return dir_
-
-
-def saveFile(file_name, content, paper, dwn_source):
-    f = open(file_name, 'wb')
-    f.write(content)
-    f.close()
-
-    paper.downloaded = True
-    paper.downloadedFrom = dwn_source
-
-
-def downloadPapers(papers, dwnl_dir, num_limit, SciHub_URL=None, SciDB_URL=None):
-
-    NetInfo.SciHub_URL = SciHub_URL
-    if NetInfo.SciHub_URL is None:
-        setSciHubUrl()
-    if SciDB_URL is not None:
-        NetInfo.SciDB_URL = SciDB_URL
-
-    print("\nUsing Sci-Hub mirror {}".format(NetInfo.SciHub_URL))
-    print("Using Sci-DB mirror {}".format(NetInfo.SciDB_URL))
-    print("You can use --scidb-mirror and --scidb-mirror to specify your're desired mirror URL\n")
-
-    num_downloaded = 0
-    paper_number = 1
-    paper_files = []
-    for p in papers:
-        if p.canBeDownloaded() and (num_limit is None or num_downloaded < num_limit):
-            print("Download {} of {} -> {}".format(paper_number, len(papers), p.title))
-            paper_number += 1
-
-            pdf_dir = getSaveDir(dwnl_dir, p.getFileName())
-
-            failed = 0
-            url = ""
-            while not p.downloaded and failed != 5:
-                try:
-                    dwn_source = 1  # 1 scidb - 2 scihub - 3 scholar
-                    if failed == 0 and p.DOI is not None:
-                        url = URLjoin(NetInfo.SciDB_URL, p.DOI)
-                    if failed == 1 and p.DOI is not None:
-                        url = URLjoin(NetInfo.SciHub_URL, p.DOI)
-                        dwn_source = 2
-                    if failed == 2 and p.scholar_link is not None:
-                        url = URLjoin(NetInfo.SciHub_URL, p.scholar_link)
-                    if failed == 3 and p.scholar_link is not None and p.scholar_link[-3:] == "pdf":
-                        url = p.scholar_link
-                        dwn_source = 3
-                    if failed == 4 and p.pdf_link is not None:
-                        url = p.pdf_link
-                        dwn_source = 3
-
-                    if url != "":
-                        r = requests.get(url, headers=NetInfo.HEADERS)
-                        content_type = r.headers.get('content-type')
-
-                        if (dwn_source == 1 or dwn_source == 2) and 'application/pdf' not in content_type and "application/octet-stream" not in content_type:
-                            time.sleep(random.randint(1, 4))
-
-                            pdf_link = getSchiHubPDF(r.text)
-                            if pdf_link is not None:
-                                r = requests.get(pdf_link, headers=NetInfo.HEADERS)
-                                content_type = r.headers.get('content-type')
-
-                        if 'application/pdf' in content_type or "application/octet-stream" in content_type:
-                            paper_files.append(saveFile(pdf_dir, r.content, p, dwn_source))
-                except Exception:
-                    pass
-
-                failed += 1
+            response = requests.get(paper.scholar_link, timeout=30)
+            if response.status_code == 200 and response.headers.get('content-type', '').startswith('application/pdf'):
+                return self._save_pdf(response.content, paper)
+            else:
+                self.logger.warning("Scholar链接不是直接的PDF")
+                return False
+        except Exception as e:
+            self.logger.error(f"从Scholar下载失败: {str(e)}")
+            return False
+    
+    def _download_from_scihub(self, paper: Paper) -> bool:
+        """从SciHub下载"""
+        try:
+            # 构建SciHub URL
+            scihub_url = urljoin(self.scihub_mirror, paper.DOI)
+            self.logger.debug(f"SciHub URL: {scihub_url}")
+            
+            # 获取页面
+            response = requests.get(scihub_url, timeout=30)
+            if response.status_code != 200:
+                self.logger.warning(f"SciHub返回错误状态码: {response.status_code}")
+                return False
+                
+            # 解析PDF链接
+            # TODO: 实现PDF链接提取逻辑
+            pdf_url = None  # 需要从页面中提取
+            
+            if pdf_url:
+                # 下载PDF
+                pdf_response = requests.get(pdf_url, timeout=30)
+                if pdf_response.status_code == 200:
+                    return self._save_pdf(pdf_response.content, paper)
+                    
+            self.logger.warning("无法从SciHub获取PDF链接")
+            return False
+            
+        except Exception as e:
+            self.logger.error(f"从SciHub下载失败: {str(e)}")
+            return False
+    
+    def _save_pdf(self, content: bytes, paper: Paper) -> bool:
+        """保存PDF文件"""
+        try:
+            # 获取文件名
+            filename = paper.getFileName()
+            filepath = os.path.join(self.download_dir, filename)
+            
+            # 保存文件
+            with open(filepath, 'wb') as f:
+                f.write(content)
+                
+            self.logger.info(f"PDF保存成功: {filepath}")
+            paper.downloaded = True
+            return True
+            
+        except Exception as e:
+            self.logger.error(f"保存PDF失败: {str(e)}")
+            return False

@@ -93,7 +93,8 @@ def setup_logging():
 def init_log_queue():
     """初始化日志队列"""
     if 'log_queue' not in st.session_state:
-        st.session_state.log_queue = deque(maxlen=1000)  # 增加日志容量
+        st.session_state.log_queue = deque(maxlen=1000)
+    return st.session_state.log_queue
 
 def log_message(message, level="info", module="系统"):
     """记录日志消息"""

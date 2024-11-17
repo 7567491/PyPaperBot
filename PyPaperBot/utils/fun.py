@@ -131,12 +131,11 @@ def create_table_data(papers, start_idx=0):
     table_data = []
     for i, paper in enumerate(papers, start_idx + 1):
         row = {
-            "序号": i,
-            "标题": paper.title,
             "作者": paper.authors if paper.authors else "N/A",
             "年份": paper.year if paper.year else "N/A",
-            "DOI": paper.DOI if hasattr(paper, 'DOI') and paper.DOI else "N/A",
-            "引用数": paper.cites_num if hasattr(paper, 'cites_num') else "N/A"
+            "标题": paper.title,
+            "期刊": paper.jurnal if paper.jurnal else "N/A",
+            "元数据数量": getattr(paper, 'metadata_count', 0)
         }
         table_data.append(row)
     return table_data
@@ -144,28 +143,25 @@ def create_table_data(papers, start_idx=0):
 def get_table_column_config():
     """获取表格列配置"""
     return {
-        "序号": st.column_config.NumberColumn(
-            "序号",
+        "作者": st.column_config.TextColumn(
+            "作者",
+            width="large"
+        ),
+        "年份": st.column_config.TextColumn(
+            "年份",
             width="small"
         ),
         "标题": st.column_config.TextColumn(
             "标题",
             width="large"
         ),
-        "作者": st.column_config.TextColumn(
-            "作者",
+        "期刊": st.column_config.TextColumn(
+            "期刊",
             width="medium"
         ),
-        "年份": st.column_config.TextColumn(
-            "年份",
-            width="small"
-        ),
-        "DOI": st.column_config.TextColumn(
-            "DOI",
-            width="medium"
-        ),
-        "引用数": st.column_config.NumberColumn(
-            "引用数",
-            width="small"
+        "元数据数量": st.column_config.NumberColumn(
+            "元数据数量",
+            width="small",
+            help="获取到的有效元数据字段数量"
         )
     } 
