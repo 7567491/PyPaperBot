@@ -202,21 +202,54 @@ class CrossRefConnector:
             
             if exact_match:
                 # 记录精确匹配论文的详细元数据
-                self.logger.info("\n" + "="*50 + "\n精确匹配论文元数据:")
+                self.logger.info("\n" + "="*50)
+                self.logger.info("找到精确匹配的论文，详细元数据如下：")
+                self.logger.info("-"*50)
                 
                 # 基础书目信息
+                self.logger.info("【基础书目信息】")
                 self.log_metadata("标题", exact_match.get("title", [None])[0])
                 self.log_metadata("DOI", exact_match.get("DOI"))
                 self.log_metadata("作者", self._format_authors(exact_match.get("author", [])))
-                self.log_metadata("出版日期(印刷)", self._format_date(exact_match.get("published-print")))
-                self.log_metadata("出版日期(在线)", self._format_date(exact_match.get("published-online")))
                 self.log_metadata("期刊", exact_match.get("container-title", [None])[0])
                 self.log_metadata("卷号", exact_match.get("volume"))
                 self.log_metadata("期号", exact_match.get("issue"))
                 self.log_metadata("页码", exact_match.get("page"))
+                
+                # 出版信息
+                self.logger.info("\n【出版信息】")
+                self.log_metadata("出版日期(印刷)", self._format_date(exact_match.get("published-print")))
+                self.log_metadata("出版日期(在线)", self._format_date(exact_match.get("published-online")))
                 self.log_metadata("出版商", exact_match.get("publisher"))
-                self.log_metadata("类型", exact_match.get("type"))
+                self.log_metadata("出版类型", exact_match.get("type"))
+                self.log_metadata("ISSN", exact_match.get("ISSN"))
+                self.log_metadata("语言", exact_match.get("language"))
+                
+                # 引用信息
+                self.logger.info("\n【引用信息】")
+                self.log_metadata("引用次数", exact_match.get("is-referenced-by-count"))
+                self.log_metadata("参考文献数", exact_match.get("references-count"))
+                
+                # 访问信息
+                self.logger.info("\n【访问信息】")
                 self.log_metadata("URL", exact_match.get("URL"))
+                self.log_metadata("许可证", self._format_licenses(exact_match.get("license", [])))
+                
+                # 其他元数据
+                self.logger.info("\n【其他元数据】")
+                self.log_metadata("摘要", exact_match.get("abstract"))
+                self.log_metadata("关键词", exact_match.get("subject"))
+                self.log_metadata("资助信息", self._format_funders(exact_match.get("funder", [])))
+                
+                # 统计元数据完整性
+                valid_fields = sum(1 for v in exact_match.values() if v is not None and v != [] and v != "")
+                total_fields = len(exact_match)
+                self.logger.info("\n【元数据统计】")
+                self.logger.info(f"有效字段数: {valid_fields}")
+                self.logger.info(f"总字段数: {total_fields}")
+                self.logger.info(f"完整度: {(valid_fields/total_fields)*100:.2f}%")
+                
+                self.logger.info("="*50)
                 
                 # 创建Paper对象
                 paper = Paper(
@@ -226,8 +259,8 @@ class CrossRefConnector:
                 )
                 paper.jurnal = exact_match.get("container-title", [None])[0]
                 paper.DOI = exact_match.get("DOI")
+                paper.metadata_count = valid_fields
                 
-                self.logger.info("="*50)
                 return [paper]  # 返回精确匹配的论文
                 
             else:

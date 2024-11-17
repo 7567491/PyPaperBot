@@ -1,0 +1,136 @@
+数据库表结构说明
+
+-- 1. Scholar搜索结果表
+CREATE TABLE scholar_papers (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    authors TEXT,
+    year TEXT,
+    doi TEXT,
+    scholar_link TEXT,
+    citations_count INTEGER,
+    scholar_id TEXT,
+    search_query TEXT,
+    search_timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+    raw_data TEXT,  -- 存储原始JSON数据
+    download_status INTEGER DEFAULT 0,  -- 0:未处理 1:已验证 2:已下载
+    UNIQUE(doi) ON CONFLICT REPLACE
+);
+
+-- 2. CrossRef验证结果表
+CREATE TABLE crossref_papers (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    doi TEXT UNIQUE NOT NULL,
+    title TEXT NOT NULL,
+    authors TEXT,
+    year TEXT,
+    journal TEXT,
+    volume TEXT,
+    issue TEXT,
+    pages TEXT,
+    publisher TEXT,
+    published_print_date TEXT,
+    published_online_date TEXT,
+    issn TEXT,
+    language TEXT,
+    type TEXT,
+    abstract TEXT,
+    references_count INTEGER,
+    is_referenced_by_count INTEGER,
+    url TEXT,
+    license TEXT,
+    subjects TEXT,  -- 关键词/主题，JSON数组
+    funders TEXT,  -- 资助信息，JSON数组
+    metadata_score INTEGER,  -- 元数据完整度评分
+    verification_timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+    raw_metadata TEXT,  -- 存储原始JSON元数据
+    UNIQUE(doi) ON CONFLICT REPLACE
+);
+
+-- 3. 验证匹配的论文表
+CREATE TABLE verified_papers (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    doi TEXT UNIQUE NOT NULL,
+    scholar_id INTEGER,
+    crossref_id INTEGER,
+    title TEXT NOT NULL,
+    authors TEXT,
+    year TEXT,
+    journal TEXT,
+    citations_count INTEGER,
+    url TEXT,
+    verification_status INTEGER DEFAULT 0,  -- 0:待验证 1:完全匹配 2:部分匹配 3:不匹配
+    match_score FLOAT,  -- 匹配度评分
+    verification_timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (scholar_id) REFERENCES scholar_papers(id),
+    FOREIGN KEY (crossref_id) REFERENCES crossref_papers(id),
+    UNIQUE(doi) ON CONFLICT REPLACE
+);
+
+-- 4. 论文全文表
+CREATE TABLE paper_fulltext (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    doi TEXT UNIQUE NOT NULL,
+    file_path TEXT,  -- 本地文件路径
+    file_size INTEGER,
+    file_hash TEXT,  -- 文件MD5哈希
+    content_type TEXT,  -- 文件类型(PDF/其他)
+    download_source TEXT,  -- 下载来源(Scholar/SciHub/SciDB)
+    download_timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+    download_status INTEGER DEFAULT 0,  -- 0:未下载 1:下载成功 2:下载失败
+    error_message TEXT,  -- 下载失败原因
+    retry_count INTEGER DEFAULT 0,  -- 重试次数
+    pdf_data BLOB,  -- PDF文件二进制数据
+    FOREIGN KEY (doi) REFERENCES verified_papers(doi),
+    UNIQUE(doi) ON CONFLICT REPLACE
+);
+
+-- 创建索引以提高查询性能
+CREATE INDEX idx_scholar_doi ON scholar_papers(doi);
+CREATE INDEX idx_scholar_title ON scholar_papers(title);
+CREATE INDEX idx_crossref_doi ON crossref_papers(doi);
+CREATE INDEX idx_crossref_title ON crossref_papers(title);
+CREATE INDEX idx_verified_doi ON verified_papers(doi);
+CREATE INDEX idx_fulltext_doi ON paper_fulltext(doi);
+
+这些数据库管理模块的功能：
+db_main.py: 主要的数据库管理界面
+提供了6个标签页的数据库管理功能
+显示数据库基本统计信息（各表记录数）
+管理数据库连接和初始化
+db_init.py: 数据库初始化功能
+创建所有必要的数据表
+创建索引以提高查询性能
+设置外键关系
+db_backup.py: 数据库备份与恢复
+创建数据库备份（带时间戳）
+从备份文件恢复数据库
+管理备份文件
+db_scholar.py: Scholar论文查询
+搜索条件：标题、作者、年份范围
+显示字段：标题、作者、年份、DOI、引用数等
+支持导出到Excel
+db_crossref.py: CrossRef论文查询
+搜索条件：标题、作者、年份、期刊、元数据数量
+显示更多元数据字段：出版商、语言、类型等
+支持导出到Excel
+db_verified.py: 验证论文查询
+搜索条件：标题、作者、年份、验证状态、匹配度
+显示验证结果：验证状态、匹配分数等
+关联显示Scholar和CrossRef的信息
+7. db_fulltext.py: 已下载论文全文管理
+搜索条件：标题、作者、年份、下载状态、来源
+显示下载信息：文件路径、大小、类型等
+支持批量操作：重试下载、清理无效文件
+每个模块都包含：
+1. 搜索条件界面
+SQL查询构建
+数据格式化和显示
+导出功能
+错误处理
+日志记录
+这样用户可以方便地：
+1. 查看和管理所有已收集的论文数据
+跟踪论文验证和下载状态
+3. 导出数据进行进一步分析
+维护数据库的完整性

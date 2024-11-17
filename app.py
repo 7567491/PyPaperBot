@@ -12,6 +12,8 @@ from PyPaperBot.utils.fun import (
 )
 from PyPaperBot.CrossRefConnector import CrossRefConnector
 from collections import deque
+from PyPaperBot.utils.cross import CrossValidator
+from db.db_main import render_database_management
 
 # 设置页面配置
 st.set_page_config(
@@ -58,7 +60,7 @@ with main_area:
     
     # 主内容区域
     if st.session_state.current_function == "论文搜索功能":
-        tabs = st.tabs(["Google Scholar搜索", "CrossRef查询", "DOI搜索"])
+        tabs = st.tabs(["Google Scholar搜索", "CrossRef查询", "验证论文"])
         
         with tabs[0]:  # Google Scholar搜索
             st.subheader("Google Scholar搜索")
@@ -209,62 +211,78 @@ with main_area:
                         papers = crossref.search_with_filters(**search_params)
                         
                         if papers:
-                            # 过滤年份
-                            if year_query:
-                                papers = [p for p in papers if p.year and int(p.year) >= int(year_query)]
-                            
-                            # 限制结果数量
-                            papers = papers[:max_results]
-                            
-                            log_message(f"找到 {len(papers)} 篇论文", "success", "CrossRef")
-                            
-                            # 创建表格数据
-                            table_data = create_table_data(papers)
-                            
-                            # 显示表格
-                            if table_data:
-                                st.data_editor(
-                                    table_data,
-                                    column_config=get_table_column_config(),
-                                    disabled=True,
-                                    hide_index=True
-                                )
+                            if len(papers) == 1 and papers[0].title.lower() == title_query.lower():
+                                # 精确匹配的情况，使用清单模式显示
+                                st.success("找到精确匹配的论文")
+                                paper = papers[0]
                                 
-                                # 显示结果数量
-                                st.markdown(f"共找到 {len(papers)} 篇论文")
+                                # 使用列表显示详细元数据
+                                st.markdown("### 论文详细信息")
                                 
-                                # 添加下载选择和按钮
-                                st.markdown("### 下载选项")
+                                # 基础书目信息
+                                st.markdown("#### 基础书目信息")
+                                col1, col2 = st.columns(2)
+                                with col1:
+                                    st.markdown(f"**标题：** {paper.title}")
+                                    st.markdown(f"**作者：** {paper.authors}")
+                                    st.markdown(f"**DOI：** {paper.DOI if paper.DOI else 'N/A'}")
+                                with col2:
+                                    st.markdown(f"**年份：** {paper.year if paper.year else 'N/A'}")
+                                    st.markdown(f"**期刊：** {paper.jurnal if paper.jurnal else 'N/A'}")
+                                    st.markdown(f"**元数据完整度：** {paper.metadata_count} 个有效字段")
                                 
-                                # 找出默认论文（第一篇，因为CrossRef没有引用数）
-                                default_paper = papers[0] if papers else None
-                                
-                                # 创建多选框
-                                selected_papers = st.multiselect(
-                                    "选择要下载的论文",
-                                    options=papers,
-                                    default=[default_paper] if default_paper else None,
-                                    format_func=lambda x: (
-                                        f"{x.title} "
-                                        f"({x.year if x.year else 'N/A'}) "
-                                        f"[DOI: {x.DOI if hasattr(x, 'DOI') else 'N/A'}]"
-                                    ),
-                                    help="可以选择多篇论文一起下载"
-                                )
-                                
-                                # 下载按钮和选择信息显示
-                                col1, col2 = st.columns([1, 4])
-                                if col1.button("下载选中论文", 
-                                             disabled=len(selected_papers) == 0,
-                                             key="crossref_download"):
-                                    handle_download(selected_papers, "downloads")
-                                
-                                # 显示选中数量
-                                if selected_papers:
-                                    col2.markdown(f"已选择 {len(selected_papers)} 篇论文")
+                                # 添加下载按钮
+                                if st.button("下载此论文"):
+                                    handle_download([paper], "downloads")
+                                    
                             else:
-                                st.info("没有找到符合条件的论文")
+                                # 相关匹配的情况，使用表格模式显示
+                                st.info(f"未找到精确匹配，显示 {len(papers)} 篇相关论文")
                                 
+                                # 创建表格数据
+                                table_data = create_table_data(papers)
+                                
+                                # 显示表格
+                                if table_data:
+                                    st.data_editor(
+                                        table_data,
+                                        column_config=get_table_column_config(),
+                                        disabled=True,
+                                        hide_index=True
+                                    )
+                                    
+                                    # 显示结果数量
+                                    st.markdown(f"共找到 {len(papers)} 篇论文")
+                                    
+                                    # 添加下载选择和按钮
+                                    st.markdown("### 下载选项")
+                                    
+                                    # 找出默认论文（第一篇）
+                                    default_paper = papers[0] if papers else None
+                                    
+                                    # 创建多选框
+                                    selected_papers = st.multiselect(
+                                        "选择要下载的论文",
+                                        options=papers,
+                                        default=[default_paper] if default_paper else None,
+                                        format_func=lambda x: (
+                                            f"{x.title} "
+                                            f"({x.year if x.year else 'N/A'}) "
+                                            f"[DOI: {x.DOI if hasattr(x, 'DOI') else 'N/A'}]"
+                                        ),
+                                        help="可以选择多篇论文一起下载"
+                                    )
+                                    
+                                    # 下载按钮和选择信息显示
+                                    col1, col2 = st.columns([1, 4])
+                                    if col1.button("下载选中论文", 
+                                                 disabled=len(selected_papers) == 0,
+                                                 key="crossref_download"):
+                                        handle_download(selected_papers, "downloads")
+                                    
+                                    # 显示选中数量
+                                    if selected_papers:
+                                        col2.markdown(f"已选择 {len(selected_papers)} 篇论文")
                         else:
                             st.warning("未找到任何结果")
                             log_message("CrossRef搜索未返回结果", "warning", "CrossRef")
@@ -273,6 +291,98 @@ with main_area:
                         error_msg = f"CrossRef搜索出错: {str(e)}"
                         st.error(error_msg)
                         log_message(error_msg, "error", "CrossRef")
+
+        with tabs[2]:  # 验证论文
+            st.subheader("论文验证")
+            
+            # 搜索输入
+            query = st.text_input(
+                "输入搜索关键词",
+                value="Digital Workplace",
+                help="输入要搜索和验证的论文关键词"
+            )
+            
+            # 搜索选项
+            col1, col2 = st.columns(2)
+            with col1:
+                max_results = st.number_input(
+                    "最大结果数",
+                    min_value=1,
+                    max_value=50,
+                    value=10,
+                    help="Scholar搜索返回的最大结果数"
+                )
+            with col2:
+                min_year = st.number_input(
+                    "最早发表年份",
+                    min_value=1900,
+                    max_value=2024,
+                    value=2000,
+                    key="validate_min_year"
+                )
+            
+            if st.button("开始验证", key="validate_search"):
+                try:
+                    validator = CrossValidator()
+                    result = validator.validate_papers(query, max_results, min_year)
+                    
+                    if result['success']:
+                        # 首先显示Scholar搜索结果
+                        st.subheader("Google Scholar搜索结果")
+                        scholar_table = create_table_data(result['scholar_papers'])
+                        st.data_editor(
+                            scholar_table,
+                            column_config=get_table_column_config(),
+                            disabled=True,
+                            hide_index=True
+                        )
+                        
+                        # 显示验证结果
+                        st.subheader("CrossRef验证结果")
+                        validated_table = validator.create_validation_table(result['validated_papers'])
+                        st.data_editor(
+                            validated_table,
+                            column_config=validator.get_table_column_config(),
+                            disabled=True,
+                            hide_index=True
+                        )
+                        
+                        # 显示��证统计
+                        st.success(result['message'])
+                        
+                        # 添加下载选项
+                        validated_papers = [p for p in result['validated_papers'] if p.validated]
+                        if validated_papers:
+                            st.markdown("### 下载选项")
+                            selected_papers = st.multiselect(
+                                "选择要下载的论文",
+                                options=validated_papers,
+                                format_func=lambda x: f"{x.title} ({x.year if x.year else 'N/A'})",
+                                help="只显示已通过验证的论文"
+                            )
+                            
+                            if st.button("下载选中论文", disabled=len(selected_papers) == 0):
+                                handle_download(selected_papers, "downloads")
+                    else:
+                        st.error(result['message'])
+                        
+                except Exception as e:
+                    error_msg = f"验证过程发生错误: {str(e)}"
+                    st.error(error_msg)
+                    log_message(error_msg, "error", "验证")
+
+    elif st.session_state.current_function == "论文下载功能":
+        # [保持原有的论文下载功能代码不变...]
+        
+    elif st.session_state.current_function == "论文过滤功能":
+        # [保持原有的论文过滤功能代码不变...]
+        
+    elif st.session_state.current_function == "论文数据管理":
+        # 调用数据库管理功能
+        render_database_management()
+        
+    elif st.session_state.current_function == "配置管理":
+        # [保持原有的配置管理功能代码不变...]
 
 # 右侧日志面板
 with right_sidebar:
