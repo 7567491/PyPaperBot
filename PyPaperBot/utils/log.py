@@ -5,6 +5,16 @@ from collections import deque
 import streamlit as st
 import traceback
 
+# 在文件开头添加颜色常量
+TERMINAL_COLORS = {
+    'DEBUG': '\033[90m',     # 灰色
+    'INFO': '\033[0m',       # 默认白色
+    'WARNING': '\033[93m',   # 黄色
+    'ERROR': '\033[91m',     # 红色
+    'CRITICAL': '\033[91m',  # 红色
+    'RESET': '\033[0m'       # 重置颜色
+}
+
 class StreamlitHandler(logging.Handler):
     def emit(self, record):
         try:
@@ -35,11 +45,15 @@ class StreamlitHandler(logging.Handler):
             }
             level = level_map.get(level_name, 'info')
             
+            # 添加带颜色的终端输出
+            color = TERMINAL_COLORS.get(level_name, TERMINAL_COLORS['INFO'])
+            print(f"{color}{log_entry}{TERMINAL_COLORS['RESET']}")
+            
             # 记录日志
             log_message(message, level, module_name)
             
         except Exception as e:
-            print(f"日志处理错误: {str(e)}")
+            print(f"{TERMINAL_COLORS['ERROR']}日志处理错误: {str(e)}{TERMINAL_COLORS['RESET']}")
 
 class FileHandler(logging.FileHandler):
     def __init__(self, filename, mode='a', encoding='utf-8'):

@@ -152,16 +152,18 @@ with main_area:
         
         # 初始化 session_state，默认显示论文搜索功能
         if 'current_function' not in st.session_state:
-            st.session_state.current_function = "论文搜索功能"  # 设置默认值
+            st.session_state.current_function = "论文搜索功能"
         
         # 左侧边栏按钮
         if st.button("论文搜索功能"):
             st.session_state.current_function = "论文搜索功能"
+        if st.button("论文查看"):
+            st.session_state.current_function = "论文查看"
         if st.button("单个论文下载"):
             st.session_state.current_function = "单个论文下载"
         if st.button("论文批量下载"):
             st.session_state.current_function = "论文批量下载"
-        if st.button("论文据管理"):
+        if st.button("论文数据管理"):
             st.session_state.current_function = "论文数据管理"
         if st.button("配置管理"):
             st.session_state.current_function = "配置管理"
@@ -243,7 +245,7 @@ with main_area:
                             # 显示分页信息
                             st.markdown(f"显示第 {start_idx + 1} 到 {end_idx} 条，共 {len(papers)} 条")
                             
-                            # 直接��储到数据库
+                            # 直接储到数据库
                             try:
                                 status_area = st.empty()
                                 status_area.info("正在保存到数据库...")
@@ -329,7 +331,7 @@ with main_area:
                             progress_bar.progress(0.3)
                             progress_text.text("正在连接CrossRef...")
                             
-                            # ���建CrossRef连接器实例
+                            # 建CrossRef连接器实例
                             crossref = CrossRefConnector()
                             log_message(f"开始CrossRef搜索，标题: {title_query}", "info", "CrossRef")
                             
@@ -434,7 +436,7 @@ with main_area:
                                             
                                             # 保存论文
                                             if save_crossref_papers(conn, papers):
-                                                status_area.success(f"成��保存 {len(papers)} 篇论文到数据库")
+                                                status_area.success(f"成功保存 {len(papers)} 篇论文到数据库")
                                                 log_message(f"成功保存 {len(papers)} 篇CrossRef论文", "success", "数据库")
                                             conn.close()
                                             

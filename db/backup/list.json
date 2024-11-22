@@ -1,24 +1,24 @@
 {
   "main_db": {
     "file_info": {
-      "size": "0.20 MB",
-      "modified": "2024-11-17 15:36:45"
+      "size": "0.21 MB",
+      "modified": "2024-11-17 21:37:20"
     },
     "tables": {
       "scholar_papers": {
         "description": "搜索论文",
-        "count": 126,
-        "latest": "2024-11-17 07:36:45"
+        "count": 128,
+        "latest": "2024-11-17 13:37:20"
       },
       "crossref_papers": {
         "description": "CrossRef论文",
-        "count": 1,
-        "latest": "2024-11-17 06:21:33"
+        "count": 6,
+        "latest": "2024-11-17 13:33:04"
       },
       "verified_papers": {
         "description": "验证论文",
-        "count": 96,
-        "latest": "2024-11-17 07:36:45"
+        "count": 98,
+        "latest": "2024-11-17 13:37:20"
       },
       "paper_fulltext": {
         "description": "全文下载",
@@ -31,7 +31,7 @@
     "paper-20241117-143505.db": {
       "file_info": {
         "size": "0.09 MB",
-        "modified": "2024-11-17 14:21:33"
+        "modified": "2024-11-17 21:31:57"
       },
       "tables": {
         "scholar_papers": {
@@ -59,7 +59,7 @@
     "paper-20241117-152618.db": {
       "file_info": {
         "size": "0.18 MB",
-        "modified": "2024-11-17 14:50:32"
+        "modified": "2024-11-17 21:31:57"
       },
       "tables": {
         "scholar_papers": {
@@ -87,7 +87,7 @@
     "paper-20241117-153731.db": {
       "file_info": {
         "size": "0.20 MB",
-        "modified": "2024-11-17 15:36:45"
+        "modified": "2024-11-17 21:31:57"
       },
       "tables": {
         "scholar_papers": {
@@ -112,10 +112,66 @@
         }
       }
     },
+    "paper-20241117-153811.db": {
+      "file_info": {
+        "size": "0.20 MB",
+        "modified": "2024-11-17 21:31:57"
+      },
+      "tables": {
+        "scholar_papers": {
+          "description": "搜索论文",
+          "count": 126,
+          "latest": "2024-11-17 07:36:45"
+        },
+        "crossref_papers": {
+          "description": "CrossRef论文",
+          "count": 1,
+          "latest": "2024-11-17 06:21:33"
+        },
+        "verified_papers": {
+          "description": "验证论文",
+          "count": 96,
+          "latest": "2024-11-17 07:36:45"
+        },
+        "paper_fulltext": {
+          "description": "全文下载",
+          "count": 0,
+          "latest": "N/A"
+        }
+      }
+    },
+    "paper-20241117-213813.db": {
+      "file_info": {
+        "size": "0.21 MB",
+        "modified": "2024-11-17 21:37:20"
+      },
+      "tables": {
+        "scholar_papers": {
+          "description": "搜索论文",
+          "count": 128,
+          "latest": "2024-11-17 13:37:20"
+        },
+        "crossref_papers": {
+          "description": "CrossRef论文",
+          "count": 6,
+          "latest": "2024-11-17 13:33:04"
+        },
+        "verified_papers": {
+          "description": "验证论文",
+          "count": 98,
+          "latest": "2024-11-17 13:37:20"
+        },
+        "paper_fulltext": {
+          "description": "全文下载",
+          "count": 0,
+          "latest": "N/A"
+        }
+      }
+    },
     "paper_db_backup_20241117_113947.db": {
       "file_info": {
         "size": "0.06 MB",
-        "modified": "2024-11-17 10:34:35"
+        "modified": "2024-11-17 21:31:57"
       },
       "tables": {
         "scholar_papers": {
