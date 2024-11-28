@@ -131,3 +131,9 @@ dmypy.json
 #Visual studio settings
 .vs
 .vscode
+
+# 忽略PDF文件目录
+/pdf/
+
+# 忽略Excel文件目录
+/excel/
