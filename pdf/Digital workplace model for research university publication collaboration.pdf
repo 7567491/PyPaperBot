@@ -1,0 +1,372 @@
+	
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Digital Workplace Model for Research University Publication Collaboration | Bakar | International Journal of Human and Technology Interaction (IJHaTI)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Digital Workplace Model for Research University Publication Collaboration" />
+	
+	
+	<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+
+	<meta name="DC.Contributor.Sponsor" xml:lang="en" content="UNIVERSITI TEKNOLOGI MALAYSIA"/>
+	<meta name="DC.Creator.PersonalName" content="N.A.A. Bakar"/>
+	<meta name="DC.Creator.PersonalName" content="S. Ya&#039;acob"/>
+	<meta name="DC.Creator.PersonalName" content="N.H. Hassan"/>
+	<meta name="DC.Date.created" scheme="ISO8601" content="2018-10-25"/>
+	<meta name="DC.Date.dateSubmitted" scheme="ISO8601" content="2018-09-02"/>
+	<meta name="DC.Date.issued" scheme="ISO8601" content="2018-10-25"/>
+	<meta name="DC.Date.modified" scheme="ISO8601" content="2018-10-25"/>
+	<meta name="DC.Description" xml:lang="en" content="Digital Workplace is a virtual equivalent to the modern version of traditional workplace where an employee can work anywhere by using any devices, browsing files and sharing knowledge.  Meanwhile, MyRa is commonly known as Malaysia Research Assessment tool for measuring research performance indicator in public university.  The MyRA instrument is used to engage the research development and innovation activities which outcomes is categorized into six levels, with ‘six stars’ being the highest and one star the lowest.  In order to achieve MyRA objective, research university boosts the research publications from academicians.  However, from all submission, not all publication papers are achieved a high standard, which causes low rating stars. The absence of working digital repository for research publication is among challenge face by most academicians in searching for research paper collections as a reference.  Besides that, they unable to keep in touch with the author of a research paper on getting advice and feedback for their working documents.  Thus, this study aims to propose a digital workplace model focusing on research publication Digital Workplace.  Initial findings highlights, there five main dimensions associated with establishing this model which are communication, environment, strategy, collaboration and community."/>
+	<meta name="DC.Format" scheme="IMT" content="application/pdf"/>
+	<meta name="DC.Identifier" content="4621"/>
+	<meta name="DC.Identifier.pageNumber" content="91-102"/>
+	<meta name="DC.Identifier.URI" content="https://journal.utem.edu.my/index.php/ijhati/article/view/4621"/>
+	<meta name="DC.Language" scheme="ISO639-1" content="en"/>
+	<meta name="DC.Rights" content=" The articles may be used for research, teaching, and private study purposes. Any substantial or systematic reproduction, redistribution, reselling, loan, sub-licensing, systematic supply, or distribution in any form to anyone is expressly forbidden. Authors alone are responsible for the contents of their articles. The journal owns the copyright of the articles. However, within the framework of  Creative Commons (CC) copyright license , authors can use their published works in non-profit environments and share them on their own platforms on the internet. The publisher shall not be liable for any loss, actions, claims, proceedings, demand, or costs or damages whatsoever or howsoever caused arising directly or indirectly in connection with or arising out of the use of the research material. All authors are requested to disclose any actual or potential conflict of interest including any financial, personal or other relationships with other people or organizations regarding the submitted work.  The author (s) guarantees that the submitted article is his/her/their original research. All authors participating in this study assumed public responsibility and confirmed that the article was not submitted for another journal. All the articles in the article do not violate the existing copyright rules and intellectual property rights of any person or organization. The article meets the ethical standards applicable to the research discipline.  The authors cannot withdraw the article they have uploaded to IJHaTI journal and upload it to another journal without the approval of the journal editor.  Authors are responsible for obtaining written permission to include any images or artwork for which they do not hold copyright in their articles, or to adapt any such images or artwork for inclusion in their articles. The copyright "/>
+	<meta name="DC.Source" content="International Journal of Human and Technology Interaction (IJHaTI)"/>
+	<meta name="DC.Source.ISSN" content="2600-8122"/>
+	<meta name="DC.Source.Issue" content="2"/>	<meta name="DC.Source.URI" content="https://journal.utem.edu.my/index.php/ijhati"/>
+	<meta name="DC.Source.Volume" content="2"/>	<meta name="DC.Title" content="Digital Workplace Model for Research University Publication Collaboration"/>
+		<meta name="DC.Type" content="Text.Serial.Journal"/>
+	<meta name="DC.Type.articleType" content="Humanities and Technology"/>
+		<meta name="gs_meta_revision" content="1.1" />
+	<meta name="citation_journal_title" content="International Journal of Human and Technology Interaction (IJHaTI)"/>
+	<meta name="citation_issn" content="2600-8122"/>
+        <meta name="citation_author" content="N.A.A. Bakar"/>
+        <meta name="citation_author_institution" content="UNIVERSITI TEKNOLOGI MALAYSIA"/>
+        <meta name="citation_author" content="S. Ya&#039;acob"/>
+        <meta name="citation_author_institution" content="UNIVERSITI TEKNOLOGI MALAYSIA"/>
+        <meta name="citation_author" content="N.H. Hassan"/>
+        <meta name="citation_author_institution" content="UNIVERSITI TEKNOLOGI MALAYSIA"/>
+<meta name="citation_title" content="Digital Workplace Model for Research University Publication Collaboration"/>
+
+	<meta name="citation_date" content="2018/10/25"/>
+
+	<meta name="citation_volume" content="2"/>
+	<meta name="citation_issue" content="2"/>
+
+	<meta name="citation_firstpage" content="91-102"/>
+	<meta name="citation_abstract_html_url" content="https://journal.utem.edu.my/index.php/ijhati/article/view/4621"/>
+	<meta name="citation_language" content="en"/>
+						<meta name="citation_pdf_url" content="https://journal.utem.edu.my/index.php/ijhati/article/download/4621/3488"/>
+				
+
+	<link rel="stylesheet" href="https://journal.utem.edu.my/lib/pkp/styles/pkp.css" type="text/css" />
+	<link rel="stylesheet" href="https://journal.utem.edu.my/lib/pkp/styles/common.css" type="text/css" />
+	<link rel="stylesheet" href="https://journal.utem.edu.my/styles/common.css" type="text/css" />
+	<link rel="stylesheet" href="https://journal.utem.edu.my/styles/compiled.css" type="text/css" />
+	<link rel="stylesheet" href="https://journal.utem.edu.my/styles/articleView.css" type="text/css" />
+	
+	
+	
+	<link rel="stylesheet" href="https://journal.utem.edu.my/styles/sidebar.css" type="text/css" />		<link rel="stylesheet" href="https://journal.utem.edu.my/styles/rightSidebar.css" type="text/css" />	
+	
+	<!-- Base Jquery -->
+	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+	<script type="text/javascript">
+		// Provide a local fallback if the CDN cannot be reached
+		if (typeof google == 'undefined') {
+			document.write(unescape("%3Cscript src='https://journal.utem.edu.my/lib/pkp/js/lib/jquery/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
+			document.write(unescape("%3Cscript src='https://journal.utem.edu.my/lib/pkp/js/lib/jquery/plugins/jqueryUi.min.js' type='text/javascript'%3E%3C/script%3E"));
+		} else {
+			google.load("jquery", "1.4.4");
+			google.load("jqueryui", "1.8.6");
+		}
+	</script>
+	
+	<script type="text/javascript">
+		$(function(){
+			fontSize("#sizer", "body", 9, 16, 32, ""); // Initialize the font sizer
+		});
+	</script>
+
+	<!-- Compiled scripts -->
+			
+<script type="text/javascript" src="https://journal.utem.edu.my/lib/pkp/js/lib/jquery/plugins/jquery.tag-it.js"></script>
+<script type="text/javascript" src="https://journal.utem.edu.my/lib/pkp/js/lib/jquery/plugins/jquery.cookie.js"></script>
+
+<script type="text/javascript" src="https://journal.utem.edu.my/lib/pkp/js/functions/fontController.js"></script>
+<script type="text/javascript" src="https://journal.utem.edu.my/lib/pkp/js/functions/general.js"></script>
+<script type="text/javascript" src="https://journal.utem.edu.my/lib/pkp/js/functions/jqueryValidatorI18n.js"></script>
+
+<script type="text/javascript" src="https://journal.utem.edu.my/lib/pkp/js/classes/Helper.js"></script>
+<script type="text/javascript" src="https://journal.utem.edu.my/lib/pkp/js/classes/ObjectProxy.js"></script>
+<script type="text/javascript" src="https://journal.utem.edu.my/lib/pkp/js/classes/Handler.js"></script>
+<script type="text/javascript" src="https://journal.utem.edu.my/lib/pkp/js/classes/linkAction/LinkActionRequest.js"></script>
+<script type="text/javascript" src="https://journal.utem.edu.my/lib/pkp/js/classes/features/Feature.js"></script>
+
+<script type="text/javascript" src="https://journal.utem.edu.my/lib/pkp/js/controllers/SiteHandler.js"></script><!-- Included only for namespace definition -->
+<script type="text/javascript" src="https://journal.utem.edu.my/lib/pkp/js/controllers/UrlInDivHandler.js"></script>
+<script type="text/javascript" src="https://journal.utem.edu.my/lib/pkp/js/controllers/AutocompleteHandler.js"></script>
+<script type="text/javascript" src="https://journal.utem.edu.my/lib/pkp/js/controllers/ExtrasOnDemandHandler.js"></script>
+<script type="text/javascript" src="https://journal.utem.edu.my/lib/pkp/js/controllers/form/FormHandler.js"></script>
+<script type="text/javascript" src="https://journal.utem.edu.my/lib/pkp/js/controllers/form/AjaxFormHandler.js"></script>
+<script type="text/javascript" src="https://journal.utem.edu.my/lib/pkp/js/controllers/form/ClientFormHandler.js"></script>
+<script type="text/javascript" src="https://journal.utem.edu.my/lib/pkp/js/controllers/grid/GridHandler.js"></script>
+<script type="text/javascript" src="https://journal.utem.edu.my/lib/pkp/js/controllers/linkAction/LinkActionHandler.js"></script>
+
+<script type="text/javascript" src="https://journal.utem.edu.my/js/pages/search/SearchFormHandler.js"></script>
+<script type="text/javascript" src="https://journal.utem.edu.my/js/statistics/ReportGeneratorFormHandler.js"></script>
+<script type="text/javascript" src="https://journal.utem.edu.my/plugins/generic/lucene/js/LuceneAutocompleteHandler.js"></script>
+
+<script type="text/javascript" src="https://journal.utem.edu.my/lib/pkp/js/lib/jquery/plugins/jquery.pkp.js"></script>	
+	
+	<script type="text/javascript" src="https://journal.utem.edu.my/js/relatedItems.js"></script>
+	<script type="text/javascript" src="https://journal.utem.edu.my/js/inlinePdf.js"></script>
+	<script type="text/javascript" src="https://journal.utem.edu.my/js/pdfobject.js"></script>
+
+</head>
+<body>
+
+<div id="container">
+
+<div id="header">
+<div id="headerTitle">
+<h1>
+	<img src="https://journal.utem.edu.my/public/journals/10/pageHeaderTitleImage_en_US.png" width="980" height="174" alt="Page Header" />
+</h1>
+</div>
+</div>
+
+<div id="body">
+
+	<div id="sidebar">
+							<div id="rightSidebar">
+				<div class="block" id="sidebarDevelopedBy">
+	<a class="blockTitle" href="http://pkp.sfu.ca/ojs/" id="developedBy">Open Journal Systems</a>
+</div><div class="block" id="sidebarHelp">
+	<a class="blockTitle" href="javascript:openHelp('https://journal.utem.edu.my/index.php/ijhati/help')">Journal Help</a>
+</div><div class="block" id="sidebarUser">
+			<span class="blockTitle">User</span>
+	
+						<form method="post" action="https://journal.utem.edu.my/index.php/ijhati/login/signIn">
+				<table>
+					<tr>
+						<td><label for="sidebar-username">Username</label></td>
+						<td><input type="text" id="sidebar-username" name="username" value="" size="12" maxlength="32" class="textField" /></td>
+					</tr>
+					<tr>
+						<td><label for="sidebar-password">Password</label></td>
+						<td><input type="password" id="sidebar-password" name="password" value="" size="12" maxlength="32" class="textField" /></td>
+					</tr>
+					<tr>
+						<td colspan="2"><input type="checkbox" id="remember" name="remember" value="1" /> <label for="remember">Remember me</label></td>
+					</tr>
+					<tr>
+						<td colspan="2"><input type="submit" value="Login" class="button" /></td>
+					</tr>
+				</table>
+			</form>
+			</div> <div class="block" id="notification">
+	<span class="blockTitle">Notifications</span>
+	<ul>
+					<li><a href="https://journal.utem.edu.my/index.php/ijhati/notification">View</a></li>
+			<li><a href="https://journal.utem.edu.my/index.php/ijhati/notification/subscribeMailList">Subscribe</a></li>
+			</ul>
+</div>
+<div class="block" id="sidebarNavigation">
+	<span class="blockTitle">Journal Content</span>
+
+	<span class="blockSubtitle">Search</span>
+	<form id="simpleSearchForm" method="post" action="https://journal.utem.edu.my/index.php/ijhati/search/search">
+		<table id="simpleSearchInput">
+			<tr>
+				<td>
+													<input type="text" id="simpleQuery" name="simpleQuery" size="15" maxlength="255" value="" class="textField" />
+								</td>
+			</tr>
+			<tr>
+				<td><select id="searchField" name="searchField" size="1" class="selectMenu">
+					<option label="All" value="query">All</option>
+<option label="Authors" value="authors">Authors</option>
+<option label="Title" value="title">Title</option>
+<option label="Abstract" value="abstract">Abstract</option>
+<option label="Index terms" value="indexTerms">Index terms</option>
+<option label="Full Text" value="galleyFullText">Full Text</option>
+
+				</select></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Search" class="button" /></td>
+			</tr>
+		</table>
+	</form>
+
+	<br />
+
+		<span class="blockSubtitle">Browse</span>
+	<ul>
+		<li><a href="https://journal.utem.edu.my/index.php/ijhati/issue/archive">By Issue</a></li>
+		<li><a href="https://journal.utem.edu.my/index.php/ijhati/search/authors">By Author</a></li>
+		<li><a href="https://journal.utem.edu.my/index.php/ijhati/search/titles">By Title</a></li>
+		
+					<li><a href="https://journal.utem.edu.my/index.php/index">Other Journals</a></li>
+			<li><a href="https://journal.utem.edu.my/index.php/index/search/categories">Categories</a></li>			</ul>
+	</div>
+<div class="block" id="sidebarFontSize" style="margin-bottom: 4px;">
+	<span class="blockTitle">Font Size</span>
+	<div id="sizer"></div>
+</div>
+<br />
+<br />
+<br />
+
+<div class="block" id="sidebarInformation">
+	<span class="blockTitle">Information</span>
+	<ul>
+		<li><a href="https://journal.utem.edu.my/index.php/ijhati/information/readers">For Readers</a></li>		<li><a href="https://journal.utem.edu.my/index.php/ijhati/information/authors">For Authors</a></li>		<li><a href="https://journal.utem.edu.my/index.php/ijhati/information/librarians">For Librarians</a></li>	</ul>
+</div>
+
+			</div>
+			</div>
+
+<div id="main">
+
+<div id="navbar">
+	<ul class="menu">
+		<li id="home"><a href="https://journal.utem.edu.my/index.php/ijhati/index">Home</a></li>
+		<li id="about"><a href="https://journal.utem.edu.my/index.php/ijhati/about">About</a></li>
+
+					<li id="login"><a href="https://journal.utem.edu.my/index.php/ijhati/login">Login</a></li>
+										<li id="categories"><a href="https://journal.utem.edu.my/index.php/index/search/categories">Categories</a></li>
+							<li id="search"><a href="https://journal.utem.edu.my/index.php/ijhati/search">Search</a></li>
+		
+					<li id="current"><a href="https://journal.utem.edu.my/index.php/ijhati/issue/current">Current</a></li>
+			<li id="archives"><a href="https://journal.utem.edu.my/index.php/ijhati/issue/archive">Archives</a></li>
+		
+				
+
+									<li class="navItem" id="navItem-0"><a href="https://journal.utem.edu.my/index.php/ijhati/about/editorialPolicies#custom-0">Publication Ethics and Malpractice</a></li>
+												<li class="navItem" id="navItem-1"><a href="https://journal.utem.edu.my/index.php/ijhati/about/editorialPolicies#custom-1">Price Policy</a></li>
+												<li class="navItem" id="navItem-2"><a href="https://journal.utem.edu.my/index.php/ijhati/about/editorialPolicies#custom-3">Indexing</a></li>
+												<li class="navItem" id="navItem-3"><a href="https://journal.utem.edu.my/index.php/ijhati/about/editorialPolicies#custom-1">Privacy Statement</a></li>
+												<li class="navItem" id="navItem-4"><a href="https://journal.utem.edu.my/index.php/ijhati/about/submissions#copyrightNotice">Copyright and Licensing</a></li>
+												<li class="navItem" id="navItem-5"><a href="https://journal.utem.edu.my/index.php/ijhati/about/editorialPolicies#custom-4">Archiving Policy</a></li>
+												<li class="navItem" id="navItem-6"><a href="https://journal.utem.edu.my/index.php/ijhati/pages/view/editorialBoard">Editorial Board</a></li>
+												<li class="navItem" id="navItem-7"><a href="https://journal.utem.edu.my/index.php/ijhati/pages/view/contact">Journal Contact</a></li>
+						</ul>
+</div>
+
+<div id="breadcrumb">
+	<a href="https://journal.utem.edu.my/index.php/ijhati/index" target="_parent">Home</a> &gt;
+	<a href="https://journal.utem.edu.my/index.php/ijhati/issue/view/205" target="_parent">Vol 2, No 2 (2018)</a> &gt;	<a href="https://journal.utem.edu.my/index.php/ijhati/article/view/4621/0" class="current" target="_parent">Bakar</a>
+</div>
+
+<div id="content">
+
+	<div id="topBar">
+					</div>
+		
+	<div id="articleTitle"><h3>Digital Workplace Model for Research University Publication Collaboration</h3></div>
+	<div id="authorString"><em>N.A.A. Bakar, S. Ya&#039;acob, N.H. Hassan</em></div>
+	<br />
+			<div id="articleAbstract">
+		<h4>Abstract</h4>
+		<br />
+		<div>Digital Workplace is a virtual equivalent to the modern version of traditional workplace where an employee can work anywhere by using any devices, browsing files and sharing knowledge.  Meanwhile, MyRa is commonly known as Malaysia Research Assessment tool for measuring research performance indicator in public university.  The MyRA instrument is used to engage the research development and innovation activities which outcomes is categorized into six levels, with ‘six stars’ being the highest and one star the lowest.  In order to achieve MyRA objective, research university boosts the research publications from academicians.  However, from all submission, not all publication papers are achieved a high standard, which causes low rating stars. The absence of working digital repository for research publication is among challenge face by most academicians in searching for research paper collections as a reference.  Besides that, they unable to keep in touch with the author of a research paper on getting advice and feedback for their working documents.  Thus, this study aims to propose a digital workplace model focusing on research publication Digital Workplace.  Initial findings highlights, there five main dimensions associated with establishing this model which are communication, environment, strategy, collaboration and community.</div>
+		<br />
+		</div>
+	
+	
+				
+			<div id="articleFullText">
+		<h4>Full Text:</h4>
+									<a href="https://journal.utem.edu.my/index.php/ijhati/article/view/4621/3488" class="file" target="_parent">PDF</a>
+														</div>
+	
+			<div id="articleCitations">
+		<h4>References</h4>
+		<br />
+		<div>
+							<p>A. D. Benson, S. D. Johnson, and K. P. Kuchinke, "The use of technology in the digital workplace: A framework for human resource development," Advances in Developing Human Resources, vol. 4, pp. 392-404, 2002.</p>
+							<p>Citrix, "Maximize the value of the new digital workplace," 2016.</p>
+							<p>A. Colbert, N. Yee, and G. George, "The digital workforce and the workplace of the future," Academy of Management Journal, vol. 59, pp. 731-739, 2016.</p>
+							<p>M. K. M. Dahlan, N. Abdullah, and A. I. H. Suhaimi, "A Study on Supporting Factors of Digital Workplace Diffusion in Public Sector," in International Conference on User Science and Engineering, 2018, pp. 327-335.</p>
+							<p>C. Dahmen, F. Wöllecke, and C. Constantinescu, "Challenges and Possible Solutions for Enhancing the Workplaces of the Future by Integrating Smart and Adaptive Exoskeletons," Procedia CIRP, vol. 67, pp. 268-273, 2018.</p>
+							<p>Deloitte, "The digital workplace: Think, share, do.Transform your employee experience," 2013.</p>
+							<p>Lumesse, "Talent Management for Today's Digital Workplace," 2017.</p>
+							<p>R. K. Mansfield, "Employee Job Satisfaction and Attitudes in Virtual Workplaces," Walden University, 2018.</p>
+							<p>M. Vallicelli, "Smart cities and digital workplace culture in the global European context: Amsterdam, London and Paris," City, Culture and Society, vol. 12, pp. 25-34, 2018.</p>
+							<p>M. White, "Digital workplaces: Vision and reality," Business information review, vol. 29, pp. 205-214, 2012.</p>
+							<p>S. E. Collaboration, "Joint Work and Information Sharing in the Modern Digital Workplace: How," Collaboration in the Digital Age: How Technology Enables Individuals, Teams and Businesses, p. 45, 2018.</p>
+							<p>M. J. Tews and R. A. Noe, "Does training have to be fun? A review and conceptual model of the role of fun in workplace training," Human Resource Management Review, 2017.</p>
+							<p>D. D. Dominic and S. Hina, "Engaging university students in hands on learning practices and social media collaboration," in Computer and Information Sciences (ICCOINS), 2016 3rd International Conference on, 2016, pp. 559-563.</p>
+							<p>J. Olaisen and O. Revang, "Working smarter and greener: Collaborative knowledge sharing in virtual global project teams," International Journal of Information Management, vol. 37, pp. 1441-1448, 2017.</p>
+							<p>K. Kasemsap, "The roles of e-learning, organizational learning, and knowledge management in the learning organizations," in Civil and Environmental Engineering: Concepts, Methodologies, Tools, and Applications, ed: IGI Global, 2016, pp. 1198-1228.</p>
+							<p>H. A. Nissen, M. R. Evald, and A. H. Clarke, "Knowledge sharing in heterogeneous teams through collaboration and cooperation: Exemplified through Public–Private-Innovation partnerships," Industrial Marketing Management, vol. 43, pp. 473-482, 2014.</p>
+							<p>N. Z. Abidin, N. Z. Zaibidi, and K. N. Karim, "Strategic planning for MyRA performance: A causal loop diagram approach," in AIP Conference Proceedings, 2017, p. 020151.</p>
+							<p>I. Yassin, A. Zabidi, M. Johari, F. Hijaz, A. Y. Izzudin, N. Tahir, et al., "Entity-Relationship analysis for development of Malaysian University Research Assessment Instrument (MyRA) information system," in System Engineering and Technology (ICSET), 2011 IEEE International Conference on, 2011, pp. 219-224.</p>
+							<p>S. K. Dhillon, R. Ibrahim, and A. Selamat, "Factors associated with scholarly publication productivity among academic staff: case of a Malaysian public university," Technology in Society, vol. 42, pp. 160-166, 2015.</p>
+							<p>F. H. Tie, "Research publication as a strategy to improve international academic ranking," International Journal of Leadership in Education, vol. 15, pp. 437-450, 2012.</p>
+							<p>M. Yu Cheng, K. Wah Hen, H. Piew Tan, and K. Fai Fok, "Patterns of co-authorship and research collaboration in Malaysia," in Aslib Proceedings: New Information Perspectives, 2013, pp. 659-674.</p>
+							<p>M. R. McGrail, C. M. Rickard, and R. Jones, "Publish or perish: a systematic review of interventions to increase academic publication rates," Higher Education Research &amp; Development, vol. 25, pp. 19-35, 2006.</p>
+							<p>D. S. Siegel, D. A. Waldman, L. E. Atwater, and A. N. Link, "Toward a model of the effective transfer of scientific knowledge from academicians to practitioners: qualitative evidence from the commercialization of university technologies," Journal of engineering and technology management, vol. 21, pp. 115-142, 2004.</p>
+							<p>A. Abbasi, J. Altmann, and L. Hossain, "Identifying the effects of co-authorship networks on the performance of scholars: A correlation and regression analysis of performance measures and social network analysis measures," Journal of Informetrics, vol. 5, pp. 594-607, 2011.</p>
+							<p>B. Bozeman, D. Fay, and C. P. Slade, "Research collaboration in universities and academic entrepreneurship: the-state-of-the-art," The Journal of Technology Transfer, vol. 38, pp. 1-67, 2013.</p>
+							<p>S. Lee and B. Bozeman, "The impact of research collaboration on scientific productivity," Social studies of science, vol. 35, pp. 673-702, 2005.</p>
+							<p>G. E. Christian, "Issues and challenges to the development of open access institutional repositories in academic and research institutions in Nigeria," 2009.</p>
+							<p>T. Gray, L. Madson, and M. Jackson, "Publish &amp; Flourish: Helping Scholars Become Better, More Prolific Writers," To Improve the Academy, vol. 37, pp. 243-256, 2018.</p>
+							<p>T. Ramayah, J. A. Yeap, and J. Ignatius, "Assessing knowledge sharing among academics: A validation of the knowledge sharing behavior scale (KSBS)," Evaluation review, vol. 38, pp. 160-187, 2014.</p>
+							<p>C. N.-L. Tan and R. Thurasamy, "Improving Research Productivity through Knowledge Sharing: The Perspective of Malaysian Institutions of Higher Learning," 2015.</p>
+							<p>T. Ramayah, J. A. Yeap, and J. Ignatius, "An empirical inquiry on knowledge sharing among academicians in higher learning institutions," Minerva, vol. 51, pp. 131-154, 2013.</p>
+							<p>R. Mack, Y. Ravin, and R. J. Byrd, "Knowledge portals and the emerging digital knowledge workplace," IBM systems journal, vol. 40, pp. 925-955, 2001.</p>
+							<p>D. Holman, S. Wood, T. D. Wall, and A. Howard, "Introduction to the essentials of the new workplace," The essentials of the new workplace, pp. 1-14, 2005.</p>
+							<p>T. Schadler, "Defining the digital workplace of today and what’s ahead," ed: Forrester, 2017.</p>
+							<p>S. Marshall. (2014). What a Digital Workplace Is and What It Isn’t. Available: https://www.cmswire.com/cms/social-business/what-a-digital-workplace-is-and-what-it-isnt-027421.php</p>
+							<p>S. Köffer, "Designing the digital workplace of the future–what scholars recommend to practitioners," 2015.</p>
+							<p>S. Mukherji and N. Arora, "Digital Communication: Easing Operational Outcomes in the Workplace," Procedia Computer Science, vol. 122, pp. 1084-1091, 2017.</p>
+							<p>G. Nauwerck and R. Cowen Forssell, "The Digital Work Environment–a Challenge and an Opportunity for CSCW," in Proceedings of 16th European Conference on Computer-Supported Cooperative Work-Exploratory Papers, 2018.</p>
+							<p>W. van Zoonen, J. W. Verhoeven, and R. Vliegenthart, "Understanding the consequences of public social media use for work," European Management Journal, vol. 35, pp. 595-605, 2017.</p>
+							<p>T. Clauss and T. Kesting, "How businesses should govern knowledge-intensive collaborations with universities: An empirical investigation of university professors," Industrial Marketing Management, vol. 62, pp. 185-198, 2017.</p>
+							<p>J. Olaisen and O. Revang, "The dynamics of intellectual property rights for trust, knowledge sharing and innovation in project teams," International Journal of Information Management, vol. 37, pp. 583-589, 2017.</p>
+							<p>M. Embo and M. Valcke, "Workplace learning in midwifery education in Flanders (Belgium)," Midwifery, vol. 33, pp. 24-27, 2016.</p>
+							<p>C. H. Liao, "How to improve research quality? Examining the impacts of collaboration intensity and member diversity in collaboration networks," Scientometrics, vol. 86, pp. 747-761, 2010.</p>
+							<p>S. Lissitsa and S. Chachashvili-Bolotin, "Digital skills and extrinsic rewards in late career," Technology in Society, vol. 51, pp. 46-55, 2017.</p>
+							<p>R. Grunzke, T. Adolph, C. Biardzki, A. Bode, T. Borst, H.-J. Bungartz, et al., "Challenges in creating a sustainable generic research data infrastructure," Softwaretechnik-Trends, vol. 37, pp. 74-77, 2017.</p>
+							<p>R. Grunzke, M. Neumann, T. Ilsche, V. Hartmann, T. Jejkal, R. Stotzka, et al., "Design evaluation of a performance analysis trace repository," Procedia Computer Science, vol. 108, pp. 2190-2199, 2017.</p>
+							<p>J. Baptista and R. D. Galliers, "Social media as a driver for new rhetorical practices in organisations," in System Science (HICSS), 2012 45th Hawaii International Conference on, 2012, pp. 3540-3549.</p>
+							<p>H. Gellerman, E. Svanberg, and Y. Barnard, "Data sharing of transport research data," in Transportation Research Procedia, 2016, pp. 2227-2236.</p>
+							<p>B. L. Ponomariov and P. C. Boardman, "Influencing scientists’ collaboration and productivity patterns through new institutions: University research centers and scientific and technical human capital," Research Policy, vol. 39, pp. 613-624, 2010.</p>
+							<p>N. X. Bach, N. Do Hai, and T. M. Phuong, "Personalized recommendation of stories for commenting in forum-based social media," Information Sciences, vol. 352, pp. 48-60, 2016.</p>
+							<p>C. Brandon, D. Jamadar, G. Girish, Q. Dong, Y. Morag, and P. Mullan, "Peer support of a faculty “writers' circle” increases confidence and productivity in generating scholarship," Academic radiology, vol. 22, pp. 534-538, 2015.</p>
+							<p>F. J. Van Rijnsoever and L. K. Hessels, "Factors associated with disciplinary and interdisciplinary research collaboration," Research policy, vol. 40, pp. 463-472, 2011.</p>
+							<p>Zhiyin Yang, Ruibin Zhu, and L. Zhang, "Research on the Capability Maturity Model of Digital Library Knowledge Management," in Proceedings of the 2nd Information Technology and Mechatronics Engineering Conference (ITOEC 2016), 2016.</p>
+							<p>C. S. Asterhan and E. Bouton, "Teenage peer-to-peer knowledge sharing through social network sites in secondary schools," Computers &amp; Education, vol. 110, pp. 16-34, 2017.</p>
+							<p>Y. Levy and T. J. Ellis, "A systems approach to conduct an effective literature review in support of information systems research," Informing Science, vol. 9, 2006.</p>
+							<p>Y. Goksen, E. Cevik, and H. Avunduk, "A Case Analysis on the Focus on the Maturity Models and Information Technologies," Procedia Economics and Finance, vol. 19, pp. 208-216, 2015.</p>
+							<p>S. Marshall, "Digital workplace maturity model From intranet to digital workplace," DWG2010.</p>
+							<p>M. Gill and S. VanBoskirk, "The Digital Maturity Model 4.0," Forrester2016.</p>
+							<p>A. Di Maio, R. Howard, and G. Archer, "Introducing the Gartner Digital Government Maturity Model–Gartner, 22 September 2015," ed, 2015.</p>
+							<p>J. McConnell, "Digital Workplace: Self Assessment and Setting Priorities," NETSTRATEGYJMC2015.</p>
+					</div>
+		<br />
+		</div>
+	
+
+
+<div class="separator"></div>
+
+<h3>Refbacks</h3>
+
+<ul class="plain">
+				<li>There are currently no refbacks.</li>
+	</ul>
+
+
+
+
+<br /><br />
+<p><strong>ISSN : 2590-3551, eISSN : 2600-8122</strong>     </p><p><span>This work is licensed under a </span><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="noopener" target="_blank">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0).</a></p><p>Best viewed using Mozilla Firefox, Google Chrome and Internet Explorer with the resolution of 1280 x 800</p>
+</div><!-- content -->
+</div><!-- main -->
+</div><!-- body -->
+
+
+
+</div> <!-- container -->
+</body>
+</html>

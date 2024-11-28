@@ -1,0 +1,360 @@
+
+ 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+	<HEAD>
+	<meta name="Referrer" content="unsafe-url" />
+	<meta name="Referrer" content="always" />
+	<TITLE>中大機構典藏-NCU Institutional Repository-博碩士論文 110453014 詳細資訊</TITLE>
+	<meta name="description" content="中央大學機構典藏(NCUIR)：提供台灣中央大學的博碩士論文、考古題、期刊論文下載" />
+  <META name="keywords" content="NCUIR,IR,National Central University Institutional Repository,theses,pass exam,journal collection,機構典藏,碩博士論文,博碩士論文下載,考古題,題庫下載,期刊論文,論文期刊下載,中央大學機構典藏,中央大學碩博士論文,中央大學考古題,中央大學期刊論文" />
+	<META name=GENERATOR content="MSHTML 8.00.6001.23501" />	
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!-- <meta HTTP-EQUIV="Refresh" CONTENT="60, URL=/thesis/view_etd.asp?URN=110453014&fileName=GC110453014.pdf" /> -->
+  <meta name="content-disposition" content="inline; filename=GC110453014.pdf" />
+  <meta name="alexaVerifyID" content="Ho5Hpwo8Xe9LepWr-628hquBT6o" />
+  <meta name="msvalidate.01" content="CCA1B73395F204DCD4B7BD09A9BED7C5" />
+  <meta name="google-site-verification" content="OITLGFRetUsD-lzg7cs8N5R7N_UtknYPdXMpksQ7_XM" />
+  <meta name="majestic-site-verification" content="MJ12_5d184b86-d906-4740-a9fe-ec26da09a5de" />
+  <meta name="sogou_site_verification" content="ugC0gd7Y5r"/>
+  <meta name="baidu-site-verification" content="FS7nffdqib" />
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" /> 
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MN8LJCL3BT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MN8LJCL3BT');
+</script>  
+
+<!-- baidu Analytics -->
+<script>
+   var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?cd7d189c2f74066e6878e2c77b3552db";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+     })();
+</script>
+
+<!-- 自動關閉視窗 -->
+<script language="javascript">setTimeout("self.opener=null; self.close();",90000)</script> 
+  
+<!-- 要下載全文 -->
+<script language="JavaScript" type="text/JavaScript">
+		function Download(pID,pFName) {
+        //document.form.action = "download.asp?datetime=" + pID + "&filename=" + pFName;
+				//location.replace("download.asp?datetime=" + pID + "&filename=" + pFName); 
+				window.open('check.asp?ID=download&datetime=' + pID + '&filename=' + pFName ,'thesis','height=500,width=600,location=no,menubar=no,toolbar=no,status=no,resizable=yes');
+        document.form.submit();			
+		}
+		
+		function viewShow(date1,sys_fileName) {
+			  //location.replace("getfile.asp?URN=" + id1 + "&date=" + date1 + "&file=" + sys_fileName);
+			  window.open('check.asp?ID=getfile&date=' + date1 + '&file=' + sys_fileName ,'thesis','height=500,width=600,location=no,menubar=no,toolbar=no,status=no,resizable=yes');
+			  document.form.submit();
+	  }	
+</script>
+
+<meta name="citation_fulltext_html_url" content="http://ir.lib.ncu.edu.tw:88/thesis/view_etd.asp?URN=110453014" />
+<meta name="DC.contributor" content="資訊管理學系在職專班" xml:lang="zh_TW" />
+<meta name="DC.creator" content="宋苡庭" xml:lang="zh_TW" />
+<meta name="DC.creator" content="Yi-Ting Sung" xml:lang="en_US" scheme="citation_authors" />
+<meta name="citation_authors" content="Yi-Ting Sung" xml:lang="en_US" scheme="citation_authors" />
+<meta name="DC.advisor" content="曾筱珽" xml:lang="zh_TW" />
+<meta name="DC.date" content="2023-6-27" xml:lang="en_US" scheme="citation_date" />
+<meta name="dc.date.accessioned" content="2023-6-27T07:39:07Z" xml:lang="en_US" />
+<meta name="dc.date.available" content="2023-6-27T07:39:07Z" xml:lang="en_US" />
+<meta name="citation_date" content="2023-6-27" xml:lang="en_US" scheme="citation_date" />
+<meta name="dc.date.issued" content="2023" xml:lang="en_US" scheme="citation_date" />
+<meta name="DCTERMS.dateAccepted" content="2023-6-27T07:13:18Z" scheme="DCTERMS.W3CDTF" />
+<meta name="DCTERMS.W3CDTF" content="2023-6-27T07:13:18Z" scheme="DCTERMS.W3CDTF" />
+<meta name="DCTERMS.available" content="2023-6-27T07:13:18Z" scheme="DCTERMS.W3CDTF" />
+<meta name="DCTERMS.W3CDTF" content="2023-6-27T07:13:18Z" scheme="DCTERMS.W3CDTF" />
+<meta name="DCTERMS.issued" content="2023-6-27T07:13:18Z" scheme="DCTERMS.W3CDTF" />
+<meta name="DCTERMS.W3CDTF" content="2023-6-27T07:13:18Z" scheme="DCTERMS.W3CDTF" />
+<meta name="DC.identifier" content="110453014" xml:lang="en_US" />
+<meta name="DC.identifier" content="http://ir.lib.ncu.edu.tw:88/thesis/view_etd.asp?URN=110453014" scheme="DCTERMS.URI" />
+<meta name="DCTERMS.URI" content="http://ir.lib.ncu.edu.tw:88/thesis/view_etd.asp?URN=110453014" scheme="DCTERMS.URI" />
+<meta name="dc.contributor.department" content="資訊管理學系在職專班" xml:lang="zh_TW" />
+<meta name="DC.description" content="110453014" xml:lang="zh_TW" />
+<meta name="DC.description" content="��ߤ����j��" xml:lang="zh_TW" />
+<meta name="DC.description" content="National Central University" xml:lang="en_US" />
+<meta name="dc.description.abstract" content="人工智慧技術在各產業之間的應用已普遍存在，然而，相對於其他行業，驗證實驗室在這方面的相關研究相對較少。驗證產業是許多採用人工智慧技術的尖端產業不可或缺的夥伴，驗證產業特別注重測試流程的效率和測試結果的可靠性，也因此驗證產業往往在內部數位化的發展相對謹慎。然而，協力夥伴間的數位資產與能力之協調性不可或缺的，也因此驗證產業實有探討數位化進一步發展的必要性。本研究旨在探討可靠度驗證實驗室導入人工智慧技術的可行性，面對科技轉型所帶來的挑戰，身為第三方公正單位開始重新定位思考，評估引入新技術的可行性。
+本研究採用個案研究和深度訪談為一採用綜合分析方法的整合性研究，以內部政策推動經驗和中高階主管的觀點為切入點，探討可靠度驗證實驗室回應人工智慧技術採用趨勢而進一步採用的可行性。因此，本研究過程，從科技準備度、組織準備度和環境準備度等方面，了解各部門主管對於人工智慧技術導入驗證實驗室的觀點和看法，以釐清個案公司如何面對市場上新技術所帶來的改變，以及人工智慧技術對可靠度驗證實驗室所能提供的成果和貢獻。
+研究結果發現，在人工智慧技術的浪潮下，驗證單位可以利用人工智慧技術提升各部門的測試生產力，從而改善客戶體驗並降低人力時間成本。最後，本研究彙總個案公司在人工智慧技術應用的可行性和深度訪談結果，提供了經驗和啟示，希望能為其他企業提供參考和借鏡之處。" xml:lang="zh_TW" />
+<meta name="dc.description.abstract" content="The application of artificial intelligence (AI) technology is widely prevalent across various industries. However, compared to other sectors, there has been relatively less research on the application of AI in verification laboratories. Verification industries are indispensable partners for many cutting-edge industries that adopt AI technology. They place special emphasis on the efficiency of testing processes and the reliability of test results, which often makes them cautious in their internal digitalization development. Nevertheless, the coordination of digital assets and capabilities among collaborative partners is essential, highlighting the need for further development of digitalization within the verification industry.
+        This study aims to explore the feasibility of integrating AI technology into reliability verification laboratories. Faced with the challenges brought about by technological transformation, third-party impartial entities have begun to reposition their thinking and assess the feasibility of introducing new technologies. The study adopts a case study approach and in-depth interviews as an integrated research methodology. It investigates the feasibility of reliability verification laboratories responding to the trend of AI technology adoption, based on the perspectives of internal policy promotion experiences and mid- to high-level executives. Therefore, in the process of this study, various department managers′ views and opinions on the introduction of AI technology into verification laboratories are examined from the aspects of technological readiness, organizational readiness, and environmental readiness. This aims to clarify how the case company addresses the changes brought by new technologies in the market and the results and contributions that AI technology can provide to reliability verification laboratories.
+       The research findings reveal that, under the wave of AI technology, verification units can utilize AI technology to enhance the testing productivity of various departments, thereby improving customer experiences and reducing labor and time costs. Finally, this study summarizes the feasibility of applying AI technology in the case company and provides insights and experiences through in-depth interviews, with the hope of providing references and insights for other businesses." xml:lang="en_US" />
+<meta name="DC.source" content="http://ir.lib.ncu.edu.tw:88/thesis/view_etd.asp?URN=110453014" xml:lang="en_US" scheme="DCTERMS.URI" />
+<meta name="dc.identifier.uri" content="http://ir.lib.ncu.edu.tw:88/thesis/view_etd.asp?URN=110453014" xml:lang="en_US" scheme="DCTERMS.URI" />
+<meta name="DCTERMS.URI" content="http://ir.lib.ncu.edu.tw:88/thesis/view_etd.asp?URN=110453014" xml:lang="en_US" scheme="DCTERMS.URI" />
+<meta name="DC.subject" content="人工智慧" xml:lang="zh_TW" />
+<meta name="DC.subject" content="實驗室流程變更" xml:lang="zh_TW" />
+<meta name="DC.subject" content="數位轉型" xml:lang="zh_TW" />
+<meta name="DC.subject" content="科技準備度" xml:lang="zh_TW" />
+<meta name="DC.subject" content="組織準備度" xml:lang="zh_TW" />
+<meta name="DC.subject" content="環境準備度" xml:lang="zh_TW" />
+<meta name="DC.subject" content="Artificial Intelligent" xml:lang="en_US" />
+<meta name="DC.subject" content="Laboratory process changes" xml:lang="en_US" />
+<meta name="DC.subject" content="Digital transformation" xml:lang="en_US" />
+<meta name="DC.subject" content="Technological readiness" xml:lang="en_US" />
+<meta name="DC.subject" content="Rrganizational readiness" xml:lang="en_US" />
+<meta name="DC.subject" content="Environmental readiness" xml:lang="en_US" />
+<meta name="DC.title" content="可靠度驗證實驗室導入人工智慧技術的可行性探討 -以A公司為例" xml:lang="zh_TW" scheme="citation_title" />
+<meta name="citation_title" content="可靠度驗證實驗室導入人工智慧技術的可行性探討 -以A公司為例" xml:lang="zh_TW" scheme="citation_title" />
+<meta name="DC.language" content="zh-TW" xml:lang="en_US" />
+<meta name="dc.language.iso" content="zh-TW" xml:lang="en_US" />
+<meta name="DC.title" content="Feasibility Study of Artificial Intelligence Adoption into Reliability Verification Laboratory" xml:lang="en_US" scheme="citation_title" />
+<meta name="citation_title" content="Feasibility Study of Artificial Intelligence Adoption into Reliability Verification Laboratory" xml:lang="en_US" scheme="citation_title" />
+<meta name="DC.type" content="�պӤh�פ�" xml:lang="zh_TW" />
+<meta name="DC.type" content="thesis" xml:lang="en_US" />
+<meta name="DC.publisher" content="National Central University" xml:lang="en_US" scheme="citation_publisher" />
+<meta name="citation_publisher" content="National Central University" xml:lang="en_US" scheme="citation_publisher" />
+
+</HEAD>
+
+<BODY aLink=#83f0f9 link=#0f26c9 bgColor=#ffffff text=#000000 vLink=#84a5c0>
+<CENTER>
+<table><tr>
+<td><A href="index.asp"><IMG border=0 src="images/top.jpg"></a></td>
+<td>
+<img src='https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=http://ir.lib.ncu.edu.tw:88/thesis/view_etd.asp?URN=110453014&fileName=GC110453014.pdf'></td></tr>
+</table>
+</CENTER>
+
+<CENTER><H3>博碩士論文 110453014 詳細資訊</H3>
+<script language=javascript>
+    // 自動 COPY 代碼開始
+    function MM_findObj(n, d) { //v4.0
+    var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+    if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+    for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+    if(!x && document.getElementById) x=document.getElementById(n); return x;
+    }
+    function JM_cc(ob){
+    var obj=MM_findObj(ob); if (obj) {
+    obj.select();js=obj.createTextRange();js.execCommand("Copy");}
+    alert("已複製到剪貼簿！");
+    }
+    
+    // 自動 COPY 代碼結束
+    document.write('本論文永久網址：&nbsp;<input name="page_url" value="http://ir.lib.ncu.edu.tw:88/thesis/view_etd.asp?URN=110453014" size="62">&nbsp;&nbsp;<input type="button" name="Button" value="複製網址" onClick=JM_cc("page_url")>');
+</script><br><br>
+
+<HR width="100%"></CENTER>
+<BLOCKQUOTE>
+  <DIV align=center>
+  <table><tr><td><a href="https://ncu.primo.exlibrisgroup.com/discovery/search?tab=nculib&search_scope=MyInstitution&vid=886UST_NCU:886UST_NCU&lang=zh-tw&offset=0&query=any,contains,%E5%AE%8B%E8%8B%A1%E5%BA%AD" target=_blank>以作者查詢圖書館館藏</a></td>
+  	         <td>、<a href="https://ndltd.ncl.edu.tw/cgi-bin/gs32/gsweb.cgi/login?o=dnclcdr&s=%22%E5%AE%8B%E8%8B%A1%E5%BA%AD%22.au.&searchmode=basic" target=_blank>以作者查詢臺灣博碩士</a></td>
+  	         <td>、<a href="http://192.83.186.170/search*cht/a?SEARCH=%E5%AE%8B%E8%8B%A1%E5%BA%AD" target=_blank>以作者查詢全國書目</a></td>
+  	         <td>、<a href="http://140.113.39.130/cgi-bin/gs32/ncugsweb.cgi/ccd=0xd4Il/issueask?db=ncucdr&idv=GC110453014&tifld=tic&idfld=id" target=_blank>勘誤回報</a></td>
+  	         <td>、線上人數：50</td>
+  	         <td>、訪客IP：157.15.54.143</td>
+  	     </tr></table>
+  <TABLE border=1 cellSpacing=1 cellPadding=3 width="95%">
+    <TBODY>
+    <TR>
+      <TD bgColor=#deb887 vAlign=top width="10%" align=left><B><FONT color=#800000>姓名</B></FONT></TD>
+      <TD bgColor=#fff7d6 vAlign=top width="40%" align=left>
+      	  宋苡庭(Yi-Ting Sung)&nbsp; 
+		      <FONT size=2><A href="https://ncu.primo.exlibrisgroup.com/discovery/search?selection=creator,contains,&query=creator,contains,%E5%AE%8B%E8%8B%A1%E5%BA%AD&tab=nculib&search_scope=MyInstitution&vid=886UST_NCU:886UST_NCU&lang=zh-tw&offset=0" target=_blank>查詢紙本館藏</A>&nbsp;&nbsp;</FONT></TD>
+      <TD bgColor=#deb887 vAlign=top width="9%" align=left><FONT color=#800000><B>畢業系所</B></FONT></TD>
+      <TD bgColor=#fff7d6 vAlign=top width="35%" align=left>資訊管理學系在職專班</TD></TR>
+    <TR>
+      <TD bgColor=#deb887 vAlign=top align=left><B><FONT color=#800000>論文名稱</FONT></B></TD>
+      <TD bgColor=#fff7d6 vAlign=top colSpan=3 align=left>
+      	  可靠度驗證實驗室導入人工智慧技術的可行性探討 -以A公司為例<br>(Feasibility Study of Artificial Intelligence Adoption into Reliability Verification Laboratory)
+      	   </TD></TR>
+    <TR><TD bgColor=#deb887 vAlign=top align=left><B><FONT color=#800000>相關論文</FONT></B></TD><TD bgColor=#fff7d6 vAlign=top colSpan=3 align=left><table width='98%'><tr><td width='48%'>★&nbsp;<A href='view_etd.asp?URN=108423031&fileName=GC108423031.pdf'><font size=2>以機器學習技術為基礎建構新生兒孕育健康狀態預測模型</a></font></td><td width='48%'>★&nbsp;<A href='view_etd.asp?URN=109423018&fileName=GC109423018.pdf'><font size=2>電子病歷縮寫消歧與一對多分類任務</a></font></td></tr><tr><td width='48%'>★&nbsp;<A href='view_etd.asp?URN=109423005&fileName=GC109423005.pdf'><font size=2>使用文字探勘與深度學習技術建置中風後肺炎之預測模型</a></font></td><td width='48%'>★&nbsp;<A href='view_etd.asp?URN=109423067&fileName=GC109423067.pdf'><font size=2>精準社群廣告投資策略：以機器學習技術為基礎之社會影響力管理模式</a></font></td></tr><tr><td width='48%'>★&nbsp;<A href='view_etd.asp?URN=109423029&fileName=GC109423029.pdf'><font size=2>智慧活躍老化之實現：以資料驅動為基礎之AI長者在地交友推薦模式</a></font></td><td width='48%'>★&nbsp;<A href='view_etd.asp?URN=109423011&fileName=GC109423011.pdf'><font size=2>整合深度學習技術與SOR理論之資訊情緒傳遞性探索：新聞生成特質與資訊情感傳播行為</a></font></td></tr><tr><td width='48%'>★&nbsp;<A href='view_etd.asp?URN=110423051&fileName=GC110423051.pdf'><font size=2>基於混合過濾的電影推薦系統</a></font></td><td width='48%'>★&nbsp;<A href='view_etd.asp?URN=110423082&fileName=GC110423082.pdf'><font size=2>以 Reddit 使用者生成內容探討糖尿病照護社會支持</a></font></td></tr><tr><td width='48%'>★&nbsp;<A href='view_etd.asp?URN=110453019&fileName=GC110453019.pdf'><font size=2>防範於未然：基於機器學習技術之網路入侵偵測系統</a></font></td><td width='48%'>★&nbsp;<A href='view_etd.asp?URN=110423054&fileName=GC110423054.pdf'><font size=2>智慧共同照護之實現: 以資料驅動為基礎之 AI 糖尿病個案管理模式</a></font></td></tr><tr><td width='48%'>★&nbsp;<A href='view_etd.asp?URN=110423036&fileName=GC110423036.pdf'><font size=2>Non-Touch Cooperation: An Interactive Mechanism Design Based on Mid-Air Gestures</a></font></td><td width='48%'>★&nbsp;<A href='view_etd.asp?URN=110423038&fileName=GC110423038.pdf'><font size=2>基於 UGC 的反脆弱社交口碑策略:以臺灣飯店業為例</a></font></td></tr><tr><td width='48%'>★&nbsp;<A href='view_etd.asp?URN=110453033&fileName=GC110453033.pdf'><font size=2>基於機器學習技術之誘導式評論過濾機制：以餐廳評論為例</a></font></td><td width='48%'>★&nbsp;<A href='view_etd.asp?URN=110453047&fileName=GC110453047.pdf'><font size=2>資料驅動的球隊經營：NBA球隊競爭力與抱團策略之研究</a></font></td></tr><tr><td width='48%'>★&nbsp;<A href='view_etd.asp?URN=111423011&fileName=GC111423011.pdf'><font size=2>基於顧客評論觀點揭示組織調整策略和顧客體驗 優化：以 Covid-19 餐飲業為例</a></font></td><td width='48%'>★&nbsp;<A href='view_etd.asp?URN=111423042&fileName=GC111423042.pdf'><font size=2>網路購物詐欺偵測系統：結合社群網路行為的方法</a></font></td></tr></table></TD></TR>                  	   
+    <TR>  	   
+    <TR>
+      <TD bgColor=#deb887 vAlign=top align=left><FONT color=#800000><B>檔案</B></FONT></TD>
+      <TD bgColor=#fff7d6 vAlign=top colSpan=3 align=left>
+		   		<A href="javascript:void(window.open('ris.asp?URN=110453014&datetime=2023-6-27'));"><IMG border=0 src='images/file_logo.gif' title='Endnote RIS 格式'><FONT size=2>[Endnote RIS 格式]</FONT></a> &nbsp;&nbsp;
+		      <A href="javascript:void(window.open('bib.asp?URN=110453014&datetime=2023-6-27'));"><IMG border=0 src='images/file_logo.gif' title='Bibtex 格式'><FONT size=2>[Bibtex 格式]</FONT></a>  &nbsp;&nbsp; 	
+      <a href='http://scholar.google.com/scholar?q=related:http://ir.lib.ncu.edu.tw:88/thesis/view_etd.asp?URN=110453014' target='_blank'><IMG border=0 src='images/article_logo.gif' title='相關文章'><FONT size=2>[相關文章]</FONT></a> &nbsp;&nbsp;<a href='#' onClick="window.open('cite.asp?URN=110453014','thesis','height=320,width=942,location=no,menubar=no,toolbar=no,scrollbars=yes,status=no,resizable=yes');"><IMG border=0 src='images/Cite_logo.gif' title='文章引用'><FONT size=2>[文章引用]</FONT></a> &nbsp;&nbsp;<a href='record_Full.asp?URN=110453014' target='_blank'><IMG border=0 src='images/Record_logo.gif' title='完整記錄'><FONT size=2>[完整記錄]</FONT></a> &nbsp;&nbsp;<a href=https://ncu.primo.exlibrisgroup.com/discovery/search?selection=title,contains,&query=title,contains,%E5%8F%AF%E9%9D%A0%E5%BA%A6%E9%A9%97%E8%AD%89%E5%AF%A6%E9%A9%97%E5%AE%A4%E5%B0%8E%E5%85%A5%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E6%8A%80%E8%A1%93%E7%9A%84%E5%8F%AF%E8%A1%8C%E6%80%A7%E6%8E%A2%E8%A8%8E+%2D%E4%BB%A5A%E5%85%AC%E5%8F%B8%E7%82%BA%E4%BE%8B&tab=nculib&search_scope=MyInstitution&vid=886UST_NCU:886UST_NCU&lang=zh-tw&offset=0 target='_blank'><IMG border=0 src='images/opac_logo.gif' title='館藏目錄'><FONT size=2>[館藏目錄]</FONT></a> &nbsp;&nbsp;<IMG border=0 src='images/warning.jpg'><a href=https://ncu.primo.exlibrisgroup.com/discovery/search?query=any,contains,%E5%8F%AF%E9%9D%A0%E5%BA%A6%E9%A9%97%E8%AD%89%E5%AF%A6%E9%A9%97%E5%AE%A4%E5%B0%8E%E5%85%A5%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E6%8A%80%E8%A1%93%E7%9A%84%E5%8F%AF%E8%A1%8C%E6%80%A7%E6%8E%A2%E8%A8%8E+%2D%E4%BB%A5A%E5%85%AC%E5%8F%B8%E7%82%BA%E4%BE%8B&tab=Everything&search_scope=MyInst_and_CI&vid=886UST_NCU:886UST_NCU&lang=zh-tw&offset=0 target='_blank'><font size=2>至系統瀏覽論文</a> (<font color=red>2028-7-1</font>以後開放)</font>  
+      </TD></TR>
+      
+    
+    <TR>
+      <TD bgColor=#deb887 vAlign=center align=left><B><FONT color=#800000>摘要(中)</FONT></B></TD>
+      <TD bgColor=#fff7d6 vAlign=top colSpan=3 align=left><FONT size=2>人工智慧技術在各產業之間的應用已普遍存在，然而，相對於其他行業，驗證實驗室在這方面的相關研究相對較少。驗證產業是許多採用人工智慧技術的尖端產業不可或缺的夥伴，驗證產業特別注重測試流程的效率和測試結果的可靠性，也因此驗證產業往往在內部數位化的發展相對謹慎。然而，協力夥伴間的數位資產與能力之協調性不可或缺的，也因此驗證產業實有探討數位化進一步發展的必要性。本研究旨在探討可靠度驗證實驗室導入人工智慧技術的可行性，面對科技轉型所帶來的挑戰，身為第三方公正單位開始重新定位思考，評估引入新技術的可行性。<BR>
+本研究採用個案研究和深度訪談為一採用綜合分析方法的整合性研究，以內部政策推動經驗和中高階主管的觀點為切入點，探討可靠度驗證實驗室回應人工智慧技術採用趨勢而進一步採用的可行性。因此，本研究過程，從科技準備度、組織準備度和環境準備度等方面，了解各部門主管對於人工智慧技術導入驗證實驗室的觀點和看法，以釐清個案公司如何面對市場上新技術所帶來的改變，以及人工智慧技術對可靠度驗證實驗室所能提供的成果和貢獻。<BR>
+研究結果發現，在人工智慧技術的浪潮下，驗證單位可以利用人工智慧技術提升各部門的測試生產力，從而改善客戶體驗並降低人力時間成本。最後，本研究彙總個案公司在人工智慧技術應用的可行性和深度訪談結果，提供了經驗和啟示，希望能為其他企業提供參考和借鏡之處。</FONT></TD></TR>
+      	
+    <TR>
+      <TD bgColor=#deb887 vAlign=center align=left><B><FONT color=#800000>摘要(英)</FONT></B></TD>
+      <TD bgColor=#fff7d6 vAlign=top colSpan=3 align=left><FONT size=2>The application of artificial intelligence (AI) technology is widely prevalent across various industries. However, compared to other sectors, there has been relatively less research on the application of AI in verification laboratories. Verification industries are indispensable partners for many cutting-edge industries that adopt AI technology. They place special emphasis on the efficiency of testing processes and the reliability of test results, which often makes them cautious in their internal digitalization development. Nevertheless, the coordination of digital assets and capabilities among collaborative partners is essential, highlighting the need for further development of digitalization within the verification industry.<BR>
+        This study aims to explore the feasibility of integrating AI technology into reliability verification laboratories. Faced with the challenges brought about by technological transformation, third-party impartial entities have begun to reposition their thinking and assess the feasibility of introducing new technologies. The study adopts a case study approach and in-depth interviews as an integrated research methodology. It investigates the feasibility of reliability verification laboratories responding to the trend of AI technology adoption, based on the perspectives of internal policy promotion experiences and mid- to high-level executives. Therefore, in the process of this study, various department managers′ views and opinions on the introduction of AI technology into verification laboratories are examined from the aspects of technological readiness, organizational readiness, and environmental readiness. This aims to clarify how the case company addresses the changes brought by new technologies in the market and the results and contributions that AI technology can provide to reliability verification laboratories.<BR>
+       The research findings reveal that, under the wave of AI technology, verification units can utilize AI technology to enhance the testing productivity of various departments, thereby improving customer experiences and reducing labor and time costs. Finally, this study summarizes the feasibility of applying AI technology in the case company and provides insights and experiences through in-depth interviews, with the hope of providing references and insights for other businesses.</FONT></TD></TR>  	
+    
+    <TR>
+      <TD bgColor=#deb887 vAlign=center align=left><FONT color=#800000><B>關鍵字(中)</B></FONT></TD>
+      <TD bgColor=#fff7d6 vAlign=top align=left>
+      	  ★&nbsp;人工智慧<br>★&nbsp;實驗室流程變更<br>★&nbsp;數位轉型<br>★&nbsp;科技準備度<br>★&nbsp;組織準備度<br>★&nbsp;環境準備度</TD>
+      <TD bgColor=#deb887 vAlign=center align=left><B><FONT color=#800000>關鍵字(英)</B></FONT></TD>
+      <TD bgColor=#fff7d6 vAlign=middle align=left>
+      	  ★&nbsp;Artificial Intelligent<br>★&nbsp;Laboratory process changes<br>★&nbsp;Digital transformation<br>★&nbsp;Technological readiness<br>★&nbsp;Rrganizational readiness<br>★&nbsp;Environmental readiness</TD></TR>
+     
+    <TR>
+      <TD bgColor=#deb887 vAlign=center align=left><B><FONT color=#800000>論文目次</B></FONT></TD>
+      <TD bgColor=#fff7d6 vAlign=top colSpan=3 align=left><FONT size=2>摘要 i<BR>
+Abstract ii<BR>
+誌謝 iii<BR>
+目 錄 iv<BR>
+表目錄 vi<BR>
+圖目錄 vii<BR>
+第一章 緒論 1<BR>
+1.1  研究背景 1<BR>
+1.2  研究動機 3<BR>
+1.3  研究目的 5<BR>
+1.4  研究流程 6<BR>
+第二章 文獻回顧與探討 8<BR>
+2.1  可靠度驗證發展 8<BR>
+2.1.1  可靠度定義 8<BR>
+2.1.2  可靠度驗證 8<BR>
+2.2  數位轉型 10<BR>
+2.3  人工智慧技術導入與採用 13<BR>
+2.3.1  人工智慧技術 13<BR>
+2.3.2  人工智慧採用與準備度 14<BR>
+第三章 研究方法 16<BR>
+3.1  研究流程與架構 16<BR>
+3.2  研究對象 21<BR>
+3.3  研究方法 22<BR>
+3.3.1 個案探討 22<BR>
+3.3.2 質性訪談 22<BR>
+3.4  資料來源與訪談大綱設計 24<BR>
+3.4.1 資料來源 24<BR>
+3.4.2  訪談大綱設計 24<BR>
+3.5  資料處理與分析方法 26<BR>
+3.5.1 三角驗證(Triangulation) 26<BR>
+3.5.2 模糊質性比較分析(fsQCA) 26<BR>
+第四章 研究結果與發現 28<BR>
+4.1  個案公司之介紹 28<BR>
+4.1.1 紅墨水測試目的 29<BR>
+4.1.2 紅墨水測試流程 29<BR>
+4.1.3 紅墨水專案介紹 32<BR>
+4.1.4 紅墨水專案分析 33<BR>
+4.2  深度訪談 35<BR>
+4.2.1  質性分析工具MAXQDA 35<BR>
+4.2.2  訪談分析結果 35<BR>
+4.3  小結 49<BR>
+第五章 結論與建議 50<BR>
+5.1  研究結論 50<BR>
+5.2  研究貢獻 50<BR>
+5.3  研究限制 51<BR>
+5.4  未來研究建議 52<BR>
+參考文獻    53<BR>
+附錄1 59</FONT></TD></TR>
+     
+    <TR>
+      <TD bgColor=#deb887 vAlign=center align=left><B><FONT color=#800000>參考文獻</B></FONT></TD>
+      <TD bgColor=#fff7d6 vAlign=top colSpan=3 align=left><FONT size=2>Abbu, H., Mugge, P., Gudergan, G., Hoeborn, G., & Kwiatkowski, A. (2022). Measuring the Human Dimensions of Digital Leadership for Successful Digital Transformation. Research-Technology Management, 65(3), 39-49. https://doi.org/10.1080/08956308.2022.2048588 <BR>
+Abduljabbar, R., Dia, H., Liyanage, S., & Bagloee, S. A. (2019). Applications of artificial intelligence in transport: An overview. Sustainability, 11(1), 189. <BR>
+Adedoyin, O. B. (2020). Qualitative research methods. Principles of Social Psychiatry:,<BR>
+ 77-87. <BR>
+Alsheibani, S., Cheung, Y., & Messom, C. (2018). Artificial Intelligence Adoption: AI-readiness at Firm-Level. PACIS, 4, 231-245. <BR>
+Anshari, M., Almunawar, M. N., Lim, S. A., & Al-Mudimigh, A. (2019). Customer relationship management and big data enabled: Personalization & customization of services. Applied Computing and Informatics, 15(2), 94-101. <BR>
+Attaran, M., & Woods, J. (2019). Cloud computing technology: improving small business performance using the Internet. Journal of Small Business & Entrepreneurship, 31(6), 495-519. <BR>
+Belanche, D., Casaló, L. V., & Flavián, C. (2019). Artificial Intelligence in FinTech: understanding robo-advisors adoption among customers. Industrial Management & Data Systems, Vol. 119 No. 7, pp. 1411-1430.<BR>
+Bender, B., & Ebbinghaus, B. (2020). Social concertation in Europe during the Great Recession: A fsQCA-study of social partner involvement. The European social model under pressure: Liber amicorum in honour of Klaus Armingeon, 33-50. <BR>
+Berman, S. J. (2012). Digital transformation: opportunities to create new business models. Strategy & Leadership, 40(2), 16-24. <BR>
+Bharadwaj, A., El Sawy, O. A., Pavlou, P. A., & Venkatraman, N. v. (2013). Digital business strategy: toward a next generation of insights. MIS Quarterly, 471-482. <BR>
+Borgia, E. (2014). The Internet of Things vision: Key features, applications and open issues. Computer Communications, 54, 1-31. <BR>
+Chang, N., Zhang, Y., Lu, D., Zheng, X., & Xue, J. (2020, December). Is a disruptive technology disruptive? The readiness perspective based on TOE. In 2020 IEEE International Conference on Industrial Engineering and Engineering Management (IEEM) (pp. 893-897). IEEE.<BR>
+Collins, C. J. (2021). Expanding the resource based view model of strategic human resource management. The International Journal of Human Resource Management, 32(2), 331-358.<BR>
+Cubric, M. (2020). Drivers, barriers and social considerations for AI adoption in business and management: A tertiary study. Technology in Society, 62, 101257. <BR>
+Davenport, T. H., & Ronanki, R. (2018). Artificial intelligence for the real world. Harvard Business Review, 96(1), 108-116. <BR>
+Deng, L., & Liu, Y. (2018). A joint introduction to natural language processing and to deep learning. Deep Learning in Natural Language Processing, 1-22. <BR>
+Diop, K. A. S., & Liu, E. (2020). Categorization of case in case study research method: New approach. Knowledge and Performance Management, 4(1), 1. <BR>
+and reliability testing. SAE international. <BR>
+Eisenhardt, K. M. (2021). What is the Eisenhardt Method, really? Strategic Organization, 19(1), 147-160. <BR>
+Eyrich, N. W., Andino, J. J., & Fessell, D. P. (2021). Bridging the digital divide to avoid leaving the most vulnerable behind. JAMA Surgery, 156(8), 703-704. <BR>
+Favoretto, C., Mendes, G. H. d. S., Filho, M. G., Gouvea de Oliveira, M., & Ganga, G. M. D. (2022). Digital transformation of business model in manufacturing companies: challenges and research agenda. The Journal of Business & Industrial Marketing, 37(4), 748-767. https://doi.org/10.1108/JBIM-10-2020-0477 <BR>
+Flavián, C., Pérez-Rueda, A., Belanche, D., & Casaló, L. V. (2022). Intention to use analytical artificial intelligence (AI) in services–the effect of technology readiness and awareness. Journal of Service Management, 33(2), 293-320. <BR>
+Fountaine, T., McCarthy, B., & Saleh, T. (2019). Building the AI-powered organization. Harvard Business Review, 97(4), 62-73. <BR>
+Ghazal, T. M., Hasan, M. K., Alshurideh, M. T., Alzoubi, H. M., Ahmad, M., Akbar, S. S., Al Kurdi, B., & Akour, I. A. (2021). IoT for smart cities: Machine learning approaches in smart healthcare—A review. Future Internet, 13(8), 218. <BR>
+Ghosh, B., Daugherty, P. R., Wilson, H. J., & Burden, A. (2019). Taking a systems approach to adopting AI. Harvard Busines Review, May 09, 2019, 1-6.<BR>
+Gubbi, J., Buyya, R., Marusic, S., & Palaniswami, M. (2013). Internet of Things (IoT): A vision, architectural elements, and future directions. Future Generation Computer Systems, 29(7), 1645-1660. <BR>
+Gutierrez, A., Boukrami, E., & Lumsden, R. (2015). Technological, organisational and environmental factors influencing managers’ decision to adopt cloud computing in the UK. Journal of Enterprise Information Management.<BR>
+Haenlein, M., & Kaplan, A. (2019). A Brief History of Artificial Intelligence: On the Past, Present, and Future of Artificial Intelligence. California Management Review, 61(4), 5-14. https://doi.org/10.1177/0008125619864925 <BR>
+Hanelt, A., Bohnsack, R., Marz, D., & Antunes Marante, C. (2021). A systematic review of the literature on digital transformation: Insights and implications for strategy and organizational change. Journal of Management Studies, 58(5), 1159-1197. <BR>
+Hossain, M. A., Agnihotri, R., Rushan, M. R. I., Rahman, M. S., & Sumi, S. F. (2022). Marketing analytics capability, artificial intelligence adoption, and firms′ competitive advantage: Evidence from the manufacturing industry. Industrial Marketing Management, 106, 240-255. <BR>
+Huber, Evelyne, Charles Ragin, and John D. Stephens. 1993. “Social Democracy, Christian Democracy, Constitutional Structure, and the Welfare State.” American Journal of Sociology 99 (3): 711-49.<BR>
+Iansiti, M., & Lakhani, K. R. (2020). Competing in the age of AI: Strategy and leadership when algorithms and networks run the world. Harvard Business Press. <BR>
+Issa, H., Jabbouri, R., & Palmer, M. (2022). An artificial intelligence (AI)-readiness and adoption framework for AgriTech firms. Technological Forecasting and Social Change, 182, 121874. <BR>
+Jöhnk, J., Weißert, M., & Wyrtki, K. (2021). Ready or not, AI comes—an interview study of organizational AI readiness factors. Business & Information Systems Engineering, 63, 5-20. <BR>
+Kuckartz, U., & Rädiker, S. (2021). Using MAXQDA for mixed methods research. In The Routledge reviewer′s guide to mixed methods analysis (pp. 305-318). Routledge. <BR>
+Kushwaha, A. K., & Kar, A. K. (2020). Micro-foundations of artificial intelligence adoption in business: Making the shift. Re-imagining Diffusion and Adoption of Information Technology and Systems: A Continuing Conversation: IFIP WG 8.6 International Conference on Transfer and Diffusion of IT, TDIT 2020, Tiruchirappalli, India, December 18–19, 2020, Proceedings, Part I, <BR>
+Lukanova, G., & Ilieva, G. (2019). Robots, artificial intelligence, and service automation in hotels. In Robots, artificial intelligence, and service automation in travel, tourism and hospitality (pp. 157-183). Emerald Publishing Limited. <BR>
+Majchrzak, A., Markus, M. L., & Wareham, J. (2016). Designing for digital transformation. MIS Quarterly, 40(2), 267-278. <BR>
+Martínez-Plumed, F., Gómez, E., & Hernández-Orallo, J. (2021). Futures of artificial intelligence through technology readiness levels. Telematics and Informatics, 58, 101525. <BR>
+Matt, C., Hess, T., & Benlian, A. (2015). Digital transformation strategies. Business & Information Systems Engineering, 57, 339-343. <BR>
+McCarthy, J., Minsky, M. L., Rochester, N., & Shannon, C. E. (2006). A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence, August 31, 1955. AI Magazine, 27(4), 12. <BR>
+Metasebia A., Shashi K. & Zerihun Ayenew B. (2023). Qualitative Analysis with MAXQDA: Effect of HRM Practices on Organization Performance with Mediation of Employees′ Work Attitude in Textile Industries of Ethiopia. Advanced Qualitative Research, Vol. 1 No. 1 <BR>
+Nambisan, S., Lyytinen, K., Majchrzak, A., & Song, M. (2017). Digital innovation management. MIS quarterly, 41(1), 223-238. <BR>
+Nancy C., Denise B.,  Alba D., Jennifer B., & Alan J. (2014). The use of triangulation in qualitative research. In Oncol Nurs Forum (Vol. 41, No. 5, pp. 545-7). <BR>
+Nathan, S., Newman, C., & Lancaster, K. (2019). Qualitative interviewing. Handbook of Research Methods in Health Social Sciences. Springer Singapore. pp. 391-410. <BR>
+Noble, H., & Heale, R. (2019). Triangulation in research, with examples. In (Vol. 22, pp. 67-68): Royal College of Nursing.<BR>
+Otter, D. W., Medina, J. R., & Kalita, J. K. (2020). A survey of the usages of deep learning for natural language processing. IEEE Transactions on Neural Networks and Learning Systems, 32(2), 604-624. <BR>
+Porter, M. E., & Heppelmann, J. E. (2014). How smart, connected products are transforming competition. Harvard Business Review, 92(11), 64-88. <BR>
+Pumplun, L., Tauchert, C., & Heidt, M. (2019). A new organizational chassis for artificial intelligence-exploring organizational readiness factors. In Proceedings of the 27th European Conference on Information Systems (ECIS), Stockholm & Uppsala, Sweden, June 8-14, 2019. ISBN 978-1-7336325-0-8 Research Papers.<BR>
+Ridder, H.G. (2017).The theory contribution of case study research designs. Business Research 10, 281–305. https://doi.org/10.1007/s40685-017-0045-z <BR>
+Singh, A., & Hess, T. (2017). How chief digital officers promote the digital transformation of their companies. MIS Quarterly Executive, 16(1), p1-17. <BR>
+Standardization, I. O. f. (2015). ISO9001 Quality Management System. In I. O. f. Standardization (Ed.).<BR>
+Truong, D. (2010). How cloud computing enhances competitive advantages: A research model for small businesses. The Business Review, Cambridge, 15(1), 59-65. <BR>
+Vial, G. (2019). Understanding digital transformation: A review and a research agenda. The Journal of Strategic Information Systems, 28(2), 118-144. https://doi.org/https://doi.org/10.1016/j.jsis.2019.01.003 <BR>
+Vinoth, S., Vemula, H. L., Haralayya, B., Mamgain, P., Hasan, M. F., & Naved, M. (2022). Application of cloud computing in banking and e-commerce and related security threats. Materials Today: Proceedings, 51, 2172-2175. <BR>
+Wamba, S. F., Akter, S., Edwards, A., Chopin, G., & Gnanzou, D. (2015). How ‘big data’can make big impact: Findings from a systematic review and a longitudinal case study. International Journal of Production economics, 165, 234-246. <BR>
+Westerman, G., Bonnet, D., & McAfee, A. (2014). The nine elements of digital transformation. MIT Sloan Management Review, 55(3), 1-6. <BR>
+Woschank, M., Rauch, E., & Zsifkovits, H. (2020). A review of further directions for artificial intelligence, machine learning, and deep learning in smart logistics. Sustainability, 12(9), 3760. <BR>
+Yoo, Y., Henfridsson, O., & Lyytinen, K. (2010). Research commentary—the new organizing logic of digital innovation: an agenda for information systems research. Information Systems Research, 21(4), 724-735. <BR>
+楊佳蓉 (2018)。大數據個資去識別化第三方驗證機構設置之研究。東吳大學商學院企<BR>
+業管理學系(所)碩士論文。<BR>
+台積電 (2022)。 台積公司110 年度永續報告書 - ESG。<BR>
+取自 https://esg.tsmc.com/download/file/2021_sustainabilityReport/chinese/c-all.pdf<BR>
+吳孝三 (2016)。全系統觀之可靠度工程發展。品質月刊，52(6)，6。<BR>
+柯利弗德·皮寇弗(著)。陳以禮（譯）(2013)。The Math Book:From Pythagoras to the 57th Dimension, 250 Milestones in the History of Mathematics [數學之書]。時報文化。<BR>
+彭鴻霖 (2000)。可靠度需求訂定技術。<BR>
+施鑫澤與林裕洋 (2022)。台達 5G 智慧工廠啟用週年。CIO Taiwan。<BR>
+取自 https://www.cio.com.tw/delta-5g-smart-factory-enablement-anniversary/</FONT></TD></TR>
+     
+    <TR>
+      <TD bgColor=#deb887 vAlign=center align=left><FONT color=#800000><B>指導教授</B></FONT></TD>
+      <TD bgColor=#fff7d6 vAlign=top align=left>
+      	  曾筱珽
+      	 </TD>
+      <TD bgColor=#deb887 vAlign=center align=left><B><FONT color=#800000>審核日期</B></FONT></TD>
+      <TD bgColor=#fff7d6 vAlign=middle align=left>2023-6-27</TD></TR>
+    <TR>
+      <TD bgColor=#deb887 vAlign=center align=left><B><FONT color=#800000>推文</B></FONT></TD>
+      <TD bgColor=#fff7d6 vAlign=top colSpan=3 align=left><FONT size=2>
+      	  <A href="javascript:void(window.open('http%3A%2F%2Fwww%2Efacebook%2Ecom%2Fshare%2Ephp%3Fu%3Dhttp%3A%2F%2Fir%2Elib%2Encu%2Eedu%2Etw%3A88%2Fthesis%2Fview%5Fetd%2Easp%3FURN%3D110453014%26t%3D%E5%8F%AF%E9%9D%A0%E5%BA%A6%E9%A9%97%E8%AD%89%E5%AF%A6%E9%A9%97%E5%AE%A4%E5%B0%8E%E5%85%A5%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E6%8A%80%E8%A1%93%E7%9A%84%E5%8F%AF%E8%A1%8C%E6%80%A7%E6%8E%A2%E8%A8%8E+%2D%E4%BB%A5A%E5%85%AC%E5%8F%B8%E7%82%BA%E4%BE%8B'));"><IMG border=0 src="images/facebook.gif" title='facebook'>facebook</A>&nbsp;&nbsp;&nbsp;<A href="javascript:void(window.open('http%3A%2F%2Fwww%2Eplurk%2Ecom%2F%3Fqualifier%3Dshares%26status%3Dhttp%3A%2F%2Fir%2Elib%2Encu%2Eedu%2Etw%3A88%2Fthesis%2Fview%5Fetd%2Easp%3FURN%3D110453014+%28%E5%8F%AF%E9%9D%A0%E5%BA%A6%E9%A9%97%E8%AD%89%E5%AF%A6%E9%A9%97%E5%AE%A4%E5%B0%8E%E5%85%A5%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E6%8A%80%E8%A1%93%E7%9A%84%E5%8F%AF%E8%A1%8C%E6%80%A7%E6%8E%A2%E8%A8%8E+%2D%E4%BB%A5A%E5%85%AC%E5%8F%B8%E7%82%BA%E4%BE%8B%29'));"><IMG border=0 src="images/plurk.gif" title='plurk'>plurk</A>&nbsp;&nbsp;&nbsp;<A href="javascript:void(window.open('http%3A%2F%2Ftwitter%2Ecom%2Fhome%2F%3Fstatus%3D%E5%8F%AF%E9%9D%A0%E5%BA%A6%E9%A9%97%E8%AD%89%E5%AF%A6%E9%A9%97%E5%AE%A4%E5%B0%8E%E5%85%A5%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E6%8A%80%E8%A1%93%E7%9A%84%E5%8F%AF%E8%A1%8C%E6%80%A7%E6%8E%A2%E8%A8%8E+%2D%E4%BB%A5A%E5%85%AC%E5%8F%B8%E7%82%BA%E4%BE%8B+http%3A%2F%2Fir%2Elib%2Encu%2Eedu%2Etw%3A88%2Fthesis%2Fview%5Fetd%2Easp%3FURN%3D110453014'));"><IMG border=0 src="images/twitter.gif" title='twitter'>twitter</A>&nbsp;&nbsp;&nbsp;<A href="javascript:void(window.open('http%3A%2F%2Ffunp%2Ecom%2Fpush%2Fsubmit%2F%3Fvia%3Dtools%26url%3Dhttp%3A%2F%2Fir%2Elib%2Encu%2Eedu%2Etw%3A88%2Fthesis%2Fview%5Fetd%2Easp%3FURN%3D110453014%26title%3D%E5%8F%AF%E9%9D%A0%E5%BA%A6%E9%A9%97%E8%AD%89%E5%AF%A6%E9%A9%97%E5%AE%A4%E5%B0%8E%E5%85%A5%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E6%8A%80%E8%A1%93%E7%9A%84%E5%8F%AF%E8%A1%8C%E6%80%A7%E6%8E%A2%E8%A8%8E+%2D%E4%BB%A5A%E5%85%AC%E5%8F%B8%E7%82%BA%E4%BE%8B'));"><IMG border=0 src="images/funp.gif" title='funp'>funp</A>&nbsp;&nbsp;&nbsp;<A href="javascript:void(window.open('http%3A%2F%2Fwww%2Egoogle%2Ecom%2Fbookmarks%2Fmark%3Fop%3Dedit%26bkmk%3Dhttp%3A%2F%2Fir%2Elib%2Encu%2Eedu%2Etw%3A88%2Fthesis%2Fview%5Fetd%2Easp%3FURN%3D110453014+%E5%8F%AF%E9%9D%A0%E5%BA%A6%E9%A9%97%E8%AD%89%E5%AF%A6%E9%A9%97%E5%AE%A4%E5%B0%8E%E5%85%A5%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E6%8A%80%E8%A1%93%E7%9A%84%E5%8F%AF%E8%A1%8C%E6%80%A7%E6%8E%A2%E8%A8%8E+%2D%E4%BB%A5A%E5%85%AC%E5%8F%B8%E7%82%BA%E4%BE%8B'));"><IMG border=0 src="images/google.gif" title='google'>google</A>&nbsp;&nbsp;&nbsp;<A href="javascript:void(window.open('https%3A%2F%2Fskydrive%2Elive%2Ecom%2Fsharefavorite%2Easpx%2F%2ESharedFavorites%3F%3Fmarklet%3D1%26url%3Dhttp%3A%2F%2Fir%2Elib%2Encu%2Eedu%2Etw%3A88%2Fthesis%2Fview%5Fetd%2Easp%3FURN%3D110453014%26title%3D%E5%8F%AF%E9%9D%A0%E5%BA%A6%E9%A9%97%E8%AD%89%E5%AF%A6%E9%A9%97%E5%AE%A4%E5%B0%8E%E5%85%A5%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E6%8A%80%E8%A1%93%E7%9A%84%E5%8F%AF%E8%A1%8C%E6%80%A7%E6%8E%A2%E8%A8%8E+%2D%E4%BB%A5A%E5%85%AC%E5%8F%B8%E7%82%BA%E4%BE%8B'));"><IMG border=0 src="images/live.gif" title='live'>live</A>&nbsp;&nbsp;&nbsp;<A href="javascript:void(window.open('http%3A%2F%2Fmember%2Eudn%2Ecom%2Fmember%2Flogin%2Ejsp%3Fsite%3Dbookmark%26redirect%3Dhttp%3A%2F%2Fbookmark%2Eudn%2Ecom%2Fadd%3Ff%5FURL%3D+http%3A%2F%2Fir%2Elib%2Encu%2Eedu%2Etw%3A88%2Fthesis%2Fview%5Fetd%2Easp%3FURN%3D110453014%26f%5FTITLE%3D%E5%8F%AF%E9%9D%A0%E5%BA%A6%E9%A9%97%E8%AD%89%E5%AF%A6%E9%A9%97%E5%AE%A4%E5%B0%8E%E5%85%A5%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E6%8A%80%E8%A1%93%E7%9A%84%E5%8F%AF%E8%A1%8C%E6%80%A7%E6%8E%A2%E8%A8%8E+%2D%E4%BB%A5A%E5%85%AC%E5%8F%B8%E7%82%BA%E4%BE%8B'));"><IMG border=0 src="images/udn.gif" title='udn'>udn</A>&nbsp;&nbsp;&nbsp;<A href="javascript:void(window.open('http%3A%2F%2Fwww%2Ehemidemi%2Ecom%2Fuser%5Fbookmark%2Fnew%3Ftitle%3D%E5%8F%AF%E9%9D%A0%E5%BA%A6%E9%A9%97%E8%AD%89%E5%AF%A6%E9%A9%97%E5%AE%A4%E5%B0%8E%E5%85%A5%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E6%8A%80%E8%A1%93%E7%9A%84%E5%8F%AF%E8%A1%8C%E6%80%A7%E6%8E%A2%E8%A8%8E+%2D%E4%BB%A5A%E5%85%AC%E5%8F%B8%E7%82%BA%E4%BE%8B%26%3Burl%3D+http%3A%2F%2Fir%2Elib%2Encu%2Eedu%2Etw%3A88%2Fthesis%2Fview%5Fetd%2Easp%3FURN%3D110453014'));"><IMG border=0 src="images/HD.gif" title='HD'>HD</A>&nbsp;&nbsp;&nbsp;<A href="javascript:void(window.open('http%3A%2F%2Fmyshare%2Eurl%2Ecom%2Etw%2Findex%2Ephp%3Ffunc%3Dnewurl%26from%3Dmysharepop%26url%3D+http%3A%2F%2Fir%2Elib%2Encu%2Eedu%2Etw%3A88%2Fthesis%2Fview%5Fetd%2Easp%3FURN%3D110453014%26desc%3D%E5%8F%AF%E9%9D%A0%E5%BA%A6%E9%A9%97%E8%AD%89%E5%AF%A6%E9%A9%97%E5%AE%A4%E5%B0%8E%E5%85%A5%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E6%8A%80%E8%A1%93%E7%9A%84%E5%8F%AF%E8%A1%8C%E6%80%A7%E6%8E%A2%E8%A8%8E+%2D%E4%BB%A5A%E5%85%AC%E5%8F%B8%E7%82%BA%E4%BE%8B'));"><IMG border=0 src="images/myshare.gif" title='myshare'>myshare</A>&nbsp;&nbsp;&nbsp;<A href="javascript:void(window.open('http%3A%2F%2Fwww%2Ereddit%2Ecom%2Fsubmit%3Furl%3Dhttp%3A%2F%2Fir%2Elib%2Encu%2Eedu%2Etw%3A88%2Fthesis%2Fview%5Fetd%2Easp%3FURN%3D110453014%26title%3D%E5%8F%AF%E9%9D%A0%E5%BA%A6%E9%A9%97%E8%AD%89%E5%AF%A6%E9%A9%97%E5%AE%A4%E5%B0%8E%E5%85%A5%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E6%8A%80%E8%A1%93%E7%9A%84%E5%8F%AF%E8%A1%8C%E6%80%A7%E6%8E%A2%E8%A8%8E+%2D%E4%BB%A5A%E5%85%AC%E5%8F%B8%E7%82%BA%E4%BE%8B'));"><IMG border=0 src="images/reddit.gif" title='reddit'>reddit</A>&nbsp;&nbsp;&nbsp;<A href="javascript:void(window.open('http%3A%2F%2Fwww%2Enetvibes%2Ecom%2Fshare%3Furl%3Dhttp%3A%2F%2Fir%2Elib%2Encu%2Eedu%2Etw%3A88%2Fthesis%2Fview%5Fetd%2Easp%3FURN%3D110453014%26title%3D%E5%8F%AF%E9%9D%A0%E5%BA%A6%E9%A9%97%E8%AD%89%E5%AF%A6%E9%A9%97%E5%AE%A4%E5%B0%8E%E5%85%A5%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E6%8A%80%E8%A1%93%E7%9A%84%E5%8F%AF%E8%A1%8C%E6%80%A7%E6%8E%A2%E8%A8%8E+%2D%E4%BB%A5A%E5%85%AC%E5%8F%B8%E7%82%BA%E4%BE%8B'));"><IMG border=0 src="images/netvibes.gif" title='netvibes'>netvibes</A>&nbsp;&nbsp;&nbsp;<A href="javascript:void(window.open('http%3A%2F%2Ffriendfeed%2Ecom%2F%3Furl%3Dhttp%3A%2F%2Fir%2Elib%2Encu%2Eedu%2Etw%3A88%2Fthesis%2Fview%5Fetd%2Easp%3FURN%3D110453014%26title%3D%E5%8F%AF%E9%9D%A0%E5%BA%A6%E9%A9%97%E8%AD%89%E5%AF%A6%E9%A9%97%E5%AE%A4%E5%B0%8E%E5%85%A5%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E6%8A%80%E8%A1%93%E7%9A%84%E5%8F%AF%E8%A1%8C%E6%80%A7%E6%8E%A2%E8%A8%8E+%2D%E4%BB%A5A%E5%85%AC%E5%8F%B8%E7%82%BA%E4%BE%8B'));"><IMG border=0 src="images/friend.gif" title='friend'>friend</A>&nbsp;&nbsp;&nbsp;<A href="javascript:void(window.open('http%3A%2F%2Fwww%2Eyoupush%2Enet%2Fsubmit%2Ephp%3Furl%3Dhttp%3A%2F%2Fir%2Elib%2Encu%2Eedu%2Etw%3A88%2Fthesis%2Fview%5Fetd%2Easp%3FURN%3D110453014'));"><IMG border=0 src="images/youpush.gif" title='youpush'>youpush</A>&nbsp;&nbsp;&nbsp;<A href="javascript:void(window.open('http%3A%2F%2Fdel%2Eicio%2Eus%2Fpost%3Fv%3D4%26noui%26jump%3Dclose%26url%3Dhttp%3A%2F%2Fir%2Elib%2Encu%2Eedu%2Etw%3A88%2Fthesis%2Fview%5Fetd%2Easp%3FURN%3D110453014%26title%3D%E5%8F%AF%E9%9D%A0%E5%BA%A6%E9%A9%97%E8%AD%89%E5%AF%A6%E9%A9%97%E5%AE%A4%E5%B0%8E%E5%85%A5%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E6%8A%80%E8%A1%93%E7%9A%84%E5%8F%AF%E8%A1%8C%E6%80%A7%E6%8E%A2%E8%A8%8E+%2D%E4%BB%A5A%E5%85%AC%E5%8F%B8%E7%82%BA%E4%BE%8B'));"><IMG border=0 src="images/delicious.gif" title='delicious'>delicious</A>&nbsp;&nbsp;&nbsp;<A href="javascript:void(window.open('http%3A%2F%2Fcang%2Ebaidu%2Ecom%2Fdo%2Fadd%3Fiu%3Dhttp%3A%2F%2Fir%2Elib%2Encu%2Eedu%2Etw%3A88%2Fthesis%2Fview%5Fetd%2Easp%3FURN%3D110453014%26it%3D%E5%8F%AF%E9%9D%A0%E5%BA%A6%E9%A9%97%E8%AD%89%E5%AF%A6%E9%A9%97%E5%AE%A4%E5%B0%8E%E5%85%A5%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E6%8A%80%E8%A1%93%E7%9A%84%E5%8F%AF%E8%A1%8C%E6%80%A7%E6%8E%A2%E8%A8%8E+%2D%E4%BB%A5A%E5%85%AC%E5%8F%B8%E7%82%BA%E4%BE%8B'));"><IMG border=0 src="images/baidu.gif" title='baidu'>baidu</A>&nbsp;&nbsp;&nbsp;
+      	 </FONT></TD></TR>  
+    <TR>
+      <TD bgColor=#deb887 vAlign=center align=left><B><FONT color=#800000>網路書籤</B></FONT></TD>
+      <TD bgColor=#fff7d6 vAlign=top colSpan=3 align=left><FONT size=2>
+      	  <A href="javascript:void(window.open('http%3A%2F%2Fwww%2Egoogle%2Ecom%2Fbookmarks%2Fmark%3Fop%3Dedit%26bkmk%3Dhttp%3A%2F%2Fir%2Elib%2Encu%2Eedu%2Etw%3A88%2Fthesis%2Fview%5Fetd%2Easp%3FURN%3D110453014%26title%3D%E5%8F%AF%E9%9D%A0%E5%BA%A6%E9%A9%97%E8%AD%89%E5%AF%A6%E9%A9%97%E5%AE%A4%E5%B0%8E%E5%85%A5%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E6%8A%80%E8%A1%93%E7%9A%84%E5%8F%AF%E8%A1%8C%E6%80%A7%E6%8E%A2%E8%A8%8E+%2D%E4%BB%A5A%E5%85%AC%E5%8F%B8%E7%82%BA%E4%BE%8B'));"><IMG border=0 src="images/Google bookmarks.gif" title='Google bookmarks'>Google bookmarks</A>&nbsp;&nbsp;&nbsp;<A href="javascript:void(window.open('http%3A%2F%2Fdel%2Eicio%2Eus%2Fpost%3Fv%3D4%26noui%26jump%3Dclose%26url%3Dhttp%3A%2F%2Fir%2Elib%2Encu%2Eedu%2Etw%3A88%2Fthesis%2Fview%5Fetd%2Easp%3FURN%3D110453014%26title%3D%E5%8F%AF%E9%9D%A0%E5%BA%A6%E9%A9%97%E8%AD%89%E5%AF%A6%E9%A9%97%E5%AE%A4%E5%B0%8E%E5%85%A5%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E6%8A%80%E8%A1%93%E7%9A%84%E5%8F%AF%E8%A1%8C%E6%80%A7%E6%8E%A2%E8%A8%8E+%2D%E4%BB%A5A%E5%85%AC%E5%8F%B8%E7%82%BA%E4%BE%8B'));"><IMG border=0 src="images/del.icio.us.gif" title='del.icio.us'>del.icio.us</A>&nbsp;&nbsp;&nbsp;<A href="javascript:void(window.open('http%3A%2F%2Fwww%2Ehemidemi%2Ecom%2Fuser%5Fbookmark%2Fnew%3Ftitle%3D%E5%8F%AF%E9%9D%A0%E5%BA%A6%E9%A9%97%E8%AD%89%E5%AF%A6%E9%A9%97%E5%AE%A4%E5%B0%8E%E5%85%A5%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E6%8A%80%E8%A1%93%E7%9A%84%E5%8F%AF%E8%A1%8C%E6%80%A7%E6%8E%A2%E8%A8%8E+%2D%E4%BB%A5A%E5%85%AC%E5%8F%B8%E7%82%BA%E4%BE%8B%26%3Burl%3Dhttp%3A%2F%2Fir%2Elib%2Encu%2Eedu%2Etw%3A88%2Fthesis%2Fview%5Fetd%2Easp%3FURN%3D110453014'));"><IMG border=0 src="images/hemidemi.gif" title='hemidemi'>hemidemi</A>&nbsp;&nbsp;&nbsp;<A href="javascript:void(window.open('http%3A%2F%2Fmyshare%2Eurl%2Ecom%2Etw%2Findex%2Ephp%3Ffunc%3Dnewurl%26from%3Dmysharepop%26url%3Dhttp%3A%2F%2Fir%2Elib%2Encu%2Eedu%2Etw%3A88%2Fthesis%2Fview%5Fetd%2Easp%3FURN%3D110453014%26title%3D%E5%8F%AF%E9%9D%A0%E5%BA%A6%E9%A9%97%E8%AD%89%E5%AF%A6%E9%A9%97%E5%AE%A4%E5%B0%8E%E5%85%A5%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E6%8A%80%E8%A1%93%E7%9A%84%E5%8F%AF%E8%A1%8C%E6%80%A7%E6%8E%A2%E8%A8%8E+%2D%E4%BB%A5A%E5%85%AC%E5%8F%B8%E7%82%BA%E4%BE%8B'));"><IMG border=0 src="images/myshare.gif" title='myshare'>myshare</A>&nbsp;&nbsp;&nbsp;
+      	 </FONT></TD></TR>     	 	
+  </TBODY></TABLE>
+  </DIV>
+  </BLOCKQUOTE>
+<CENTER><HR width="100%"></CENTER>
+
+
+
+<P></P>
+<DIV align=center>
+<P>
+<CENTER>若有論文相關問題，請聯絡國立中央大學圖書館推廣服務組 TEL:(03)422-7151轉57407，或<A href="mailto:ncu57407@ncu.edu.tw">E-mail</A>聯絡
+	      &nbsp;-&nbsp;<a target='_blank' href="http://www.cc.ncu.edu.tw/privacy/">隱私權政策聲明</a></CENTER>
+<P></P></DIV>
+	
+</BODY>
+</HTML>
+

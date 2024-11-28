@@ -1,0 +1,476 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>The role of artificial intelligence, marketing strategies, and organizational capabilities in organizational performance: The moderating role of organizational behavior &raquo; Growing Science</title>
+<meta name="description" content="Currently, artificial intelligence and marketing strategies have become significant factors for improving the business capabilities that lead to improved business performance. Thus, the curr" />
+<meta name="keywords" content="Artificial intelligence,  Marketing strategies,  Organizational performance,  Organizational capabilities,  Organizational behavior, organizational, performance, marketing, strategies, artificial, intelligence, study, industry, tourism, between, links, capabilities, behavior, business, current, outcomes, revealed, association, positively, results" />
+<meta name="citation_title" content="The role of artificial intelligence, marketing strategies, and organizational capabilities in organizational performance: The moderating role of organizational behavior">
+<meta name="citation_author" content="Nuseir, M.">
+<meta name="citation_author" content="Refae, G.">
+<meta name="citation_publication_date" content="2022">
+<meta name="citation_journal_title" content="Uncertain Supply Chain Management">
+<meta name="citation_volume" content="10">
+<meta name="citation_issue" content="4">
+<meta name="citation_firstpage" content="1457">
+<meta name="citation_lastpage" content="1466">
+<meta name="citation_pdf_url" content="http://m.growingscience.com/uscm/Vol10/uscm_2022_63.pdf">
+<link rel="search" type="application/opensearchdescription+xml" href="http://m.growingscience.com/beta/engine/opensearch.php" title="Growing Science" />
+<link rel="alternate" type="application/rss+xml" title="Growing Science" href="http://m.growingscience.com/beta/rss.xml" />
+<script type="text/javascript" src="/beta/engine/classes/min/index.php?charset=utf-8&amp;g=general&amp;9"></script>
+<script type="text/javascript" src="/beta/engine/classes/min/index.php?charset=utf-8&amp;f=engine/classes/js/bbcodes.js&amp;9"></script>
+<script type="text/javascript" src="/beta/engine/editor/scripts/webfont.js"></script>
+<link media="screen" href="/beta/engine/editor/css/default.css" type="text/css" rel="stylesheet" />
+<!--[IF IE]>
+<script type="text/javascript" src="/beta/engine/classes/masha/ierange.js"></script>
+<![ENDIF]-->
+<script type="text/javascript" src="/beta/engine/classes/masha/masha.js"></script>
+<link href="/beta/templates/gs/style/styles.css" type="text/css" rel="stylesheet" />
+<link href="/beta/templates/gs/style/engine.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<div id="loading-layer" style="display:none">Processing, Please wait... </div>
+<script type="text/javascript">
+<!--
+var dle_root       = '/beta/';
+var dle_admin      = '';
+var dle_login_hash = '';
+var dle_group      = 5;
+var dle_skin       = 'gs';
+var dle_wysiwyg    = '0';
+var quick_wysiwyg  = '0';
+var dle_act_lang   = ["Yes", "No", "Enter", "Cancel", "Save"];
+var menu_short     = 'Quick Edit';
+var menu_full      = 'Full Edit';
+var menu_profile   = 'Profile';
+var menu_send      = 'Send message';
+var menu_uedit     = 'User Administration';
+var dle_info       = 'Information';
+var dle_confirm    = 'Confirm';
+var dle_prompt     = 'Input information';
+var dle_req_field  = 'Fill out all required fields';
+var dle_del_agree  = 'Are you sure you want to delete this message?';
+var dle_spam_agree = 'Do you really want to mark a user as a spammer? This will delete all of his/her reviews';
+var dle_complaint  = 'Enter your report text:';
+var dle_big_text   = 'Selected area is too large text.';
+var dle_orfo_title = 'Enter a review for report';
+var dle_p_send     = 'Send';
+var dle_p_send_ok  = 'Notification sent successfully';
+var dle_save_ok    = 'Changes has saved successfully.';
+var dle_del_news   = 'Delete article';
+var allow_dle_delete_news   = false;
+var dle_search_delay   = false;
+var dle_search_value   = '';
+$(function(){
+	FastSearch();
+});
+
+$(function(){
+		var timeoutHover = null;
+
+		$('body').append('<div id="share-popup" style="display:none"><div class="social"><p>Share selected text</p><ul><li><a href="#" class="tw"><span></span>Twitter</a></li><li><a href="#" class="fb"><span></span>Facebook</a></li><li><a href="#" class="vk"><span></span>VKontakte</a></li><li><a href="#" class="gp"><span></span>Google+</a></li></ul></div><div class="link"><p>Direct link:</p><a href=""><ins></ins></a><span>Right click and select «Copy Link»</span></div></div>');
+
+		$("#share-popup").hover(
+			function(){
+				if (typeof timeout_hover!="undefined") {
+					window.clearTimeout(timeout_hover)
+				}
+
+			},
+			function(){
+				timeout_hover=window.setTimeout(function(){
+					hideSharePopup();
+				},2000);
+			}
+		);
+
+		MaSha.instance=new MaSha({
+				selectable:$("#dle-content")[0],
+				'ignored': '.ignore-select',
+				onMark:function(){
+				updateSharePopupContent();
+				showSharePopup($(".num"+ (this.counter-1), $(this.selectable))[0]);
+			},
+				onUnmark: function(){
+				"undefined"!=typeof hideSharePopup && hideSharePopup("",!0);
+				updateSharePopupContent();
+			}
+		});
+		updateSharePopupContent();
+
+});//-->
+</script>
+<div id="bgcontainer">
+  <div class="bg_footer">
+    <!-- START Header -->
+    <div class="Header">
+      <!-- Start Logo -->
+
+        <div id="header-inner">
+          <h1></h1>
+        </div>
+
+      <!-- End Logo -->
+
+
+      <div class="clr"></div>
+    </div>
+
+    <!-- END Header -->
+<!-- Container -->
+
+<div class="CON">
+  <!-- Start Menu -->
+  <div class="Menu" style="float:left">
+	<div>
+    <ul>
+      <li><a href="http://m.growingscience.com/index.html">
+        Home        </a></li>
+      <li><a href="http://m.growingscience.com/ijiec/page.html">
+
+        About Us        </a></li>
+      
+      </ul><div class="clr"></div>
+	  </div>
+
+
+  </div>		<div style="float:right;padding:10px;">
+		<form action="/gs/" name="searchform" method="get">
+			<input type="hidden" name="do" value="search" />
+			<input type="hidden" name="subaction" value="search" />
+			<input name="search_start" id="search_start" value="1" type="hidden">
+			<input name="full_search" id="full_search" value="1" type="hidden">	
+			<ul class="searchbar reset">
+			<li class="lfield4"><span>Search:</span></li><li class="lfield2"><select class="textin" name="titleonly" id="titleonly">
+								<option  value="0">All Fields</option>
+								<option  value="3">Titles</option>
+								<option  value="4">Keywords</option>
+								<option  value="5">Authors</option>
+							</select></li>
+				<li class="lfield"><input id="story" name="story" type="text" /></li>
+				<li class="lbtn"><input title="Search" alt="Search" type="image" src="/beta/templates/gs/images/spacer.gif" /></li>
+											<li class="lfield3"><a href="http://m.growingscience.com/beta/?do=search&mode=advanced">
+        Advanced Search        </a></li>
+			</ul>
+		</form>
+		</div>    <div class="clr"></div>
+  <div class="clr"></div>
+  		<div id="speedbar">
+			<div>
+				<div style="font-size:14px;" class="container">
+					<p><span id='dle-speedbar'><a href="http://m.growingscience.com/beta/">Growing Science</a> &raquo; <a href="http://m.growingscience.com/beta/uscm/">Uncertain Supply Chain Management</a> &raquo; The role of artificial intelligence, marketing strategies, and organizational capabilities in organizational performance: The moderating role of organizational behavior</span></p>
+				</div>
+			</div>
+		</div>
+  <!-- End Menu -->
+  <!-- Start SC -->
+  <div class="SC2">
+            <div class="PostTime">   <!-- Start Archives -->
+  <iframe src="http://m.growingscience.com/iframes/iframeleft.html" width="180" height="210" frameborder="0"></iframe>
+
+
+
+	  
+<script type="text/javascript">//<![CDATA[
+$(function(){
+	$("#slidemenu").UlMenu();
+});
+//]]></script>
+
+	<div class="categories">
+      <h2>
+        Journals     </h2>
+	<ul style="max-height:450px;overflow: auto;" class="slidemenu" class="reset">
+<li><a href="/beta/ijiec" alt="International Journal of Industrial Engineering Computations " title="International Journal of Industrial Engineering Computations ">IJIEC (651)</a></li><li><a href="/beta/msl" alt="Management Science Letters " title="Management Science Letters ">MSL (2628)</a></li><li><a href="/beta/dsl" alt="Decision Science Letters " title="Decision Science Letters ">DSL (562)</a></li><li><a href="/beta/ccl" alt="Current Chemistry Letters" title="Current Chemistry Letters">CCL (447)</a></li><li><a href="/beta/uscm" alt="Uncertain Supply Chain Management" title="Uncertain Supply Chain Management">USCM (1045)</a></li><li><a href="/beta/esm" alt="Engineering Solid Mechanics" title="Engineering Solid Mechanics">ESM (372)</a></li><li><a href="/beta/ac" alt="Accounting" title="Accounting">AC (532)</a></li><li><a href="/beta/jpm" alt="Journal of Project Management" title="Journal of Project Management">JPM (179)</a></li><li><a href="/beta/ijds" alt="International Journal of Data and Network Science" title="International Journal of Data and Network Science">IJDS (776)</a></li><li><a href="/beta/jfs" alt="Journal of Future Sustainability" title="Journal of Future Sustainability">JFS (81)</a></li>
+	</ul>
+      <div class="clr"></div>
+    </div><br>
+	<div class="categories">
+      <h2>
+        USCM Volumes    </h2>
+	<ul class="slidemenu" id="slidemenu" class="reset">
+<ul><li><span class="sublnk">Volume 1 (22)</span></li><li class="submenu"><ul><li><a href="/beta/journal/uscm/volume/1/issue/1">Issue 1 (4)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/1/issue/2">Issue 2 (6)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/1/issue/3">Issue 3 (6)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/1/issue/4">Issue 4 (6)</a></li></ul></li></ul><ul><li><span class="sublnk">Volume 2 (32)</span></li><li class="submenu"><ul><li><a href="/beta/journal/uscm/volume/2/issue/1">Issue 1 (7)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/2/issue/2">Issue 2 (5)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/2/issue/3">Issue 3 (10)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/2/issue/4">Issue 4 (10)</a></li></ul></li></ul><ul><li><span class="sublnk">Volume 3 (39)</span></li><li class="submenu"><ul><li><a href="/beta/journal/uscm/volume/3/issue/1">Issue 1 (9)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/3/issue/2">Issue 2 (13)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/3/issue/3">Issue 3 (10)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/3/issue/4">Issue 4 (7)</a></li></ul></li></ul><ul><li><span class="sublnk">Volume 4 (31)</span></li><li class="submenu"><ul><li><a href="/beta/journal/uscm/volume/4/issue/1">Issue 1 (10)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/4/issue/2">Issue 2 (6)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/4/issue/3">Issue 3 (6)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/4/issue/4">Issue 4 (9)</a></li></ul></li></ul><ul><li><span class="sublnk">Volume 5 (26)</span></li><li class="submenu"><ul><li><a href="/beta/journal/uscm/volume/5/issue/1">Issue 1 (6)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/5/issue/2">Issue 2 (6)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/5/issue/3">Issue 3 (8)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/5/issue/4">Issue 4 (6)</a></li></ul></li></ul><ul><li><span class="sublnk">Volume 6 (25)</span></li><li class="submenu"><ul><li><a href="/beta/journal/uscm/volume/6/issue/1">Issue 1 (7)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/6/issue/2">Issue 2 (6)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/6/issue/3">Issue 3 (6)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/6/issue/4">Issue 4 (6)</a></li></ul></li></ul><ul><li><span class="sublnk">Volume 7 (57)</span></li><li class="submenu"><ul><li><a href="/beta/journal/uscm/volume/7/issue/1">Issue 1 (8)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/7/issue/2">Issue 2 (19)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/7/issue/3">Issue 3 (14)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/7/issue/4">Issue 4 (16)</a></li></ul></li></ul><ul><li><span class="sublnk">Volume 8 (82)</span></li><li class="submenu"><ul><li><a href="/beta/journal/uscm/volume/8/issue/1">Issue 1 (20)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/8/issue/2">Issue 2 (15)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/8/issue/3">Issue 3 (17)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/8/issue/4">Issue 4 (30)</a></li></ul></li></ul><ul><li><span class="sublnk">Volume 9 (117)</span></li><li class="submenu"><ul><li><a href="/beta/journal/uscm/volume/9/issue/1">Issue 1 (25)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/9/issue/2">Issue 2 (26)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/9/issue/3">Issue 3 (32)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/9/issue/4">Issue 4 (34)</a></li></ul></li></ul><ul><li><span class="sublnk">Volume 10 (150)</span></li><li class="submenu"><ul><li><a href="/beta/journal/uscm/volume/10/issue/1">Issue 1 (28)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/10/issue/2">Issue 2 (32)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/10/issue/3">Issue 3 (44)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/10/issue/4">Issue 4 (46)</a></li></ul></li></ul><ul><li><span class="sublnk">Volume 11 (190)</span></li><li class="submenu"><ul><li><a href="/beta/journal/uscm/volume/11/issue/1">Issue 1 (42)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/11/issue/2">Issue 2 (45)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/11/issue/3">Issue 3 (50)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/11/issue/4">Issue 4 (53)</a></li></ul></li></ul><ul><li><span class="sublnk">Volume 12 (244)</span></li><li class="submenu"><ul><li><a href="/beta/journal/uscm/volume/12/issue/1">Issue 1 (55)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/12/issue/2">Issue 2 (59)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/12/issue/3">Issue 3 (63)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/12/issue/4">Issue 4 (67)</a></li></ul></li></ul><ul><li><span class="sublnk">Volume 13 (30)</span></li><li class="submenu"><ul><li><a href="/beta/journal/uscm/volume/13/issue/1">Issue 1 (15)</a></li></ul><ul><li><a href="/beta/journal/uscm/volume/13/issue/2">Issue 2 (15)</a></li></ul></li></ul>
+	</ul>
+      <div class="clr"></div>
+    </div>	
+	
+	
+	  
+
+  <br><script type="text/javascript">//<![CDATA[
+  function srmtoggle (a) {
+		$('#'+a).toggle('slow', function() {
+		// Animation complete.
+		});
+};
+//]]></script>
+
+	
+<div id="news-partner" class="block2"><div class="dtop">
+	<div class="dcont">
+		<h2 class="btl"><a href="#" onclick="srmtoggle('keywords');return false;" id="key">Keywords</a></h2>
+		<div id="keywords" style="padding:10px;text-align:justify;display:none;"><a href="http://m.growingscience.com/beta/tags/Supply+chain+management/" title="Search results: 150">Supply chain management(150)</a><br><a href="http://m.growingscience.com/beta/tags/Jordan/" title="Search results: 147">Jordan(147)</a><br><a href="http://m.growingscience.com/beta/tags/Vietnam/" title="Search results: 145">Vietnam(145)</a><br><a href="http://m.growingscience.com/beta/tags/Customer+satisfaction/" title="Search results: 116">Customer satisfaction(116)</a><br><a href="http://m.growingscience.com/beta/tags/Performance/" title="Search results: 106">Performance(106)</a><br><a href="http://m.growingscience.com/beta/tags/Supply+chain/" title="Search results: 102">Supply chain(102)</a><br><a href="http://m.growingscience.com/beta/tags/Tehran+Stock+Exchange/" title="Search results: 94">Tehran Stock Exchange(94)</a><br><a href="http://m.growingscience.com/beta/tags/Service+quality/" title="Search results: 90">Service quality(90)</a><br><a href="http://m.growingscience.com/beta/tags/Competitive+advantage/" title="Search results: 86">Competitive advantage(86)</a><br><a href="http://m.growingscience.com/beta/tags/SMEs/" title="Search results: 84">SMEs(84)</a><br><a href="http://m.growingscience.com/beta/tags/Factor+analysis/" title="Search results: 78">Factor analysis(78)</a><br><a href="http://m.growingscience.com/beta/tags/Financial+performance/" title="Search results: 78">Financial performance(78)</a><br><a href="http://m.growingscience.com/beta/tags/optimization/" title="Search results: 78">optimization(78)</a><br><a href="http://m.growingscience.com/beta/tags/Job+satisfaction/" title="Search results: 76">Job satisfaction(76)</a><br><a href="http://m.growingscience.com/beta/tags/Knowledge+Management/" title="Search results: 74">Knowledge Management(74)</a><br><a href="http://m.growingscience.com/beta/tags/Trust/" title="Search results: 74">Trust(74)</a><br><a href="http://m.growingscience.com/beta/tags/Genetic+Algorithm/" title="Search results: 73">Genetic Algorithm(73)</a><br><a href="http://m.growingscience.com/beta/tags/TOPSIS/" title="Search results: 71">TOPSIS(71)</a><br><a href="http://m.growingscience.com/beta/tags/Social+media/" title="Search results: 69">Social media(69)</a><br><a href="http://m.growingscience.com/beta/tags/Organizational+performance/" title="Search results: 69">Organizational performance(69)</a><br><br /><br /><a href="http://m.growingscience.com/beta/tags/">&raquo; Show all keywords</a></div>
+		<h2 class="btl"><a href="#" onclick="srmtoggle('authors');return false;" id="authorkey">Authors</a></h2>
+		
+		<div id="authors" style="padding:10px;text-align:justify;display:none;"> <a href="http://m.growingscience.com/beta/authors/Naser+Azad/" title="Search results: 82">Naser Azad(82)</a><br><a href="http://m.growingscience.com/beta/authors/Mohammad+Reza+Iravani/" title="Search results: 64">Mohammad Reza Iravani(64)</a><br><a href="http://m.growingscience.com/beta/authors/Zeplin+Jiwa+Husada+Tarigan/" title="Search results: 48">Zeplin Jiwa Husada Tarigan(48)</a><br><a href="http://m.growingscience.com/beta/authors/Endri+Endri/" title="Search results: 44">Endri Endri(44)</a><br><a href="http://m.growingscience.com/beta/authors/Muhammad+Alshurideh/" title="Search results: 38">Muhammad Alshurideh(38)</a><br><a href="http://m.growingscience.com/beta/authors/Jumadil+Saputra/" title="Search results: 35">Jumadil Saputra(35)</a><br><a href="http://m.growingscience.com/beta/authors/Muhammad+Turki+Alshurideh/" title="Search results: 35">Muhammad Turki Alshurideh(35)</a><br><a href="http://m.growingscience.com/beta/authors/Hotlan+Siagian/" title="Search results: 34">Hotlan Siagian(34)</a><br><a href="http://m.growingscience.com/beta/authors/Barween+Al+Kurdi/" title="Search results: 31">Barween Al Kurdi(31)</a><br><a href="http://m.growingscience.com/beta/authors/Hassan+Ghodrati/" title="Search results: 31">Hassan Ghodrati(31)</a><br><a href="http://m.growingscience.com/beta/authors/Mohammad+Khodaei+Valahzaghard/" title="Search results: 30">Mohammad Khodaei Valahzaghard(30)</a><br><a href="http://m.growingscience.com/beta/authors/Ahmad+Makui/" title="Search results: 30">Ahmad Makui(30)</a><br><a href="http://m.growingscience.com/beta/authors/Shankar+Chakraborty/" title="Search results: 29">Shankar Chakraborty(29)</a><br><a href="http://m.growingscience.com/beta/authors/Ni+Nyoman+Kerti+Yasa/" title="Search results: 29">Ni Nyoman Kerti Yasa(29)</a><br><a href="http://m.growingscience.com/beta/authors/Prasadja+Ricardianto/" title="Search results: 28">Prasadja Ricardianto(28)</a><br><a href="http://m.growingscience.com/beta/authors/Basrowi+Basrowi/" title="Search results: 28">Basrowi Basrowi(28)</a><br><a href="http://m.growingscience.com/beta/authors/Dmaithan+Almajali/" title="Search results: 28">Dmaithan Almajali(28)</a><br><a href="http://m.growingscience.com/beta/authors/Sulieman+Ibraheem+Shelash+Al-Hawary/" title="Search results: 27">Sulieman Ibraheem Shelash Al-Hawary(27)</a><br><a href="http://m.growingscience.com/beta/authors/Ali+Harounabadi/" title="Search results: 26">Ali Harounabadi(26)</a><br><a href="http://m.growingscience.com/beta/authors/Haitham+M.+Alzoubi/" title="Search results: 25">Haitham M. Alzoubi(25)</a><br><br /><br /><a href="http://m.growingscience.com/beta/authors/">&raquo; Show all authors</a></div>
+		<h2 class="btl"><a href="#" onclick="srmtoggle('countries');return false;" id="countrykey">Countries</a></h2>
+		
+		<div id="countries" style="padding:10px;text-align:justify;display:none;"> <a href="http://m.growingscience.com/beta/countries/Iran/" title="Search results: 2134">Iran(2134)</a><br><a href="http://m.growingscience.com/beta/countries/Indonesia/" title="Search results: 1161">Indonesia(1161)</a><br><a href="http://m.growingscience.com/beta/countries/India/" title="Search results: 742">India(742)</a><br><a href="http://m.growingscience.com/beta/countries/Jordan/" title="Search results: 700">Jordan(700)</a><br><a href="http://m.growingscience.com/beta/countries/Vietnam/" title="Search results: 482">Vietnam(482)</a><br><a href="http://m.growingscience.com/beta/countries/Malaysia/" title="Search results: 403">Malaysia(403)</a><br><a href="http://m.growingscience.com/beta/countries/Saudi+Arabia/" title="Search results: 355">Saudi Arabia(355)</a><br><a href="http://m.growingscience.com/beta/countries/United+Arab+Emirates/" title="Search results: 202">United Arab Emirates(202)</a><br><a href="http://m.growingscience.com/beta/countries/Thailand/" title="Search results: 136">Thailand(136)</a><br><a href="http://m.growingscience.com/beta/countries/China/" title="Search results: 112">China(112)</a><br><a href="http://m.growingscience.com/beta/countries/United+States/" title="Search results: 93">United States(93)</a><br><a href="http://m.growingscience.com/beta/countries/Turkey/" title="Search results: 90">Turkey(90)</a><br><a href="http://m.growingscience.com/beta/countries/Ukraine/" title="Search results: 90">Ukraine(90)</a><br><a href="http://m.growingscience.com/beta/countries/Egypt/" title="Search results: 86">Egypt(86)</a><br><a href="http://m.growingscience.com/beta/countries/Canada/" title="Search results: 83">Canada(83)</a><br><a href="http://m.growingscience.com/beta/countries/Pakistan/" title="Search results: 80">Pakistan(80)</a><br><a href="http://m.growingscience.com/beta/countries/Nigeria/" title="Search results: 71">Nigeria(71)</a><br><a href="http://m.growingscience.com/beta/countries/United+Kingdom/" title="Search results: 65">United Kingdom(65)</a><br><a href="http://m.growingscience.com/beta/countries/Peru/" title="Search results: 62">Peru(62)</a><br><a href="http://m.growingscience.com/beta/countries/Taiwan/" title="Search results: 61">Taiwan(61)</a><br><br /><br /><a href="http://m.growingscience.com/beta/countries/">&raquo; Show all countries</a></div>		
+	</div>
+</div></div>
+
+	
+	
+ </div>
+ 
+    <div class="Post" id="post-35">
+
+      <div>  
+
+		
+						
+						<div id='dle-content'><div class="base fullstory">
+
+<h3> <a href="http://m.growingscience.com/beta/uscm/">Uncertain Supply Chain Management</a> </h3>
+<span align="justify" style="font-size: 12pt; line-height: 115%;color: #8A0000; font-family: Arial">
+<center>  ISSN 2291-6830 (Online) - ISSN 2291-6822 (Print) </center>
+<center>  Quarterly Publication  </center> </span>
+	  
+<span style="align: justify; color: darkgreen; font-size: 12pt;"><center>Volume 10 Issue 4 pp. 1457-1466 , 2022</center></span>
+
+
+	<div class="dpad">
+		<h3 class="btl"><a href="http://m.growingscience.com/beta/uscm/5642-the-role-of-artificial-intelligence-marketing-strategies-and-organizational-capabilities-in-organizational-performance-the-moderating-role-of-organizational-behavior.html">The role of artificial intelligence, marketing strategies, and organizational capabilities in organizational performance: The moderating role of organizational behavior</a> <i><span style="font-size:13px;color : #DC143C">  Pages 1457-1466</span></i>
+		<a href="http://www.m.growingscience.com/uscm/Vol10/uscm_2022_63.pdf" style="font-size:14px;"><img src="/beta/templates/gs/images/icon_pdf.gif" alt="Right click to download the paper" border="0"><span style="COLOR : #000000"> Download PDF</span></a>
+		</h3><p class="editdate small"><i>Authors: <b><a class="core" href="http://m.growingscience.com/beta/authors/Mohammed+T.+Nuseir/">Mohammed T. Nuseir</a>, <a href="http://m.growingscience.com/beta/authors/Ghaleb+El+Refae/">Ghaleb El Refae</a></b></i></p>
+		<p class="editdate small"><i>DOI: <b><a href="http://dx.doi.org/10.5267/j.uscm.2022.6.010">10.5267/j.uscm.2022.6.010</a></b></i></p>
+		<p class="editdate small"><i>Keywords: <b><a href="http://m.growingscience.com/beta/tags/Artificial+intelligence/">Artificial intelligence</a>, <a href="http://m.growingscience.com/beta/tags/Marketing+strategies/">Marketing strategies</a>, <a href="http://m.growingscience.com/beta/tags/Organizational+performance/">Organizational performance</a>, <a href="http://m.growingscience.com/beta/tags/Organizational+capabilities/">Organizational capabilities</a>, <a href="http://m.growingscience.com/beta/tags/Organizational+behavior/">Organizational behavior</a></b></i></p>
+		<div class="maincont">
+			<b>Abstract: </b>Currently, artificial intelligence and marketing strategies have become significant factors for improving the business capabilities that lead to improved business performance. Thus, the current study investigates the impacts of artificial intelligence and marketing strategies on the organizational performance of the tourism industry in the UAE. The present study also examines the mediating role of organizational capabilities in linking artificial intelligence, marketing strategies, and organizational performance of the tourism industry in the UAE. The analysis of the moderating impact of organizational behavior on the links between artificial intelligence, marketing strategies, and organizational performance are also part of the current study’s goals. This study used questionnaires to collect primary data from the respondents and analyzed it using Smart-PLS. The results indicated that artificial intelligence and marketing strategies have a positive association with the organizational performance of the tourism industry in the UAE. The outcomes also revealed that organizational capabilities positively mediate the links between artificial intelligence, marketing strategies, and organizational performance. The findings also demonstrated that organizational behavior significantly moderates the links between artificial intelligence, marketing strategies, and organizational performance of the tourism industry in the UAE. This study is relevant for regulators in supporting policy development related to artificial intelligence and marketing strategies for high organizational performance.<br><br>
+<b>How to cite this paper</b><br>
+
+<div align="justify" style="text-align:justify;font-size: 11pt; line-height: 115%;color: darkgreen;width:98%;
+background-color:#ffffff;
+padding:5px;
+border:1px solid #d4d4d4;
+font-family:courier new;"> Nuseir, M & Refae, G. (2022). The role of artificial intelligence, marketing strategies, and organizational capabilities in organizational performance: The moderating role of organizational behavior.<i>Uncertain Supply Chain Management</i>, 10(4), 1457-1466.</div>
+<br>		
+			<b>Refrences </b><br>
+			<div style="border:1px solid #d4d4d4;height:250px;overflow:scroll;padding:10px;">
+			<div id="news-id-5642" style="display:inline;">Al-Surmi, A., Cao, G., & Duan, Y. (2019). Data of the impact of Aligning Business, IT, and Marketing Strategies on Firm Performance. Data in Brief, 27, 104656. doi: https://doi.org/10.1016/j.dib.2019.104656<br />Al-Surmi, A., Cao, G., & Duan, Y. (2020). The impact of aligning business, IT, and marketing strategies on firm performance. Industrial Marketing Management, 84, 39-49. doi: https://doi.org/10.1016/j.indmarman.2019.04.002<br />Alseiari, H., Khalifa, G. S., & Bhaumick, A. (2019). Tourism destination competitiveness in UAE: The role of strategic leadership and strategic planning effectiveness. Int. J. Recent Technol. Eng, 8, 860-865. <br />Aydiner, A. S., Tatoglu, E., Bayraktar, E., & Zaim, S. (2019). Information system capabilities and firm performance: Opening the black box through decision-making performance and business-process performance. International Journal of Information Management, 47, 168-182. doi: https://doi.org/10.1016/j.ijinfomgt.2018.12.015<br />Bag, S., Pretorius, J. H. C., Gupta, S., & Dwivedi, Y. K. (2021). Role of institutional pressures and resources in the adoption of big data analytics powered artificial intelligence, sustainable manufacturing practices and circular economy capabilities. Technological Forecasting and Social Change, 163, 120420. doi: https://doi.org/10.1016/j.techfore.2020.120420<br />Belhadi, A., Mani, V., Kamble, S. S., Khan, S. A. R., & Verma, S. (2021). Artificial intelligence-driven innovation for enhancing supply chain resilience and performance under the effect of supply chain dynamism: an empirical investigation. Annals of Operations Research, 1-26. <br />Berberoglu, A. (2018). Impact of organizational climate on organizational commitment and perceived organizational performance: empirical evidence from public hospitals. BMC health services research, 18(1), 1-9. doi: https://doi.org/10.1186/s12913-018-3149-z<br />Cacciolatti, L., & Lee, S. H. (2016). Revisiting the relationship between marketing capabilities and firm performance: The moderating role of market orientation, marketing strategy and organisational power. Journal of Business Research, 69(12), 5597-5610. doi: https://doi.org/10.1016/j.jbusres.2016.03.067<br />Chen, Y., & Lin, Z. (2021). Business Intelligence Capabilities and Firm Performance: A Study in China. International Journal of Information Management, 57, 102232. doi: https://doi.org/10.1016/j.ijinfomgt.2020.102232<br />Collins, C., Dennehy, D., Conboy, K., & Mikalef, P. (2021). Artificial intelligence in information systems research: A systematic literature review and research agenda. International Journal of Information Management, 60, 1-17. <br />de Jong, A., de Ruyter, K., Keeling, D. I., Polyakova, A., & Ringberg, T. (2021). Key trends in business-to-business services marketing strategies: Developing a practice-based research agenda. Industrial Marketing Management, 93, 1-9. doi: https://doi.org/10.1016/j.indmarman.2020.12.004<br />Dubey, R., Gunasekaran, A., Childe, S. J., Bryde, D. J., Giannakis, M., Foropon, C., . . . Hazen, B. T. (2020a). Big data analytics and artificial intelligence pathway to operational performance under the effects of entrepreneurial orientation and environmental dynamism: A study of manufacturing organisations. International Journal of Production Economics, 226, 107599. doi: https://doi.org/10.1016/j.ijpe.2019.107599<br />Dubey, R., Gunasekaran, A., Childe, S. J., Bryde, D. J., Giannakis, M., Foropon, C., . . . Hazen, B. T. (2020b). Big data analytics and artificial intelligence pathway to operational performance under the effects of entrepreneurial orientation and environmental dynamism: A study of manufacturing organisations. International Journal of Production Economics, 226, 1-12. <br />Eneizan, B., Abdulrahman, S. A., & Alabboodi, A. S. (2018). The influence of environmental marketing mix on the non-financial performance of solar energy firms: The mediating role of corporate image. IJAR, 4(7), 190-196. doi: doi:10.1177/0092070305276119<br />Enholm, I. M., Papagiannidis, E., Mikalef, P., & Krogstie, J. (2021). Artificial intelligence and business value: A literature review. Information Systems Frontiers, 1-26. <br />Garg, N. (2020). Promoting organizational performance in Indian insurance industry: The roles of workplace spirituality and organizational citizenship behaviour. Global Business Review, 21(3), 834-849. doi: https://doi.org/10.1177%2F0972150918778983<br />González-Rodríguez, M. R., Martín-Samper, R. C., Köseoglu, M. A., & Okumus, F. (2019). Hotels’ corporate social responsibility practices, organizational culture, firm reputation, and performance. Journal of sustainable tourism, 27(3), 398-419. doi: 10.1080/09669582.2019.1585441<br />Hair Jr, J. F., Babin, B. J., & Krey, N. (2017). Covariance-based structural equation modeling in the Journal of Advertising: Review and recommendations. Journal of Advertising, 46(1), 163-177. doi: https://doi.org/10.1080/00913367.2017.1281777<br />He, J., Zhang, H., & Morrison Alastair, M. (2019). The impacts of corporate social responsibility on organization citizenship behavior and task performance in hospitality: A sequential mediation model. International Journal of Contemporary Hospitality Management, 31(6), 2582-2598. doi: 10.1108/IJCHM-05-2018-0378<br />Hong, P. V., & Nguyen, T.-T. (2020). Factors affecting marketing strategy of logistics business – Case of Vietnam. The Asian Journal of Shipping and Logistics, 36(4), 224-234. doi: https://doi.org/10.1016/j.ajsl.2020.03.004<br />Jianjun, H., Yao, Y., Hameed, J., Hafiz, W. K., Nawaz, M. A., Aqdas, R., & Patwary, A. K. (2021). The Role of Artificial and Nonartificial Intelligence in the New Product Success with Moderating Role of New Product Innovation: A Case of Manufacturing Companies in China. Complexity, 2021. <br />Jumani, Z. A., & Sukhabot, S. (2020). Identifying the important attitude of Islamic brands and its effect on buying behavioural intentions among Malaysian Muslims: A quantitative study using smart-PLS. Journal of Islamic Marketing, 12(2), 408.426. <br />Khan, N. A., Khan, A. N., & Gul, S. (2019). Relationship between perception of organizational politics and organizational citizenship behavior: testing a moderated mediation model. Asian Business & Management, 18(2), 122-141. doi: 10.1057/s41291-018-00057-9<br />Khoshmaram, M., Zarafshani, K., Alibaygi, A., & Mirakzadeh, A. (2017). Exploring the role of social capital in agricultural entrepreneurial opportunity recognition: Application of Smart PLS. International Journal of Agricultural Management and Development (IJAMAD), 7(2), 395-406. <br />Kumar, V., Rajan, B., Venkatesan, R., & Lecinski, J. (2019). Understanding the role of artificial intelligence in personalized engagement marketing. California Management Review, 61(4), 135-155. <br />Nawaz, M. A., Ahmadk, T. I., Hussain, M. S., & Bhatti, M. A. (2020). How Energy Use, Financial Development and Economic Growth Affect Carbon Dioxide Emissions in Selected Association of South East Asian Nations? Paradigms, SI(1), 159-165. <br />Nawaz, M. A., Hussain, M. S., Kamran, H. W., Ehsanullah, S., Maheen, R., & Shair, F. (2020). Trilemma association of energy consumption, carbon emission, and economic growth of BRICS and OECD regions: Quantile regression estimation. Environmental Science and Pollution Research, 1-15. <br />Nawaz, M. A., Seshadri, U., Kumar, P., Aqdas, R., Patwary, A. K., & Riaz, M. (2021). Nexus between green finance and climate change mitigation in N-11 and BRICS countries: empirical estimation through difference in differences (DID) approach. Environmental Science and Pollution Research, 28(6), 6504-6519. doi: https://doi.org/10.1007/s11356-020-10920-y<br />Olson, E. M., Olson, K. M., Czaplewski, A. J., & Key, T. M. (2021). Business strategy and the management of digital marketing. Business Horizons, 64(2), 285-293. doi: https://doi.org/10.1016/j.bushor.2020.12.004<br />Papastathopoulos, A., Ahmad, S. Z., Al Sabri, N., & Kaminakis, K. (2020). Demographic analysis of residents’ support for tourism development in the UAE: A Bayesian structural equation modeling multigroup approach. Journal of Travel Research, 59(6), 1119-1139. doi: https://doi.org/10.1177%2F0047287519874131<br />Petrella, S., Miller, C., & Cooper, B. (2021). Russia's Artificial Intelligence Strategy: The Role of State-Owned Firms. Orbis, 65(1), 75-100. doi: https://doi.org/10.1016/j.orbis.2020.11.004<br />Rehman, S.-u., Mohamed, R., & Ayoup, H. (2019). The mediating role of organizational capabilities between organizational performance and its determinants. Journal of Global Entrepreneurship Research, 9(1), 1-23. doi: https://doi.org/10.1186/s40497-019-0155-5<br />Schneider, S., & Leyer, M. (2019). Me or information technology? Adoption of artificial intelligence in the delegation of personal strategic decisions. Managerial and Decision Economics, 40(3), 223-231. <br />Thomas, L., Ambrosini, V., & Hughes, P. (2019). The role of organizational citizenship behaviour and rewards in strategy effectiveness. The International Journal of Human Resource Management, 30(18), 2628-2660. doi: 10.1080/09585192.2017.1391312<br />Tung, V. W. S., Chen, P.-J., & Schuckert, M. (2017). Managing customer citizenship behaviour: The moderating roles of employee responsiveness and organizational reassurance. Tourism management, 59, 23-35. doi: https://doi.org/10.1016/j.tourman.2016.07.010<br />Turkina, E. (2018). The importance of networking to entrepreneurship: Montreal's artificial intelligence cluster and its born-global firm element AI (Vol. 30, pp. 1-8): Taylor & Francis.<br />Vijayabanu, C., & Arunkumar, S. (2018). Strengthening the team performance through personality and emotional intelligence: Smart PLS approach. Scientific Annals of Economics and Business, 65(3), 303-316. <br />Vrontis, D., Christofi, M., Pereira, V., Tarba, S., Makrides, A., & Trichina, E. (2021). Artificial intelligence, robotics, advanced technologies and human resource management: a systematic review. The International Journal of Human Resource Management, 1-30. <br />Wang, Z., & Kim, H. G. (2017). Can Social Media Marketing Improve Customer Relationship Capabilities and Firm Performance? Dynamic Capability Perspective. Journal of Interactive Marketing, 39, 15-26. doi: https://doi.org/10.1016/j.intmar.2017.02.004<br />Xie, M., Ding, L., Xia, Y., Guo, J., Pan, J., & Wang, H. (2021). Does artificial intelligence affect the pattern of skill demand? Evidence from Chinese manufacturing firms. Economic Modelling, 96, 295-309. doi: https://doi.org/10.1016/j.econmod.2021.01.009<br />Zaefarian, G., Forkmann, S., Mitręga, M., & Henneberg, S. C. (2017). A Capability Perspective on Relationship Ending and Its Impact on Product Innovation Success and Firm Performance. Long range planning, 50(2), 184-199. doi: https://doi.org/10.1016/j.lrp.2015.12.023<br /></div></div>
+			<div class="clr"></div>
+		</div>
+		<div class="storenumber"></div>
+		
+	
+		<div class="mlink"><div class="mlink">
+			
+			
+			<div class="rate"><div id='ratig-layer-5642'><div class="rating">
+		<ul class="unit-rating">
+		<li class="current-rating" style="width:68px;">68</li>
+		<li><a href="#" title="Bad" class="r1-unit" onclick="doRate('1', '5642'); return false;">1</a></li>
+		<li><a href="#" title="Poor" class="r2-unit" onclick="doRate('2', '5642'); return false;">2</a></li>
+		<li><a href="#" title="Fair" class="r3-unit" onclick="doRate('3', '5642'); return false;">3</a></li>
+		<li><a href="#" title="Good" class="r4-unit" onclick="doRate('4', '5642'); return false;">4</a></li>
+		<li><a href="#" title="Excellent" class="r5-unit" onclick="doRate('5', '5642'); return false;">5</a></li>
+		</ul>
+</div></div></div>
+		</div></div>
+		<p class="argcat small">Journal: <a href="http://m.growingscience.com/beta/uscm/">Uncertain Supply Chain Management</a> | Year: <a href="http://m.growingscience.com/beta/year/2022">2022</a> | Volume: <a href="http://m.growingscience.com/beta/journal/uscm/volume/10">10</a> | Issue: <a href="http://m.growingscience.com/beta/journal/uscm/volume/10/issue/4">4</a> | Views: 1934 | <a id="dle-comm-link" href="http://m.growingscience.com/beta/uscm/5642-the-role-of-artificial-intelligence-marketing-strategies-and-organizational-capabilities-in-organizational-performance-the-moderating-role-of-organizational-behavior.html#comment">Reviews: 0</a></p>
+	</div>
+</div>
+
+<div class="related">
+	<div class="dtop"><span><b>Related Articles:</b></span></div>
+	<ul class="reset">
+		<li><a href="http://m.growingscience.com/beta/msl/5515-big-data-analytics-and-supply-chain-performance-the-mediating-role-of-supply-chain-capabilities-and-innovation.html">Big data analytics and supply chain performance: The mediating role of supp ...</a></li><li><a href="http://m.growingscience.com/beta/uscm/5105-critical-thinking-and-creativity-of-msmes-in-improving-business-performance-during-the-covid-19-pandemic.html">Critical thinking and creativity of MSMEs in improving business performance ...</a></li><li><a href="http://m.growingscience.com/beta/uscm/5028-networking-capability-entrepreneurial-marketing-competitive-advantage-and-marketing-performance.html">Networking capability, entrepreneurial marketing, competitive advantage, an ...</a></li><li><a href="http://m.growingscience.com/beta/ac/4856-the-effects-of-corporate-social-responsibility-and-practices-on-the-performance-of-smes-in-vietnam.html">The effects of corporate social responsibility and practices on the perform ...</a></li><li><a href="http://m.growingscience.com/beta/ijds/4673-the-mediating-effect-of-big-data-analysis-on-the-process-orientation-and-information-system-software-to-improve-supply-chain-process-in-saudi-arabian-industrial-organizations.html">The mediating effect of big data analysis on the process orientation and in ...</a></li>
+	</ul>
+</div>
+
+
+<div id="comment">
+<form  method="post" name="dle-comments-form" id="dle-comments-form" action="/beta/uscm/5642-the-role-of-artificial-intelligence-marketing-strategies-and-organizational-capabilities-in-organizational-performance-the-moderating-role-of-organizational-behavior.html"><br />
+<div class="baseform">
+	<div class="dcont"><h2 class="heading">Add Reviews</h2></div>
+	<table class="tableform">
+		
+		<tr>
+			<td class="label">
+				Name:<span class="impot">*</span>
+			</td>
+			<td><input type="text" name="name" id="name" class="f_input" /></td>
+		</tr>
+		<tr>
+			<td class="label">
+				E-Mail:
+			</td>
+			<td><input type="text" name="mail" id="mail" class="f_input" /></td>
+		</tr>
+		
+		<tr>
+			<td class="label">
+				Review:
+			</td>
+			<td class="editorcomm"><script language="javascript" type="text/javascript">
+<!--
+var text_enter_url       = "Enter full URL";
+var text_enter_size       = "Enter flash video dimension (width, height)";
+var text_enter_flash       = "Enter link to flash video";
+var text_enter_page      = "Enter page number";
+var text_enter_url_name  = "Enter the name of the site ";
+var text_enter_page_name = "Enter link description";
+var text_enter_image    = "Enter full URL to the images ";
+var text_enter_email    = "Enter e-mail address";
+var text_code           = "Example: [CODE] your text is here [/CODE] ";
+var text_quote          = "Example: [QUOTE] your quote is here  [/QUOTE] ";
+var text_upload         = "Upload file";
+var error_no_url        = "Enter URL";
+var error_no_title      = "Enter article title.";
+var error_no_email      = "Enter email address";
+var prompt_start        = "Enter text to format";
+var img_title   		= "Image alignment (left, center, right)";
+var email_title  	    = "Reference (optional)";
+var text_pages  	    = "Page";
+var image_align  	    = "left";
+var bb_t_emo  	        = "Insert smilies";
+var bb_t_col  	        = "Color:";
+var text_enter_list     = "Enter the item list. To finish, simply leave it blank.";
+var text_alt_image      = "Enter a image description (image alt)";
+var img_align  	        = "Align";
+var img_align_sel  	    = "<select name='dleimagealign' id='dleimagealign' class='ui-widget-content ui-corner-all'><option value='' >None</option><option value='left' selected>Left</option><option value='right' >Right</option><option value='center' >Center</option></select>";
+
+var selField  = "comments";
+var fombj    = document.getElementById( 'dle-comments-form' );
+-->
+</script>
+<div class="bb-editor">
+<div class="bb-pane">
+<b id="b_b" class="bb-btn" onclick="simpletag('b')" title="Bold">Bold</b>
+<b id="b_i" class="bb-btn" onclick="simpletag('i')" title="Italic">Italic</b>
+<b id="b_u" class="bb-btn" onclick="simpletag('u')" title="Underline">Underline</b>
+<b id="b_s" class="bb-btn" onclick="simpletag('s')" title="Strike">Strike</b>
+<span class="bb-sep">|</span>
+<b id="b_left" class="bb-btn" onclick="simpletag('left')" title="Align left">Align left</b>
+<b id="b_center" class="bb-btn" onclick="simpletag('center')" title="Center">Center</b>
+<b id="b_right" class="bb-btn" onclick="simpletag('right')" title="Align right">Align right</b>
+<span class="bb-sep">|</span>
+<b id="b_emo" class="bb-btn" onclick="ins_emo(this)" title="Insert smilies">Insert smilies</b>
+<b id="b_url" class="bb-btn" onclick="tag_url()" title="Insert link URL">Insert link URL</b><b id="b_leech" class="bb-btn" onclick="tag_leech()" title="Insert protected URL">Insert protected URL</b>
+
+<b id="b_color" class="bb-btn" onclick="ins_color(this)" title="Select color">Select color</b>
+<span class="bb-sep">|</span>
+<b id="b_hide" class="bb-btn" onclick="simpletag('hide')" title="Add Hidden Text">Add Hidden Text</b>
+<b id="b_quote" class="bb-btn" onclick="simpletag('quote')" title="Insert Quote">Insert Quote</b>
+<b id="b_tnl" class="bb-btn" onclick="translit()" title="Convert selected text from selection to Cyrillic (Russian) alphabet">Convert selected text from selection to Cyrillic (Russian) alphabet</b>
+<b id="b_spoiler" class="bb-btn" onclick="simpletag('spoiler')" title="Insert spoiler">Insert spoiler</b>
+</div>
+<div id="dle_emos" style="display: none;" title="Insert smilies"><div style="width:100%;height:100%;overflow: auto;"><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td style="padding:2px;" align="center"><a href="#" onclick="dle_smiley(':wink:'); return false;"><img style="border: none;" alt="wink" src="http://m.growingscience.com/beta/engine/data/emoticons/wink.gif" /></a></td><td style="padding:2px;" align="center"><a href="#" onclick="dle_smiley(':winked:'); return false;"><img style="border: none;" alt="winked" src="http://m.growingscience.com/beta/engine/data/emoticons/winked.gif" /></a></td><td style="padding:2px;" align="center"><a href="#" onclick="dle_smiley(':smile:'); return false;"><img style="border: none;" alt="smile" src="http://m.growingscience.com/beta/engine/data/emoticons/smile.gif" /></a></td><td style="padding:2px;" align="center"><a href="#" onclick="dle_smiley(':am:'); return false;"><img style="border: none;" alt="am" src="http://m.growingscience.com/beta/engine/data/emoticons/am.gif" /></a></td></tr><tr><td style="padding:2px;" align="center"><a href="#" onclick="dle_smiley(':belay:'); return false;"><img style="border: none;" alt="belay" src="http://m.growingscience.com/beta/engine/data/emoticons/belay.gif" /></a></td><td style="padding:2px;" align="center"><a href="#" onclick="dle_smiley(':feel:'); return false;"><img style="border: none;" alt="feel" src="http://m.growingscience.com/beta/engine/data/emoticons/feel.gif" /></a></td><td style="padding:2px;" align="center"><a href="#" onclick="dle_smiley(':fellow:'); return false;"><img style="border: none;" alt="fellow" src="http://m.growingscience.com/beta/engine/data/emoticons/fellow.gif" /></a></td><td style="padding:2px;" align="center"><a href="#" onclick="dle_smiley(':laughing:'); return false;"><img style="border: none;" alt="laughing" src="http://m.growingscience.com/beta/engine/data/emoticons/laughing.gif" /></a></td></tr><tr><td style="padding:2px;" align="center"><a href="#" onclick="dle_smiley(':lol:'); return false;"><img style="border: none;" alt="lol" src="http://m.growingscience.com/beta/engine/data/emoticons/lol.gif" /></a></td><td style="padding:2px;" align="center"><a href="#" onclick="dle_smiley(':love:'); return false;"><img style="border: none;" alt="love" src="http://m.growingscience.com/beta/engine/data/emoticons/love.gif" /></a></td><td style="padding:2px;" align="center"><a href="#" onclick="dle_smiley(':no:'); return false;"><img style="border: none;" alt="no" src="http://m.growingscience.com/beta/engine/data/emoticons/no.gif" /></a></td><td style="padding:2px;" align="center"><a href="#" onclick="dle_smiley(':recourse:'); return false;"><img style="border: none;" alt="recourse" src="http://m.growingscience.com/beta/engine/data/emoticons/recourse.gif" /></a></td></tr><tr><td style="padding:2px;" align="center"><a href="#" onclick="dle_smiley(':request:'); return false;"><img style="border: none;" alt="request" src="http://m.growingscience.com/beta/engine/data/emoticons/request.gif" /></a></td><td style="padding:2px;" align="center"><a href="#" onclick="dle_smiley(':sad:'); return false;"><img style="border: none;" alt="sad" src="http://m.growingscience.com/beta/engine/data/emoticons/sad.gif" /></a></td><td style="padding:2px;" align="center"><a href="#" onclick="dle_smiley(':tongue:'); return false;"><img style="border: none;" alt="tongue" src="http://m.growingscience.com/beta/engine/data/emoticons/tongue.gif" /></a></td><td style="padding:2px;" align="center"><a href="#" onclick="dle_smiley(':wassat:'); return false;"><img style="border: none;" alt="wassat" src="http://m.growingscience.com/beta/engine/data/emoticons/wassat.gif" /></a></td></tr><tr><td style="padding:2px;" align="center"><a href="#" onclick="dle_smiley(':crying:'); return false;"><img style="border: none;" alt="crying" src="http://m.growingscience.com/beta/engine/data/emoticons/crying.gif" /></a></td><td style="padding:2px;" align="center"><a href="#" onclick="dle_smiley(':what:'); return false;"><img style="border: none;" alt="what" src="http://m.growingscience.com/beta/engine/data/emoticons/what.gif" /></a></td><td style="padding:2px;" align="center"><a href="#" onclick="dle_smiley(':bully:'); return false;"><img style="border: none;" alt="bully" src="http://m.growingscience.com/beta/engine/data/emoticons/bully.gif" /></a></td><td style="padding:2px;" align="center"><a href="#" onclick="dle_smiley(':angry:'); return false;"><img style="border: none;" alt="angry" src="http://m.growingscience.com/beta/engine/data/emoticons/angry.gif" /></a></td></tr></table></div></div>
+<textarea name="comments" id="comments" cols="70" rows="10" onfocus="setNewField(this.name, document.getElementById( 'dle-comments-form' ))"></textarea>
+</div></td>
+		</tr>
+			
+		
+		<tr>
+			<td class="label">
+				Security Code: <span class="impot">*</span>
+			</td>
+			<td>
+				<div><span id="dle-captcha"><img src="/beta/engine/modules/antibot.php" alt="Include security image CAPCHA." /><br /><a onclick="reload(); return false;" href="#">Refresh Code</a></span></div>
+				<div><input type="text" name="sec_code" id="sec_code" style="width:115px" class="f_input" /></div>
+			</td>
+		</tr>
+		
+		
+	</table>
+	<div class="fieldsubmit">
+		<button type="submit" name="submit" class="fbutton"><span>Submit</span></button>
+	</div>
+</div>
+		<input type="hidden" name="subaction" value="addcomment" />
+		<input type="hidden" name="post_id" id="post_id" value="5642" /></form><script language="javascript" type="text/javascript">
+<!--
+$(function(){
+
+	$('#dle-comments-form').submit(function() {
+	  doAddComments();
+	  return false;
+	});
+
+});
+
+function reload () {
+
+	var rndval = new Date().getTime(); 
+
+	document.getElementById('dle-captcha').innerHTML = '<img src="/beta/engine/modules/antibot.php?rndval=' + rndval + '" width="120" height="50" alt="" /><br /><a onclick="reload(); return false;" href="#">Refresh Code</a>';
+
+};
+//-->
+</script>
+
+<div id="dle-ajax-comments"></div>
+
+<!--dlenavigationcomments--></div></div>
+
+      </div>
+      <div class="clr"></div>
+      <div class="PostCom">
+        <div class="clr"></div>
+      </div>
+      <div class="clr"></div>
+    </div>
+  
+    <div class="clr"></div>
+			<!-- End Nav -->
+
+      </div>
+  <!-- End SC -->
+
+  <div class="clr"></div>
+</div>
+<!-- Container -->
+  </div>
+</div>
+<div class="FBG">
+  <div class="Footer">
+<!-- footer credits -->
+<div><p>
+<big><strong>&reg 2010-2024 GrowingScience.Com</strong></big><br>
+</p></div>
+  </div>
+  <div class="clr"></div>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-15738908-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+
+
+<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+var sc_project=5759938; 
+var sc_invisible=1; 
+var sc_security="28c27a5b"; 
+</script>
+
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter.js"></script><noscript><div
+class="statcounter"><a title="hits counter"
+href="http://www.statcounter.com/" target="_blank"><img
+class="statcounter"
+src="http://c.statcounter.com/5759938/0/28c27a5b/1/"
+alt="hits counter" ></a></div></noscript>
+<!-- End of StatCounter Code -->
+
+
+</body>
+</html>

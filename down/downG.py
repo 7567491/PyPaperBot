@@ -34,21 +34,52 @@ def print_error(msg):
     print(f"{Fore.RED}{msg}{Style.RESET_ALL}")
 
 def check_paper_downloaded(title):
-    """检查论文是否已下载"""
+    """检查论文是否已下载（忽略大小写）"""
     root_dir = Path(__file__).parent.parent
     pdf_dir = root_dir / "pdf"
     
     if not pdf_dir.exists():
         return False
         
+    # 构造安全的文件名（小写）
     invalid_chars = '<>:"/\\|?*'
     safe_title = ''.join(c for c in title if c not in invalid_chars)
-    pdf_file = pdf_dir / f"{safe_title}.pdf"
+    safe_title_lower = safe_title.lower()  # 转换为小写
     
-    return pdf_file.exists()
+    # 获取所有PDF文件并比较（忽略大小写）
+    try:
+        for pdf_file in pdf_dir.glob("*.pdf"):
+            # 移除.pdf后缀并转换为小写进行比较
+            existing_name = pdf_file.stem.lower()
+            if existing_name == safe_title_lower:
+                return True
+    except Exception as e:
+        print_error(f"检查文件时出错: {str(e)}")
+    
+    return False
 
-def get_scholar_url(title):
-    """从Google Scholar获取论文URL"""
+def get_scholar_url(title, db_conn=None, paper_id=None):
+    """从Google Scholar获取论文URL
+    Args:
+        title: 论文标题
+        db_conn: 数据库连接
+        paper_id: 论文ID，用于更新URL
+    """
+    def update_paper_url(new_url):
+        """更新数据库中的论文URL"""
+        if db_conn and paper_id:
+            try:
+                cursor = db_conn.cursor()
+                cursor.execute("""
+                    UPDATE verified_papers 
+                    SET url = ? 
+                    WHERE id = ?
+                """, (new_url, paper_id))
+                db_conn.commit()
+                print_success(f"已更新数据库中的URL: {new_url}")
+            except sqlite3.Error as e:
+                print_error(f"更新URL时发生错误: {str(e)}")
+
     try:
         print_info("\n=== 启动Chrome浏览器 ===")
         # 使用 webdriver_manager 自动管理 ChromeDriver
@@ -106,6 +137,7 @@ def get_scholar_url(title):
                         if '[PDF]' in link.text:
                             url = link.get_attribute('href')
                             print_success(f"找到PDF直接下载链接: {url}")
+                            update_paper_url(url)  # 更新数据库
                             return url
                 except:
                     print_warning("未找到PDF直接下载链接")
@@ -117,6 +149,7 @@ def get_scholar_url(title):
                     if title_links:
                         url = title_links[0].get_attribute('href')
                         print_success(f"找到标题链接: {url}")
+                        update_paper_url(url)  # 更新数据库
                         return url
                 except:
                     print_warning("未找到标题链接")
@@ -135,13 +168,13 @@ def get_scholar_url(title):
         print_error(f"错误类型: {type(e).__name__}")
         return None
 
-def download_paper(title, scholar_url=None):
+def download_paper(title, scholar_url=None, db_conn=None, paper_id=None):
     """从Google Scholar下载论文"""
     print_info(f"\n开始尝试下载论文: {title}")
     
     if not scholar_url:
         print_info("尝试从Google Scholar获取链接...")
-        scholar_url = get_scholar_url(title)
+        scholar_url = get_scholar_url(title, db_conn, paper_id)  # 传入数据库连接和论文ID
         
     if not scholar_url:
         print_warning("无法获取下载链接，跳过下载")
@@ -233,7 +266,7 @@ def get_download_range(total_papers):
             print_error(f"输入错误: {str(e)}")
 
 def display_and_download_papers():
-    """显示论文息并尝试下载用户选择范围内的论文"""
+    """显示论文信息并尝试下载用户选择范围内的论文"""
     root_dir = Path(__file__).parent.parent
     db_path = root_dir / "db" / "paper.db"
     
@@ -250,13 +283,13 @@ def display_and_download_papers():
             return
             
         table = PrettyTable()
-        table.field_names = ["序号", "论文标题", "引用数", "已下载"]
+        table.field_names = ["序号", "论文标题", "引用数", "已下载", "URL状态"]  # 添加URL状态列
         table.align = "l"
         table.max_width = 100
         
-        # 只查询必要的字段
+        # 修改查询，添加url字段
         cursor.execute("""
-            SELECT id, title, citations_count 
+            SELECT id, title, citations_count, url 
             FROM verified_papers 
             ORDER BY citations_count DESC NULLS LAST
         """)
@@ -265,13 +298,23 @@ def display_and_download_papers():
         for index, paper in enumerate(papers, 1):
             is_downloaded = check_paper_downloaded(paper[1])
             title = paper[1][:97] + "..." if len(paper[1]) > 100 else paper[1]
-            row = [index, title, paper[2] or 0, "1" if is_downloaded else "0"]
+            url_status = "有" if paper[3] else "无"  # paper[3]是URL字段
+            
+            row = [
+                index, 
+                title, 
+                paper[2] or 0,  # citations_count
+                "1" if is_downloaded else "0",
+                url_status
+            ]
             table.add_row(row)
         
         print_info(f"\n=== 论文统计信息 ===")
         print_info(f"总论文数: {len(papers)}")
         downloaded_count = sum(1 for paper in papers if check_paper_downloaded(paper[1]))
+        url_count = sum(1 for paper in papers if paper[3])  # 统计有URL的论文数
         print_info(f"已下载论文数: {downloaded_count}")
+        print_info(f"已存储URL论文数: {url_count}")
         print_info("\n=== 论文列表 ===")
         print(table)
         
@@ -292,15 +335,18 @@ def display_and_download_papers():
         
         for i, paper in enumerate(selected_papers, start_index):
             title = paper[1]
+            url = paper[3]  # 获取存储的URL
+            paper_id = paper[0]  # 获取论文ID
             
             if not check_paper_downloaded(title):
                 attempt_count += 1
                 print_info(f"\n尝试下载第 {i} 篇论文:")
                 print_info(f"标题: {title}")
+                print_info(f"存储URL: {url if url else '无'}")
                 print_info(f"引用数: {paper[2] or 0}")
                 
-                # 直接从Google Scholar获取URL并下载
-                if download_paper(title):
+                # 传入数据库连接和论文ID
+                if download_paper(title, scholar_url=url, db_conn=conn, paper_id=paper_id):
                     success_count += 1
                     print_success(f"论文下载成功！当前进度: 成功{success_count}篇/尝试{attempt_count}篇 (选择范围内共{total_selected}篇)")
                 else:

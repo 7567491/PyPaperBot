@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Using Artificial Intelligence for Creating and Managing Organizational Knowledge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <meta name="description" content="With changes in organizational environment organizations must adopt their business model to the new conditions that are arising. By adapting to the new conditions, organization create knowledge. The main aim of the paper is to show the possibilities..." />
+                <meta name="keywords" content="artificial intelligence; data mining; digital transformation; knowledge management; organizational knowledge" />
+    
+        <!-- Highwire Press -->
+                                    <meta name="citation_title" content="Using Artificial Intelligence for Creating and Managing Organizational Knowledge"/>
+                                                <meta name="citation_author" content="Kovačić, Matija"/>
+                                                <meta name="citation_author_institution" content="Sveučilište Sjever/University North, Trg dr. Žarka Dolinara 1, 48000 Koprivnica"/>
+                                                <meta name="citation_author" content="Mutavdžija, Maja"/>
+                                                <meta name="citation_author_institution" content="Sveučilište Sjever/University North, Trg dr. Žarka Dolinara 1, 48000 Koprivnica"/>
+                                                <meta name="citation_author" content="Buntak, Krešimir"/>
+                                                <meta name="citation_author_institution" content="Sveučilište Sjever/University North, Trg dr. Žarka Dolinara 1, 48000 Koprivnica"/>
+                                                <meta name="citation_author" content="Pus, Igor"/>
+                                                <meta name="citation_author_institution" content="University of Slavonski Brod, Mechanical Engineering Faculty in Slavonski Brod, Trg Ivane Brlić Mažuranić 2, 35000 Slavonski Brod"/>
+                                                <meta name="citation_publication_date" content="2022/06/17"/>
+                                                <meta name="citation_publisher" content="Sveučilište u Slavonskom Brodu, Stojarski fakultet"/>
+                                                <meta name="citation_publisher" content="Sveučilište Josipa Jurja Strossmayera u Osijeku, Fakultet elektrotehnike, računarstva i informacijskih tehnologija Osijek"/>
+                                                <meta name="citation_publisher" content="Sveučilište Josipa Jurja Strossmayera u Osijeku, Građevinski i arhitektonski fakultet Osijek"/>
+                                                <meta name="citation_journal_title" content="Tehnički vjesnik"/>
+                                                <meta name="citation_issn" content="1330-3651"/>
+                                                <meta name="citation_issn" content="1848-6339"/>
+                                                <meta name="citation_volume" content="29"/>
+                                                <meta name="citation_issue" content="4"/>
+                                                <meta name="citation_doi" content="10.17559/TV-20211222120653"/>
+                                                <meta name="citation_pdf_url" content="https://hrcak.srce.hr/file/404861"/>
+                                                <meta name="citation_language" content="en"/>
+                                                <meta name="citation_firstpage" content="1413"/>
+                                                <meta name="citation_lastpage" content="1418"/>
+                                                <meta name="citation_keywords" content="artificial intelligence; data mining; digital transformation; knowledge management; organizational knowledge"/>
+                        
+    <meta content="Srce" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="/javno/assets/images/favicon.ico">
+
+    <!-- App css -->
+    <link href="/javno/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/javno/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="/javno/assets/css/app.css" rel="stylesheet" type="text/css" />
+    <!-- JATS -->
+    <link href="/javno/assets/libs/jats/transform/hrcak/hrcak.css" rel="stylesheet" type="text/css" />
+
+    <link href="/javno/assets/css/custom_selec2_css.css" rel="stylesheet" type="text/css" />
+
+    
+</head>
+
+
+<body data-layout="topnav">
+<a class="skip-main text-white" href="#skipToMain" aria-label="skoči na glavni sadržaj">
+    Skoči na glavni sadržaj
+</a>
+
+<div class="wrapper">
+
+    <div class="navbar navbar-expand flex-column flex-md-row navbar-custom">
+        <div class="container-fluid">
+            <!-- LOGO -->
+            <a href="https://hrcak.srce.hr/" class="navbar-brand mr-0 mr-md-2 logo">
+                    <span class="logo-lg">
+                        <img src="/javno/assets/images/hrcak-logo.png" alt="" height="34" />
+
+                    </span>
+                <span class="logo-sm">
+                        <img src="/javno/assets/images/hrcak-logo.png" alt="" height="24">
+                    </span>
+            </a>
+
+            <ul class="navbar-nav bd-navbar-nav flex-row list-unstyled menu-left mb-0">
+                <li class="">
+                    <button class="button-menu-mobile open-left disable-btn">
+                        <i data-feather="menu" class="menu-icon"></i>
+                        <i data-feather="x" class="close-icon"></i>
+                    </button>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav flex-row ml-auto d-flex list-unstyled topnav-menu float-right mb-0">
+
+								<!-- Search -->
+                                <li>
+                    <div class="app-search">
+                        <form action="/pretraga" title="Pretraži">
+                            <div class="input-group">
+                                <input type="text" aria-label="Unesite pojam za pretragu..." class="form-control searchInput" name="q" placeholder="Unesite pojam za pretragu...">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" aria-label="Pretraži" type="submit" value="submit"> <i data-feather="search" class="serachIkona"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="app-search">
+
+                      <div class="input-group">
+                                                <a rel="alternate" hreflang="en" href="https://hrcak.srce.hr/en/279503" class="mr-0 mt-1 btn btn-primary btn-sm ">english</a>
+                                              </div>
+
+                    </div>
+                </li>
+
+
+                <li class="dropdown notification-list align-self-center profile-dropdown">
+                    <a class="nav-link dropdown-toggle nav-user mr-0" data-toggle="dropdown" href="#" role="button"
+                       aria-haspopup="false" aria-expanded="false">
+                        <div class="media user-profile ">
+                                                            <div class="media-body text-left">
+                                    <h6 class="pro-user-name ml-2 my-0">
+                                        <i data-feather="user" class="icon-dual icon-xs mr-2"></i>
+                                        <span>Prijava i registracija</span>
+                                    </h6>
+                                </div>
+                                                        <span data-feather="chevron-down" class="ml-2 align-self-center"></span>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu profile-dropdown-items dropdown-menu-right">
+                                                    <a href="/login" class="dropdown-item notify-item">
+                                <i data-feather="user" class="icon-dual icon-xs mr-2"></i>
+                                <span>Prijava</span>
+                            </a>
+                            <a href="/korisnik/nova_autentikacija" class="dropdown-item notify-item">
+                                <i data-feather="help-circle" class="icon-dual icon-xs mr-2"></i>
+                                <span>Promjena načina <br>autentikacije</span>
+                            </a>
+                            <a href="/novi_korisnik" class="dropdown-item notify-item">
+                                <i data-feather="settings" class="icon-dual icon-xs mr-2"></i>
+                                <span>Registracija</span>
+                            </a>
+                                            </div>
+                </li>
+
+
+                <li class="d-none d-sm-block">
+                    <div class="app-search">
+
+                        <div class="input-group">
+                            <a href="https://www.srce.unizg.hr" target="_blank"><img src="/javno/assets/images/srcelogo.gif" class="mr-0" alt="srce logo" height="34"></a>
+                        </div>
+
+                    </div>
+                </li>
+
+
+            </ul>
+        </div>
+
+    </div>
+<div class="topnav shadow-sm">
+        <div class="container-fluid">
+            <nav class="navbar navbar-light navbar-expand-lg topbar-nav">
+                <div class="collapse navbar-collapse" id="topnav-menu-content">
+                    <ul class="metismenu" id="menu-bar">
+                        <li class="menu-title">Navigation</li>
+
+                        <li>
+                            <a href="/">
+                                <span class="badge badge-success float-right">1</span>
+                                <span>Početna</span>
+                            </a>
+                        </li>
+                        <li class="menu-title">O Hrčku</li>
+
+                        <li>
+                            <a href="javascript: void(0);">
+
+                                <span> O Hrčku </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li>
+                                    <a href="https://hrcak.srce.hr/o-hrcku">O Hrčku</a>
+                                </li>
+                                <li>
+                                    <a href="https://hrcak.srce.hr/interoperabilnost">Interoperabilnost</a>
+                                </li>
+                                <li>
+                                    <a href="https://hrcak.srce.hr/politike">Politike korištenja</a>
+                                </li>
+                                <li>
+                                    <a href="https://hrcak.srce.hr/savjet-hrcka">Savjet Hrčka</a>
+                                </li>
+                                <li>
+                                    <a href="https://hrcak.srce.hr/kontakt">Kontakt</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.srce.unizg.hr/redovna-odrzavanja-sustava#hrcak">Redovne nadogradnje</a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+                        <li>
+                            <a href="javascript: void(0);">
+
+                                <span> Časopisi </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li>
+                                    <a href="https://hrcak.srce.hr/popis_casopisa/abecedno">Abecedno</a>
+                                </li>
+                                <li>
+                                    <a href="https://hrcak.srce.hr/podrucja">Po područjima</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);">
+
+                                <span> Za uredništva </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li>
+                                    <a href="https://hrcak.srce.hr/posjecenost">Posjećenost časopisa</a>
+                                </li>
+                                <li>
+                                    <a href="https://hrcak.srce.hr/statusi">Statusi časopisa</a>
+                                </li>
+                                <li>
+                                    <a href="https://wiki.srce.hr/pages/viewpage.action?pageId=27690837" target="_blank">Upute za administratore časopisa</a>
+                                </li>
+                                <li>
+                                    <a href="https://hrcak.srce.hr/otvoreni-pristup">Izjava o otvorenom pristupu</a>
+                                </li>
+                                <li>
+                                    <a href="https://hrcak.srce.hr/kriteriji">Kriteriji uvrštavanja časopisa</a>
+                                </li>
+                                <li>
+                                    <a href="https://hrcak.srce.hr/novi_casopis">Prijava časopisa u Hrčak</a>
+                                </li>
+                                <li>
+                                    <a href="https://hrcak.srce.hr/alati">Alati</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);">
+
+                                <span> Za autore </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li>
+                                    <a href="https://hrcak.srce.hr/prijava-radova">Prijava radova</a>
+                                </li>
+                                <li>
+                                    <a href="https://hrcak.srce.hr/orcid">ORCID identifikator</a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+        
+    <div id="skipToMain">
+            <div class="content-page">
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row page-title">
+                        <div class="col-md-12">
+                            <h4 class="mb-1 mt-0">
+                                <a href="https://hrcak.srce.hr/tehnicki-vjesnik">Tehnički vjesnik</a>,
+                                <a href="https://hrcak.srce.hr/broj/21801">Vol. 29  No. 4</a>, 2022.</h4>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12 col-xs-12 col-md-12">
+                            <div class="card topBorder">
+                                <div class="card-body">
+                                    <p>Pregledni rad</p>
+                                                                            <p><a title="doi" href="https://doi.org/10.17559/TV-20211222120653">https://doi.org/10.17559/TV-20211222120653</a></p>
+                                                                        <p><b>Using Artificial Intelligence for Creating and Managing Organizational Knowledge</b></p>
+
+                                    <p>
+                                                                                                                                                                            <a href="https://hrcak.srce.hr/pretraga?type=napredna&amp;field[]=article_author_orcid&amp;term[]=0000-0002-5472-5192">
+                                                    Matija Kovačić
+                                                </a>
+                                                    <img alt="orcid id" src="https://hrcak.srce.hr/javno/assets/images/orcid-icon-16x16.png">
+                                                    <a href="https://orcid.org/0000-0002-5472-5192">orcid.org/0000-0002-5472-5192</a>
+                                            
+                                                                                                                                                    ; Sveučilište Sjever/University North, Trg dr. Žarka Dolinara 1, 48000 Koprivnica
+                                                                                                                                                                                                                                            <a href="mailto:m&#x61;tkov&#97;cic&#64;unin&#x2e;hr"><img title="mail" src="https://hrcak.srce.hr/javno/assets/images/mail.gif"></a>
+                                                                                                                                                                                        <br>
+                                                                                                                                    <a href="https://hrcak.srce.hr/pretraga?type=napredna&amp;field[]=article_author_orcid&amp;term[]=0000-0002-0475-7241">
+                                                    Maja Mutavdžija
+                                                </a>
+                                                    <img alt="orcid id" src="https://hrcak.srce.hr/javno/assets/images/orcid-icon-16x16.png">
+                                                    <a href="https://orcid.org/0000-0002-0475-7241">orcid.org/0000-0002-0475-7241</a>
+                                            
+                                                                                                                                                    ; Sveučilište Sjever/University North, Trg dr. Žarka Dolinara 1, 48000 Koprivnica
+                                                                                                                                                                                                                                                                                                                                <br>
+                                                                                                                                    <a href="https://hrcak.srce.hr/pretraga?type=napredna&amp;field[]=article_author_orcid&amp;term[]=0000-0002-2209-690X">
+                                                    Krešimir Buntak
+                                                </a>
+                                                    <img alt="orcid id" src="https://hrcak.srce.hr/javno/assets/images/orcid-icon-16x16.png">
+                                                    <a href="https://orcid.org/0000-0002-2209-690X">orcid.org/0000-0002-2209-690X</a>
+                                            
+                                                                                                                                                    ; Sveučilište Sjever/University North, Trg dr. Žarka Dolinara 1, 48000 Koprivnica
+                                                                                                                                                                                                                                                                                                                                <br>
+                                                                                                                                    Igor Pus
+                                            
+                                                                                                                                                    ; University of Slavonski Brod, Mechanical Engineering Faculty in Slavonski Brod, Trg Ivane Brlić Mažuranić 2, 35000 Slavonski Brod
+                                                                                                                                                                                                                                                                                                                                <br>
+                                                                            </p>
+                                                                        <hr>
+                                                                                                                     <div class="d-flex justify-content-between">
+                                            <p>Puni tekst: <a class="btn btn-outline-primary btn-sm" href="https://hrcak.srce.hr/file/404861" target="_blank">engleski pdf 422 Kb</a></p>
+
+                                                                                                                                        <p>str. 1413-1418</p>
+                                                                                        <p>preuzimanja: <strong>806</strong></p>
+                                            <p>
+                                                <a href="#" id="cite_link">citiraj</a>
+                                            </p>
+                                        </div>
+
+                                        
+                                        <div id="cite" style="display: none;">
+                                                                                            <p><b>APA 6th Edition</b></p>
+                                                <p>Kovačić, M., Mutavdžija, M., Buntak, K. i Pus, I. (2022). Using Artificial Intelligence for Creating and Managing Organizational Knowledge. <i>Tehnički vjesnik, 29</i> (4), 1413-1418.  https://doi.org/10.17559/TV-20211222120653</p>
+                                                                                                    <hr>
+                                                                                                                                            <p><b>MLA 8th Edition</b></p>
+                                                <p>Kovačić, Matija, et al. "Using Artificial Intelligence for Creating and Managing Organizational Knowledge." <i>Tehnički vjesnik</i>, vol. 29, br. 4, 2022, str. 1413-1418. https://doi.org/10.17559/TV-20211222120653. Citirano 28.11.2024.</p>
+                                                                                                    <hr>
+                                                                                                                                            <p><b>Chicago 17th Edition</b></p>
+                                                <p>Kovačić, Matija, Maja Mutavdžija, Krešimir Buntak i Igor Pus. "Using Artificial Intelligence for Creating and Managing Organizational Knowledge." <i>Tehnički vjesnik</i> 29, br. 4 (2022): 1413-1418. https://doi.org/10.17559/TV-20211222120653</p>
+                                                                                                    <hr>
+                                                                                                                                            <p><b>Harvard</b></p>
+                                                <p>Kovačić, M., et al. (2022). 'Using Artificial Intelligence for Creating and Managing Organizational Knowledge', <i>Tehnički vjesnik</i>, 29(4), str. 1413-1418. https://doi.org/10.17559/TV-20211222120653</p>
+                                                                                                    <hr>
+                                                                                                                                            <p><b>Vancouver</b></p>
+                                                <p>Kovačić M, Mutavdžija M, Buntak K, Pus I. Using Artificial Intelligence for Creating and Managing Organizational Knowledge. Tehnički vjesnik [Internet]. 2022 [pristupljeno 28.11.2024.];29(4):1413-1418. https://doi.org/10.17559/TV-20211222120653</p>
+                                                                                                    <hr>
+                                                                                                                                            <p><b>IEEE</b></p>
+                                                <p>M. Kovačić, M. Mutavdžija, K. Buntak i I. Pus, "Using Artificial Intelligence for Creating and Managing Organizational Knowledge", <i>Tehnički vjesnik</i>, vol.29, br. 4, str. 1413-1418, 2022. [Online]. https://doi.org/10.17559/TV-20211222120653</p>
+                                                                                            
+                                        </div>
+
+                                                                             
+                                    
+                                    
+                                        <hr>
+
+                                    <h6>Sažetak</h6>
+                                    <p>With changes in organizational environment organizations must adopt their business model to the new conditions that are arising. By adapting to the new conditions, organization create knowledge. The main aim of the paper is to show the possibilities of using AI in managing and creating organizational knowledge within the organization and using once created knowledge for competitive advantage. This paper presents the results of the conducted secondary research on the application of artificial intelligence in knowledge creation, and based on the conducted research, a framework for knowledge creation was proposed. This framework starts with collecting data from different sensors on devices or machines and from employees. Gathering large amount of data then creates Big Data databases from which through data mining knowledge is created. In further research, the proposed framework will be used to conduct primary research on the impact of artificial intelligence on creating knowledge and managing it.</p>
+                                    <h6>Ključne riječi</h6>
+                                    <p>
+                                                                                    <a href="https://hrcak.srce.hr/pretraga?type=napredna&amp;field[]=article_keywords&amp;term[]=%22artificial+intelligence%22">artificial intelligence</a>;                                                                                    <a href="https://hrcak.srce.hr/pretraga?type=napredna&amp;field[]=article_keywords&amp;term[]=%22+data+mining%22"> data mining</a>;                                                                                    <a href="https://hrcak.srce.hr/pretraga?type=napredna&amp;field[]=article_keywords&amp;term[]=%22+digital+transformation%22"> digital transformation</a>;                                                                                    <a href="https://hrcak.srce.hr/pretraga?type=napredna&amp;field[]=article_keywords&amp;term[]=%22+knowledge+management%22"> knowledge management</a>;                                                                                    <a href="https://hrcak.srce.hr/pretraga?type=napredna&amp;field[]=article_keywords&amp;term[]=%22+organizational+knowledge%22"> organizational knowledge</a>                                                                            </p>
+                                    <h6>Hrčak ID: </h6>
+                                    <p>279503</p>
+                                    <h6>URI</h6>
+                                    <p><a href="https://hrcak.srce.hr/279503">https://hrcak.srce.hr/279503</a> </p>
+                                    <h6>Datum izdavanja:</h6>
+                                    <p>17.6.2022.</p>
+                                                                            <p><img src="https://hrcak.srce.hr/javno/assets/images/cc/by.png" height="40">
+                                        </p>
+                                                                        <p>
+                                                                                                                                                                                                        </p>
+                                    <p class="text-center mt-5">Posjeta: 1.989
+                                        <a href="https://hrcak.srce.hr/posjecenost-objasnjenje">*</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <!-- JATS -->
+                    
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        $('#cite_link').click(function(){
+            $('#cite').slideToggle('fast');
+            return false;
+        });
+        $('#verzije_link').click(function(){
+            $('#verzije').slideToggle('fast');
+            return false;
+        });
+    </script>
+
+
+    </div>
+
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-12">
+                    <div class="footerLinks">
+                            <span>
+                                2021 © Portal hrvatskih znanstvenih i stručnih časopisa - Hrčak
+                            </span>
+                        <div>
+                            <a href="https://wiki.srce.hr/x/xIB3Aw" target="_blank">Izjava o pristupačnosti</a>
+                            |
+
+                                                            <a href="https://www.srce.unizg.hr/politika-privatnosti" target="_blank">Politika privatnosti</a>
+                                                            |
+                            <a href="/kontakt">Kontakt</a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+
+
+<script src="/javno/assets/js/vendor.min.js"></script>
+<script src="/javno/assets/libs/moment/moment.min.js"></script>
+<script src="/javno/assets/js/app.min.js"></script>
+
+<script src="/javno/assets/js/pristupacnost.js"></script>
+<script>
+    var options = {
+        icon: {
+            circular: true,
+            img: 'accessibility',
+        }
+    }
+    window.addEventListener('load', function () { new Pristupacnost(options); }, false);
+</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-3867323-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</body>
+
+</html>

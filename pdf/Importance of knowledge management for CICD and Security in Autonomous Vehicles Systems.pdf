@@ -1,0 +1,378 @@
+	<!DOCTYPE html>
+<html lang="en-US" xml:lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google-site-verification" content="5uxJyYM6Hxk-vkaANeuSqvf2AYYKF7B0ThTr9uzoHeE" />
+	<title>
+		Importance of knowledge management for CI/CD and Security in Autonomous Vehicles Systems
+							| JITA - APEIRON
+			</title>
+
+	
+<meta name="generator" content="Open Journal Systems 2.4.8.0">
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+<meta name="DC.Creator.PersonalName" content="Pavle Dakić"/>
+<meta name="DC.Date.created" scheme="ISO8601" content="2024-09-17"/>
+<meta name="DC.Date.dateSubmitted" scheme="ISO8601" content="2024-06-20"/>
+<meta name="DC.Date.issued" scheme="ISO8601" content="2024-09-17"/>
+<meta name="DC.Date.modified" scheme="ISO8601" content="2024-09-17"/>
+<meta name="DC.Description" xml:lang="en" content="The development of autonomous vehicles (AV) entails complex design, production, testing, and deployment procedures that require excellent information and knowledge management in the event of security breaches. As researchers and managers, we must have a good understanding of the development of AV technology. Communication and information exchange, as well as knowledge management (KM) strategies and approaches, are undoubtedly important components. The most difficult challenge is to save the lives of drivers and passengers who use and travel in an AV that is partially or entirely managed by a machine learning model (ML) and artificial intelligence (AI). In this paper, we attempt to investigate the manufacturing process of AVs and intelligent vehicles (IVs), emphasizing the importance of information management (IM) within the factory and processes that are not explicitly articulated in the majority of scenarios. Furthermore, we discuss our method for using the knowledge management life cycle for information exchange in an organization, which could allow for faster and more efficient resolution of security issues within vehicle operating systems. This study seeks to provide an essential theoretical foundation to characterize the future scope of integrated manufacturing, which integrates software and the industry that employs it within the vehicle."/>
+<meta name="DC.Description" xml:lang="sr" content="Nema"/>
+<meta name="DC.Format" scheme="IMT" content="application/pdf"/>
+<meta name="DC.Identifier" content="10999"/>
+<meta name="DC.Identifier.pageNumber" content="7-16"/>
+<meta name="DC.Identifier.DOI" content="10.7251/JIT2401007D"/>
+<meta name="DC.Identifier.URI" content="https://doisrpska.nub.rs/index.php/jita/article/view/10999"/>
+<meta name="DC.Language" scheme="ISO639-1" content="en"/>
+<meta name="DC.Rights" content="Copyright (c) 2024 JITA - APEIRON"/>
+<meta name="DC.Rights" content=""/>
+<meta name="DC.Source" content="JITA - APEIRON"/>
+<meta name="DC.Source.ISSN" content="2233-0194"/>
+<meta name="DC.Source.Issue" content="1"/>
+<meta name="DC.Source.Volume" content="27"/>
+<meta name="DC.Source.URI" content="https://doisrpska.nub.rs/index.php/jita"/>
+<meta name="DC.Subject" xml:lang="en" content="System design with modeling and deployment"/>
+<meta name="DC.Title" content="Importance of knowledge management for CI/CD and Security in Autonomous Vehicles Systems"/>
+<meta name="DC.Title.Alternative" xml:lang="sr" content="nema"/>
+<meta name="DC.Type" content="Text.Serial.Journal"/>
+<meta name="DC.Type.articleType" content=""/>
+<meta name="gs_meta_revision" content="1.1"/>
+<meta name="citation_journal_title" content="JITA - APEIRON"/>
+<meta name="citation_journal_abbrev" content="JITA"/>
+<meta name="citation_issn" content="2233-0194"/> 
+<meta name="citation_author" content="Pavle Dakić"/>
+<meta name="citation_author_institution" content="Faculty of Informatics and Information Technologies, Slovak University of Technology in Bratislava, Bratislava"/>
+<meta name="citation_title" content="Importance of knowledge management for CI/CD and Security in Autonomous Vehicles Systems"/>
+<meta name="citation_language" content="en"/>
+<meta name="citation_date" content="2024/09/17"/>
+<meta name="citation_volume" content="27"/>
+<meta name="citation_issue" content="1"/>
+<meta name="citation_firstpage" content="7"/>
+<meta name="citation_lastpage" content="16"/>
+<meta name="citation_doi" content="10.7251/JIT2401007D"/>
+<meta name="citation_abstract_html_url" content="https://doisrpska.nub.rs/index.php/jita/article/view/10999"/>
+<meta name="citation_keywords" xml:lang="en" content="autonomous vehicles"/>
+<meta name="citation_keywords" xml:lang="en" content="knowledge management"/>
+<meta name="citation_keywords" xml:lang="en" content="artificial intelligence"/>
+<meta name="citation_keywords" xml:lang="en" content="system integration"/>
+<meta name="citation_keywords" xml:lang="en" content="safety and security"/>
+<meta name="citation_keywords" xml:lang="en" content="System design with modeling and deployment"/>
+<meta name="citation_pdf_url" content="https://doisrpska.nub.rs/index.php/jita/article/download/10999/10610"/>
+	<link rel="stylesheet" href="https://doisrpska.nub.rs/index.php/jita/$$$call$$$/page/page/css?name=stylesheet" type="text/css" /><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700,700italic" type="text/css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css?v=2.4.8.0" type="text/css" />
+</head>
+<body class="pkp_page_article pkp_op_view" dir="ltr">
+
+	<div class="pkp_structure_page">
+
+				<header class="pkp_structure_head" id="headerNavigationContainer" role="banner">
+						 <nav class="cmp_skip_to_content" aria-label="Jump to content links">
+	<a href="#pkp_content_main">Skip to main content</a>
+	<a href="#siteNav">Skip to main navigation menu</a>
+		<a href="#pkp_content_footer">Skip to site footer</a>
+</nav>
+
+			<div class="pkp_head_wrapper">
+
+				<div class="pkp_site_name_wrapper">
+					<button class="pkp_site_nav_toggle">
+						<span>Open Menu</span>
+					</button>
+										<div class="pkp_site_name">
+																<a href="						https://doisrpska.nub.rs/index.php/jita/index
+					" class="is_text">JITA - APEIRON</a>
+										</div>
+				</div>
+
+				
+				<nav class="pkp_site_nav_menu" aria-label="Site Navigation">
+					<a id="siteNav"></a>
+					<div class="pkp_navigation_primary_row">
+						<div class="pkp_navigation_primary_wrapper">
+																				<ul id="navigationPrimary" class="pkp_navigation_primary pkp_nav_list">
+								<li class="">
+				<a href="https://doisrpska.nub.rs/index.php/jita/issue/current">
+					Current
+				</a>
+							</li>
+								<li class="">
+				<a href="https://doisrpska.nub.rs/index.php/jita/issue/archive">
+					Archives
+				</a>
+							</li>
+															<li class="">
+				<a href="https://doisrpska.nub.rs/index.php/jita/about">
+					About
+				</a>
+									<ul>
+																					<li class="">
+									<a href="https://doisrpska.nub.rs/index.php/jita/about">
+										About the Journal
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://doisrpska.nub.rs/index.php/jita/about/submissions">
+										Submissions
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://doisrpska.nub.rs/index.php/jita/about/editorialTeam">
+										Editorial Team
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://doisrpska.nub.rs/index.php/jita/about/privacy">
+										Privacy Statement
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://doisrpska.nub.rs/index.php/jita/about/contact">
+										Contact
+									</a>
+								</li>
+																		</ul>
+							</li>
+			</ul>
+
+				
+
+																								
+	<form class="pkp_search pkp_search_desktop" action="https://doisrpska.nub.rs/index.php/jita/search/search" method="get" role="search" aria-label="Article Search">
+		<input type="hidden" name="csrfToken" value="d7dd09d7e4fbf1b5a31b19b9b920e8de">
+				
+			<input name="query" value="" type="text" aria-label="Search Query">
+		
+
+		<button type="submit">
+			Search
+		</button>
+		<div class="search_controls" aria-hidden="true">
+			<a href="https://doisrpska.nub.rs/index.php/jita/search/search" class="headerSearchPrompt search_prompt" aria-hidden="true">
+				Search
+			</a>
+			<a href="#" class="search_cancel headerSearchCancel" aria-hidden="true"></a>
+			<span class="search_loading" aria-hidden="true"></span>
+		</div>
+	</form>
+													</div>
+					</div>
+					<div class="pkp_navigation_user_wrapper" id="navigationUserWrapper">
+							<ul id="navigationUser" class="pkp_navigation_user pkp_nav_list">
+								<li class="profile">
+				<a href="https://doisrpska.nub.rs/index.php/jita/user/register">
+					Register
+				</a>
+							</li>
+								<li class="profile">
+				<a href="https://doisrpska.nub.rs/index.php/jita/login">
+					Login
+				</a>
+							</li>
+										</ul>
+
+					</div>
+																		
+	<form class="pkp_search pkp_search_mobile" action="https://doisrpska.nub.rs/index.php/jita/search/search" method="get" role="search" aria-label="Article Search">
+		<input type="hidden" name="csrfToken" value="d7dd09d7e4fbf1b5a31b19b9b920e8de">
+				
+			<input name="query" value="" type="text" aria-label="Search Query">
+		
+
+		<button type="submit">
+			Search
+		</button>
+		<div class="search_controls" aria-hidden="true">
+			<a href="https://doisrpska.nub.rs/index.php/jita/search/search" class="headerSearchPrompt search_prompt" aria-hidden="true">
+				Search
+			</a>
+			<a href="#" class="search_cancel headerSearchCancel" aria-hidden="true"></a>
+			<span class="search_loading" aria-hidden="true"></span>
+		</div>
+	</form>
+									</nav>
+			</div><!-- .pkp_head_wrapper -->
+		</header><!-- .pkp_structure_head -->
+
+						<div class="pkp_structure_content has_sidebar">
+			<div class="pkp_structure_main" role="main">
+				<a id="pkp_content_main"></a>
+
+<div style="display: none;">
+<ul>
+<li><a href="https://smknegeriwongsorejo.sch.id/inlislite/uploaded_files/">Situs Slot Deposit Pulsa Tanpa Potongan Mudah Scatter</a></li>
+<li><a href="https://maprogress.com/wp-content/uploads/">Situs Togel Resmi Toto 4D</a></li>
+<li><a href="https://food.tribune.com.pk/ckfinder/userfiles/files/slot-deposit-pulsa/">Situs Judi Slot Online Gacor Resmi Terlengkap Dan Terpercaya Deposit Pulsa</a></li>
+<li><a href="https://togel-4d.online/">Togel 4D Situs Bandar Toto Togel Macau Online</a></li>
+<li><a href="https://slot-togel.online/">Situs toto togel 4D resmi daftar bandar slot togel hadiah 10 juta</a></li>
+<li><a href="https://situs-togel.org/">Situs Togel Online Bandar Toto Resmi Pasaran Macau Terlengkap</a></li>
+</ul>
+</div>
+
+<div class="page page_article">
+			<nav class="cmp_breadcrumbs" role="navigation" aria-label="You are here:">
+	<ol>
+		<li>
+			<a href="https://doisrpska.nub.rs/index.php/jita/index">
+				Home
+			</a>
+			<span class="separator">/</span>
+		</li>
+		<li>
+			<a href="https://doisrpska.nub.rs/index.php/jita/issue/archive">
+				Archives
+			</a>
+			<span class="separator">/</span>
+		</li>
+					<li>
+				<a href="https://doisrpska.nub.rs/index.php/jita/issue/view/997">
+					Vol. 27 No. 1 (2024): JITA - APEIRON
+				</a>
+				<span class="separator">/</span>
+			</li>
+				<li class="current" aria-current="page">
+			<span aria-current="page">
+									Чланци
+							</span>
+		</li>
+	</ol>
+</nav>
+	
+			<article class="obj_article_details">
+
+		
+	<h1 class="page_title">
+		Importance of knowledge management for CI/CD and Security in Autonomous Vehicles Systems
+	</h1>
+
+	
+	<div class="row">
+		<div class="main_entry">
+
+							<section class="item authors">
+					<h2 class="pkp_screen_reader">Authors</h2>
+					<ul class="authors">
+											<li>
+							<span class="name">
+								Pavle Dakić
+							</span>
+															<span class="affiliation">
+									Faculty of Informatics and Information Technologies, Slovak University of Technology in Bratislava, Bratislava
+								</span>
+																						<span class="orcid">
+									
+									<a href="https://orcid.org/0000-0003-3538-6284" target="_blank">
+										https://orcid.org/0000-0003-3538-6284
+									</a>
+								</span>
+													</li>
+										</ul>
+				</section>
+			
+																												<section class="item doi">
+						<h2 class="label">
+														DOI:
+						</h2>
+						<span class="value">
+							<a href="https://doi.org/10.7251/JIT2401007D">
+								https://doi.org/10.7251/JIT2401007D
+							</a>
+						</span>
+					</section>
+							
+									<section class="item keywords">
+				<h2 class="label">
+										Keywords:
+				</h2>
+				<span class="value">
+											autonomous vehicles, 											knowledge management, 											artificial intelligence, 											system integration, 											safety and security, 											System design with modeling and deployment									</span>
+			</section>
+			
+										<section class="item abstract">
+					<h2 class="label">Abstract</h2>
+					<p>The development of autonomous vehicles (AV) entails complex design, production, testing, and deployment procedures that require excellent information and knowledge management in the event of security breaches. As researchers and managers, we must have a good understanding of the development of AV technology. Communication and information exchange, as well as knowledge management (KM) strategies and approaches, are undoubtedly important components. The most difficult challenge is to save the lives of drivers and passengers who use and travel in an AV that is partially or entirely managed by a machine learning model (ML) and artificial intelligence (AI). In this paper, we attempt to investigate the manufacturing process of AVs and intelligent vehicles (IVs), emphasizing the importance of information management (IM) within the factory and processes that are not explicitly articulated in the majority of scenarios. Furthermore, we discuss our method for using the knowledge management life cycle for information exchange in an organization, which could allow for faster and more efficient resolution of security issues within vehicle operating systems. This study seeks to provide an essential theoretical foundation to characterize the future scope of integrated manufacturing, which integrates software and the industry that employs it within the vehicle.</p>
+				</section>
+			
+			
+
+																			
+						
+		</div><!-- .main_entry -->
+
+		<div class="entry_details">
+
+										<div class="item cover_image">
+					<div class="sub_item">
+													<a href="https://doisrpska.nub.rs/index.php/jita/issue/view/997">
+								<img src="https://doisrpska.nub.rs/public/journals/16/cover_issue_997_en_US.jpg" alt="">
+							</a>
+											</div>
+				</div>
+			
+										<div class="item galleys">
+					<h2 class="pkp_screen_reader">
+						Downloads
+					</h2>
+					<ul class="value galleys_links">
+													<li>
+								
+	
+							
+
+<a class="obj_galley_link pdf" href="https://doisrpska.nub.rs/index.php/jita/article/view/10999/10610">
+
+		
+	PDF
+
+	</a>
+							</li>
+											</ul>
+				</div>
+						
+						<div class="item published">
+				<section class="sub_item">
+					<h2 class="label">
+						Published
+					</h2>
+					<div class="value">
+																			<span>2024-09-17</span>
+																	</div>
+				</section>
+							</div>
+			
+						
+										<div class="item issue">
+
+											<section class="sub_item">
+							<h2 class="label">
+								Issue
+							</h2>
+							<div class="value">
+								<a class="title" href="https://doisrpska.nub.rs/index.php/jita/issue/view/997">
+									Vol. 27 No. 1 (2024): JITA - APEIRON
+								</a>
+							</div>
+						</section>
+					
+											<section class="sub_item">
+							<h2 class="label">
+								Section
+							</h2>
+							<div class="value">
+								Чланци
+							</div>
+						</section>
+									</div>
+			
+															
+						
+			
+
+		</div><!-- .entry_details -->
+	</div><!-- .row -->
+
+</article>
+
+	
+
+</div><!-- .page -->
+

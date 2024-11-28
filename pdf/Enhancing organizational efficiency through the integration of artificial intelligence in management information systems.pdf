@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en-US" xml:lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		Enhancing Organizational Efficiency through the Integration of Artificial Intelligence in Management Information Systems
+							| APTISI Transactions on Management
+			</title>
+
+	
+<link rel="icon" href="https://ijc.ilearning.co/public/journals/6/favicon_en_US.png">
+<meta name="generator" content="Open Journal Systems 3.3.0.6">
+<meta name="google-site-verification" content="U9nAOt2UTcZ8HC5U4mpBUZQIZXxPkMat7mHNrfZnZW4"/>
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+<meta name="DC.Creator.PersonalName" content="Bhima Bhima"/>
+<meta name="DC.Creator.PersonalName" content="Achani Rahmania Az Zahra"/>
+<meta name="DC.Creator.PersonalName" content="Tio Nurtino"/>
+<meta name="DC.Creator.PersonalName" content="M. Zaki Firli"/>
+<meta name="DC.Date.created" scheme="ISO8601" content="2023-09-28"/>
+<meta name="DC.Date.dateSubmitted" scheme="ISO8601" content="2023-09-19"/>
+<meta name="DC.Date.issued" scheme="ISO8601" content="2022-11-25"/>
+<meta name="DC.Date.modified" scheme="ISO8601" content="2024-08-22"/>
+<meta name="DC.Description" xml:lang="en" content="This research delves into AI's role in enhancing Management Information Systems for organizational efficiency. It employs cross-sector case studies to showcase AI's potential in automating tasks, offering predictive insights from historical data, and bolstering decision-making. While AI promises substantial benefits, it also poses technical and ethical challenges during implementation. AI integration emerges as a game-changer, liberating organizations from mundane tasks through automation. Predictive analytics empowers firms to foresee trends, fostering a competitive edge in decision-making. Yet, obstacles include algorithm compatibility with existing systems and the demand for heightened technical proficiency. Ethical considerations loom large, demanding robust privacy and fairness guidelines in AI data usage. This research underscores the importance of employee AI training and multidisciplinary teams for tackling technical hurdles. Ethical principles should permeate AI development and utilization. The study recommends a three-fold strategy: First, prioritize employee AI training for seamless adoption. Second, establish cross-disciplinary teams to navigate technical complexities. Third, embed ethics in every AI facet to maintain trust. In conclusion, a holistic approach allows organizations to seamlessly integrate AI into Management Information Systems, yielding operational efficiencies, superior decision-making, and a competitive edge in a dynamic business landscape."/>
+<meta name="DC.Format" scheme="IMT" content="application/pdf"/>
+<meta name="DC.Identifier" content="2146"/>
+<meta name="DC.Identifier.pageNumber" content="275-282"/>
+<meta name="DC.Identifier.DOI" content="10.33050/atm.v7i3.2146"/>
+<meta name="DC.Identifier.URI" content="https://ijc.ilearning.co/index.php/ATM/article/view/2146"/>
+<meta name="DC.Language" scheme="ISO639-1" content="en"/>
+<meta name="DC.Rights" content="Copyright (c) 2023 Bhima, Achani Rahmania Az Zahra, Tio Nurtino, M. Zaki Firli (Author)"/>
+<meta name="DC.Rights" content="http://creativecommons.org/licenses/by-sa/4.0"/>
+<meta name="DC.Source" content="APTISI Transactions on Management"/>
+<meta name="DC.Source.ISSN" content="2622-6804"/>
+<meta name="DC.Source.Issue" content="3"/>
+<meta name="DC.Source.Volume" content="7"/>
+<meta name="DC.Source.URI" content="https://ijc.ilearning.co/index.php/ATM"/>
+<meta name="DC.Subject" xml:lang="en" content="Decision Making"/>
+<meta name="DC.Title" content="Enhancing Organizational Efficiency through the Integration of Artificial Intelligence in Management Information Systems"/>
+<meta name="DC.Type" content="Text.Serial.Journal"/>
+<meta name="DC.Type.articleType" content="Article"/>
+<meta name="gs_meta_revision" content="1.1"/>
+<meta name="citation_journal_title" content="APTISI Transactions on Management"/>
+<meta name="citation_journal_abbrev" content="ATM"/>
+<meta name="citation_issn" content="2622-6804"/> 
+<meta name="citation_author" content="Bhima Bhima"/>
+<meta name="citation_author_institution" content="Universitas Raharja"/>
+<meta name="citation_author" content="Achani Rahmania Az Zahra"/>
+<meta name="citation_author_institution" content="Universitas Raharja"/>
+<meta name="citation_author" content="Tio Nurtino"/>
+<meta name="citation_author_institution" content="Universitas Raharja"/>
+<meta name="citation_author" content="M. Zaki Firli"/>
+<meta name="citation_author_institution" content="Universitas Raharja"/>
+<meta name="citation_title" content="Enhancing Organizational Efficiency through the Integration of Artificial Intelligence in Management Information Systems"/>
+<meta name="citation_language" content="en"/>
+<meta name="citation_date" content="2023/09/28"/>
+<meta name="citation_volume" content="7"/>
+<meta name="citation_issue" content="3"/>
+<meta name="citation_firstpage" content="275"/>
+<meta name="citation_lastpage" content="282"/>
+<meta name="citation_doi" content="10.33050/atm.v7i3.2146"/>
+<meta name="citation_abstract_html_url" content="https://ijc.ilearning.co/index.php/ATM/article/view/2146"/>
+<meta name="citation_keywords" xml:lang="en" content="Artificial Intelligence"/>
+<meta name="citation_keywords" xml:lang="en" content="Management Information System"/>
+<meta name="citation_keywords" xml:lang="en" content="Organizational Efficiency"/>
+<meta name="citation_keywords" xml:lang="en" content="Data Analysis"/>
+<meta name="citation_keywords" xml:lang="en" content="Decision Making"/>
+<meta name="citation_pdf_url" content="https://ijc.ilearning.co/index.php/ATM/article/download/2146/780"/>
+<meta name="citation_reference" content="R. Alief and E. Nurmiati, “Penerapan Kecerdasan Buatan Dan Teknologi Informasi Pada Efisiensi Manajemen Pengetahuan,” J. Masy. Inform., vol. 13, no. 1, pp. 59–69, 2022."/>
+<meta name="citation_reference" content="Y. Y. Anis and A. S. Rifa, “Perancangan Sistem Informasi E-Booking Jasa Steam Mobil Dan Motor Berbasis Web (Studi Kasus Cheers Autocare Solo),” Bull. Inf. Technol., vol. 4, no. 1, pp. 99–104, 2023."/>
+<meta name="citation_reference" content="A. Cahyono and Y. D. Nurcahyanie, “Identification and Evaluation of Logistics Operational Risk Using the Fmea Method at PT. XZY,” Aptisi Trans. Technopreneursh., vol. 5, no. 1Sp, pp. 1–10, 2023."/>
+<meta name="citation_reference" content="I. Farida, R. Setiawan, A. S. Maryatmi, and M. N. Juwita, “The implementation of E-government in the industrial revolution era 4.0 in Indonesia,” Int. J. Progress. Sci. Technol., vol. 22, no. 2, pp. 340–346, 2020."/>
+<meta name="citation_reference" content="R. F. Firmansyah, “Tinjauan Literatur Tentang Peran Sistem Informasi Manajemen Dalam Proses Transformasi Digital Organisasi,” TEKNOBIS J. Teknol. Bisnis dan Pendidik., vol. 1, no. 1, pp. 45–49, 2023."/>
+<meta name="citation_reference" content="A. A. Hakim, L. izzah Harahap, R. Salsabila, and N. Nurbaiti, “ANALISIS PANDANGAN MASYARAKAT AWAM TERHADAP MANAJEMEN SISTEM INFORMASI GLOBAL,” J. Manag. Creat. Bus., vol. 1, no. 1, pp. 86–94, 2023."/>
+<meta name="citation_reference" content="T. Sutisna, “Manfaat Sistem Informasi Manajemen,” J. Inform. STMIK Tulus Cendekia, vol. 1, no. 1, pp. 16–21, 2021."/>
+<meta name="citation_reference" content="A. R. Putra and D. Darmawan, “Competitive Advantage of MSMEs in Terms of Technology Orientation and Entrepreneurship Competence,” Int. J. Serv. Sci. Manag. Eng. Technol., vol. 2, no. 1, pp. 15–20, 2022."/>
+<meta name="citation_reference" content="N. Manunggal, I. T. Santoso, and S. Wicaksana, “Pengaruh Sistem Informasi Sumber Daya Manusia (HRIS) dan Kecerdasan Buatan Terhadap Kinerja Industri Pertahanan,” J. Ind. Eng. Manag. Res., vol. 3, no. 6, pp. 111–120, 2022."/>
+<meta name="citation_reference" content="A. Zemankova, “Artificial intelligence in audit and accounting: development, current trends, opportunities and threats-literature review,” in 2019 International Conference on Control, Artificial Intelligence, Robotics &amp; Optimization (ICCAIRO), 2019, pp. 148–154."/>
+<meta name="citation_reference" content="A. Nurkholis and I. H. Ikasari, “Peran Artificial Intellegence Dalam Sistem Informasi Manajemen,” AI dan SPK J. Artif. Intell. dan Sist. Penunjang Keputusan, vol. 1, no. 1, pp. 41–47, 2023."/>
+<meta name="citation_reference" content="C. F. Anggraini, N. M. Estiyanti, and P. A. C. Dewi, “Governance Audit Using COBIT 5 in CV. XYZ on Accounting Information System,” ADI J. Recent Innov., vol. 4, no. 2, pp. 201–209, 2023."/>
+<meta name="citation_reference" content="O. H. Prabowo, A. Merthayasa, and N. Saebah, “Pemanfaatan Teknologi Informasi dan Manajemen Perubahan pada Kegiatan Bisnis di Era Globalisasi,” Syntax Idea, vol. 5, no. 7, pp. 883–892, 2023."/>
+<meta name="citation_reference" content="D. Baidoo-Anu and L. O. Ansah, “Education in the era of generative artificial intelligence (AI): Understanding the potential benefits of ChatGPT in promoting teaching and learning,” J. AI, vol. 7, no. 1, pp. 52–62, 2023."/>
+<meta name="citation_reference" content="T. W. A. Putra, A. Solechan, and B. Hartono, “Transformasi Digital Pada UMKM Dalam Meningkatkan Daya Saing Pasar,” J. Inform. Upgris, vol. 9, no. 1, 2023."/>
+<meta name="citation_reference" content="A. F. Rezy and I. H. Ikasari, “Systematic Literature Review: Sistem Informasi Manajemen Inventory Barang Berbasis Web,” Bul. Ilm. Ilmu Komput. dan Multimed., vol. 1, no. 1, pp. 121–125, 2023."/>
+<meta name="citation_reference" content="S. Sulartopo, S. Kholifah, D. Danang, and J. T. Santoso, “Transformasi Proyek Melalui Keajaiban Kecerdasan Buatan: Mengeksplorasi Potensi AI Dalam Project Management,” J. Publ. Ilmu Manaj., vol. 2, no. 2, pp. 363–392, 2023."/>
+<meta name="citation_reference" content="S. Suroto, “Mengoptimalkan Layanan Pendidikan di Sekolah Menengah Kejuruan melalui Perencanaan Strategis Sistem Informasi,” Seroja J. Pendidik., vol. 2, no. 3, pp. 245–261, 2023."/>
+<meta name="citation_reference" content="A. Syamil et al., AKUNTANSI MANAJEMEN: Konsep-konsep dasar Akuntansi Manajemen Era Digital. PT. Sonpedia Publishing Indonesia, 2023."/>
+<meta name="citation_reference" content="C. A. Tambos, “Insinyur Teknik Informatika: Kini dan Masa Depan,” J. Kependud. dan Pembang. Lingkung., vol. 4, no. 1, pp. 65–74, 2023."/>
+<meta name="citation_reference" content="R. N. Rizqiyah, R. Kriyantono, and A. Sujoko, “Literacy studies media relations studies on digitalization and artificial intelligence on company reputation in the digital era in 2008–2019,” Adv. Educ. Philos, vol. 5, pp. 236–248, 2021."/>
+<meta name="citation_reference" content="M. A. Yaqin, “OPTIMALISASI SISTEM INFORMASI MANAJEMEN PADA LEMBAGA PENDIDIKAN ISLAM,” J. Pendidik. dan Kebud., vol. 1, no. 1, pp. 12–22, 2021."/>
+<meta name="citation_reference" content="D. Manongga, U. Rahardja, I. Sembiring, N. Lutfiani, and A. B. Yadila, “Dampak Kecerdasan Buatan Bagi Pendidikan,” ADI Bisnis Digit. Interdisiplin J., vol. 3, no. 2, pp. 41–55, 2022."/>
+<meta name="citation_reference" content="D. S. S. Wuisan and T. Mariyanti, “Analisa Peran Triple Helik dalam Mengatasi Tantangan Pendidikan di Era Industri 4.0,” J. MENTARI Manajemen, Pendidik. dan Teknol. Inf., vol. 1, no. 2, pp. 123–132, 2023."/>
+<meta name="citation_reference" content="F. Yudianto, T. Herlambang, M. Y. Anshori, M. Adinugroho, A. Rulyansah, and L. Yuliana, “Innovation in Company Profit Management: Socialization of Numerical Calculation for Efficiency Improvement at PT AJISAKA,” Indones. J. Cult. Community Dev., vol. 14, no. 2, 2023."/>
+<meta name="citation_reference" content="F. al Schwendicke, W. Samek, and J. Krois, “Artificial intelligence in dentistry: chances and challenges,” J. Dent. Res., vol. 99, no. 7, pp. 769–774, 2020."/>
+<meta name="citation_reference" content="R. Cioffi, M. Travaglioni, G. Piscitelli, A. Petrillo, and F. De Felice, “Artificial intelligence and machine learning applications in smart production: Progress, trends, and directions,” Sustainability, vol. 12, no. 2, p. 492, 2020."/>
+<meta name="citation_reference" content="M.-H. Huang and R. T. Rust, “A strategic framework for artificial intelligence in marketing,” J. Acad. Mark. Sci., vol. 49, pp. 30–50, 2021."/>
+<meta name="citation_reference" content="M. Elahi, A. Beheshti, and S. R. Goluguri, “Recommender Systems: Challenges and Opportunities in the Age of Big Data and Artificial Intelligence,” Data Sci. Its Appl., no. 2011, pp. 15–39, 2021, doi: 10.1201/9781003102380-2."/>
+<meta name="citation_reference" content="S. B. Khanagar et al., “Developments, application, and performance of artificial intelligence in dentistry–A systematic review,” J. Dent. Sci., vol. 16, no. 1, pp. 508–522, 2021."/>
+<link rel="alternate" type="application/atom+xml" href="https://ijc.ilearning.co/index.php/ATM/gateway/plugin/WebFeedGatewayPlugin/atom">
+<link rel="alternate" type="application/rdf+xml" href="https://ijc.ilearning.co/index.php/ATM/gateway/plugin/WebFeedGatewayPlugin/rss">
+<link rel="alternate" type="application/rss+xml" href="https://ijc.ilearning.co/index.php/ATM/gateway/plugin/WebFeedGatewayPlugin/rss2">
+	<link rel="stylesheet" href="https://ijc.ilearning.co/index.php/ATM/$$$call$$$/page/page/css?name=stylesheet" type="text/css" /><link rel="stylesheet" href="https://ijc.ilearning.co/lib/pkp/styles/fontawesome/fontawesome.css?v=3.3.0.6" type="text/css" /><link rel="stylesheet" href="https://ijc.ilearning.co/plugins/generic/orcidProfile/css/orcidProfile.css?v=3.3.0.6" type="text/css" /><link rel="stylesheet" href="https://ijc.ilearning.co/public/journals/6/styleSheet.css?d=2024-06-27+04%3A18%3A16" type="text/css" />
+</head>
+<body class="pkp_page_article pkp_op_view has_site_logo" dir="ltr">
+
+	<div class="pkp_structure_page">
+
+				<header class="pkp_structure_head" id="headerNavigationContainer" role="banner">
+						 <nav class="cmp_skip_to_content" aria-label="Jump to content links">
+	<a href="#pkp_content_main">Skip to main content</a>
+	<a href="#siteNav">Skip to main navigation menu</a>
+		<a href="#pkp_content_footer">Skip to site footer</a>
+</nav>
+
+			<div class="pkp_head_wrapper">
+
+				<div class="pkp_site_name_wrapper">
+					<button class="pkp_site_nav_toggle">
+						<span>Open Menu</span>
+					</button>
+										<div class="pkp_site_name">
+																<a href="						https://ijc.ilearning.co/index.php/ATM/index
+					" class="is_img">
+							<img src="https://ijc.ilearning.co/public/journals/6/pageHeaderLogoImage_en_US.png" width="28849" height="3395" alt="APTISI Transactiions on Management" />
+						</a>
+										</div>
+				</div>
+
+				
+				<nav class="pkp_site_nav_menu" aria-label="Site Navigation">
+					<a id="siteNav"></a>
+					<div class="pkp_navigation_primary_row">
+						<div class="pkp_navigation_primary_wrapper">
+																				<ul id="navigationPrimary" class="pkp_navigation_primary pkp_nav_list">
+								<li class="">
+				<a href="http://ijc.ilearning.co/index.php/ATM/index">
+					Home
+				</a>
+							</li>
+								<li class="">
+				<a href="https://ijc.ilearning.co/index.php/ATM/about">
+					JOURNAL OVERVIEW
+				</a>
+									<ul>
+																					<li class="">
+									<a href="https://ijc.ilearning.co/index.php/ATM/about">
+										About The Journal
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://ijc.ilearning.co/index.php/ATM/about/contact">
+										Contact
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://ijc.ilearning.co/index.php/ATM/FAQ">
+										FAQ
+									</a>
+								</li>
+																		</ul>
+							</li>
+								<li class="">
+				<a href="https://ijc.ilearning.co/index.php/ATM/issue/archive">
+					ISSUE
+				</a>
+									<ul>
+																					<li class="">
+									<a href="https://ijc.ilearning.co/index.php/ATM/issue/current">
+										Current
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://ijc.ilearning.co/index.php/ATM/issue/archive">
+										Archives
+									</a>
+								</li>
+																		</ul>
+							</li>
+								<li class="">
+				<a href="https://ijc.ilearning.co/index.php/ATM/about">
+					E-LETTERS
+				</a>
+									<ul>
+																					<li class="">
+									<a href="https://ijc.ilearning.co/index.php/ATM/E-JOURNAL">
+										E-JOURNAL
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://ijc.ilearning.co/index.php/ATM/E-CERTIFICATE">
+										E-CERTIFICATE
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://ijc.ilearning.co/index.php/ATM/E-LOA">
+										E-LOA
+									</a>
+								</li>
+																		</ul>
+							</li>
+								<li class="">
+				<a href="https://ijc.ilearning.co/index.php/ATM/about">
+					EDITOR/REVIEWER
+				</a>
+									<ul>
+																					<li class="">
+									<a href="https://ijc.ilearning.co/index.php/ATM/reviewerregistrationform">
+										Reviewer Registration Form
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://ijc.ilearning.co/index.php/ATM/editorialteam">
+										Editorial Team
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://ijc.ilearning.co/index.php/ATM/Peer_Reviewers">
+										Peer Reviewers
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://ijc.ilearning.co/index.php/ATM/RegistrasiEditor">
+										Editors Registration
+									</a>
+								</li>
+																		</ul>
+							</li>
+								<li class="">
+				<a href="https://ijc.ilearning.co/index.php/ATM/Announcement">
+					ANNOUNCEMENT
+				</a>
+							</li>
+			</ul>
+
+				
+
+																						<div class="pkp_navigation_search_wrapper">
+									<a href="https://ijc.ilearning.co/index.php/ATM/search" class="pkp_search pkp_search_desktop">
+										<span class="fa fa-search" aria-hidden="true"></span>
+										Search
+									</a>
+								</div>
+													</div>
+					</div>
+					<div class="pkp_navigation_user_wrapper" id="navigationUserWrapper">
+							<ul id="navigationUser" class="pkp_navigation_user pkp_nav_list">
+								<li class="profile">
+				<a href="https://ijc.ilearning.co/index.php/ATM/login">
+					Login
+				</a>
+							</li>
+								<li class="profile">
+				<a href="https://ijc.ilearning.co/index.php/ATM/user/register">
+					Register
+				</a>
+							</li>
+										</ul>
+
+					</div>
+				</nav>
+			</div><!-- .pkp_head_wrapper -->
+		</header><!-- .pkp_structure_head -->
+
+						<div class="pkp_structure_content has_sidebar">
+			<div class="pkp_structure_main" role="main">
+				<a id="pkp_content_main"></a>
+
+<div class="page page_article">
+			<nav class="cmp_breadcrumbs" role="navigation" aria-label="You are here:">
+	<ol>
+		<li>
+			<a href="https://ijc.ilearning.co/index.php/ATM/index">
+				Home
+			</a>
+			<span class="separator">/</span>
+		</li>
+		<li>
+			<a href="https://ijc.ilearning.co/index.php/ATM/issue/archive">
+				Archives
+			</a>
+			<span class="separator">/</span>
+		</li>
+					<li>
+				<a href="https://ijc.ilearning.co/index.php/ATM/issue/view/74">
+					Vol. 7 No. 3 (2023): ATM (APTISI Transactions on Management: September)
+				</a>
+				<span class="separator">/</span>
+			</li>
+				<li class="current" aria-current="page">
+			<span aria-current="page">
+									Article
+							</span>
+		</li>
+	</ol>
+</nav>
+	
+			<article class="obj_article_details">
+
+			<h1 class="page_title">
+		Enhancing Organizational Efficiency through the Integration of Artificial Intelligence in Management Information Systems
+	</h1>
+	
+	<div class="row">
+		<div class="main_entry">
+
+							<section class="item authors">
+					<h2 class="pkp_screen_reader">Authors</h2>
+					<ul class="authors">
+											<li>
+							<span class="name">
+								Bhima Bhima
+							</span>
+															<span class="affiliation">
+									Universitas Raharja
+																	</span>
+																				</li>
+											<li>
+							<span class="name">
+								Achani Rahmania Az Zahra
+							</span>
+															<span class="affiliation">
+									Universitas Raharja
+																	</span>
+																				</li>
+											<li>
+							<span class="name">
+								Tio Nurtino
+							</span>
+															<span class="affiliation">
+									Universitas Raharja
+																	</span>
+																				</li>
+											<li>
+							<span class="name">
+								M. Zaki Firli
+							</span>
+															<span class="affiliation">
+									Universitas Raharja
+																	</span>
+																				</li>
+										</ul>
+				</section>
+			
+																												<section class="item doi">
+						<h2 class="label">
+														DOI:
+						</h2>
+						<span class="value">
+							<a href="https://doi.org/10.33050/atm.v7i3.2146">
+								https://doi.org/10.33050/atm.v7i3.2146
+							</a>
+						</span>
+					</section>
+							
+									<section class="item keywords">
+				<h2 class="label">
+										Keywords:
+				</h2>
+				<span class="value">
+											Artificial Intelligence, 											Management Information System, 											Organizational Efficiency, 											Data Analysis, 											Decision Making									</span>
+			</section>
+			
+										<section class="item abstract">
+					<h2 class="label">Abstract</h2>
+					<p>This research delves into AI's role in enhancing Management Information Systems for organizational efficiency. It employs cross-sector case studies to showcase AI's potential in automating tasks, offering predictive insights from historical data, and bolstering decision-making. While AI promises substantial benefits, it also poses technical and ethical challenges during implementation. AI integration emerges as a game-changer, liberating organizations from mundane tasks through automation. Predictive analytics empowers firms to foresee trends, fostering a competitive edge in decision-making. Yet, obstacles include algorithm compatibility with existing systems and the demand for heightened technical proficiency. Ethical considerations loom large, demanding robust privacy and fairness guidelines in AI data usage. This research underscores the importance of employee AI training and multidisciplinary teams for tackling technical hurdles. Ethical principles should permeate AI development and utilization. The study recommends a three-fold strategy: First, prioritize employee AI training for seamless adoption. Second, establish cross-disciplinary teams to navigate technical complexities. Third, embed ethics in every AI facet to maintain trust. In conclusion, a holistic approach allows organizations to seamlessly integrate AI into Management Information Systems, yielding operational efficiencies, superior decision-making, and a competitive edge in a dynamic business landscape.</p>
+				</section>
+			
+			<div class="item downloads_chart">
+	<h3 class="label">
+		Downloads
+	</h3>
+	<div class="value">
+		<canvas class="usageStatsGraph" data-object-type="Submission" data-object-id="2146"></canvas>
+		<div class="usageStatsUnavailable" data-object-type="Submission" data-object-id="2146">
+			Download data is not yet available.
+		</div>
+	</div>
+</div>
+
+
+																																								
+										<section class="item references">
+					<h2 class="label">
+						References
+					</h2>
+					<div class="value">
+																					<p>R. Alief and E. Nurmiati, “Penerapan Kecerdasan Buatan Dan Teknologi Informasi Pada Efisiensi Manajemen Pengetahuan,” J. Masy. Inform., vol. 13, no. 1, pp. 59–69, 2022. </p>
+															<p>Y. Y. Anis and A. S. Rifa, “Perancangan Sistem Informasi E-Booking Jasa Steam Mobil Dan Motor Berbasis Web (Studi Kasus Cheers Autocare Solo),” Bull. Inf. Technol., vol. 4, no. 1, pp. 99–104, 2023. </p>
+															<p>A. Cahyono and Y. D. Nurcahyanie, “Identification and Evaluation of Logistics Operational Risk Using the Fmea Method at PT. XZY,” Aptisi Trans. Technopreneursh., vol. 5, no. 1Sp, pp. 1–10, 2023. </p>
+															<p>I. Farida, R. Setiawan, A. S. Maryatmi, and M. N. Juwita, “The implementation of E-government in the industrial revolution era 4.0 in Indonesia,” Int. J. Progress. Sci. Technol., vol. 22, no. 2, pp. 340–346, 2020. </p>
+															<p>R. F. Firmansyah, “Tinjauan Literatur Tentang Peran Sistem Informasi Manajemen Dalam Proses Transformasi Digital Organisasi,” TEKNOBIS J. Teknol. Bisnis dan Pendidik., vol. 1, no. 1, pp. 45–49, 2023. </p>
+															<p>A. A. Hakim, L. izzah Harahap, R. Salsabila, and N. Nurbaiti, “ANALISIS PANDANGAN MASYARAKAT AWAM TERHADAP MANAJEMEN SISTEM INFORMASI GLOBAL,” J. Manag. Creat. Bus., vol. 1, no. 1, pp. 86–94, 2023. </p>
+															<p>T. Sutisna, “Manfaat Sistem Informasi Manajemen,” J. Inform. STMIK Tulus Cendekia, vol. 1, no. 1, pp. 16–21, 2021. </p>
+															<p>A. R. Putra and D. Darmawan, “Competitive Advantage of MSMEs in Terms of Technology Orientation and Entrepreneurship Competence,” Int. J. Serv. Sci. Manag. Eng. Technol., vol. 2, no. 1, pp. 15–20, 2022. </p>
+															<p>N. Manunggal, I. T. Santoso, and S. Wicaksana, “Pengaruh Sistem Informasi Sumber Daya Manusia (HRIS) dan Kecerdasan Buatan Terhadap Kinerja Industri Pertahanan,” J. Ind. Eng. Manag. Res., vol. 3, no. 6, pp. 111–120, 2022. </p>
+															<p>A. Zemankova, “Artificial intelligence in audit and accounting: development, current trends, opportunities and threats-literature review,” in 2019 International Conference on Control, Artificial Intelligence, Robotics &amp; Optimization (ICCAIRO), 2019, pp. 148–154. </p>
+															<p>A. Nurkholis and I. H. Ikasari, “Peran Artificial Intellegence Dalam Sistem Informasi Manajemen,” AI dan SPK J. Artif. Intell. dan Sist. Penunjang Keputusan, vol. 1, no. 1, pp. 41–47, 2023. </p>
+															<p>C. F. Anggraini, N. M. Estiyanti, and P. A. C. Dewi, “Governance Audit Using COBIT 5 in CV. XYZ on Accounting Information System,” ADI J. Recent Innov., vol. 4, no. 2, pp. 201–209, 2023. </p>
+															<p>O. H. Prabowo, A. Merthayasa, and N. Saebah, “Pemanfaatan Teknologi Informasi dan Manajemen Perubahan pada Kegiatan Bisnis di Era Globalisasi,” Syntax Idea, vol. 5, no. 7, pp. 883–892, 2023. </p>
+															<p>D. Baidoo-Anu and L. O. Ansah, “Education in the era of generative artificial intelligence (AI): Understanding the potential benefits of ChatGPT in promoting teaching and learning,” J. AI, vol. 7, no. 1, pp. 52–62, 2023. </p>
+															<p>T. W. A. Putra, A. Solechan, and B. Hartono, “Transformasi Digital Pada UMKM Dalam Meningkatkan Daya Saing Pasar,” J. Inform. Upgris, vol. 9, no. 1, 2023. </p>
+															<p>A. F. Rezy and I. H. Ikasari, “Systematic Literature Review: Sistem Informasi Manajemen Inventory Barang Berbasis Web,” Bul. Ilm. Ilmu Komput. dan Multimed., vol. 1, no. 1, pp. 121–125, 2023. </p>
+															<p>S. Sulartopo, S. Kholifah, D. Danang, and J. T. Santoso, “Transformasi Proyek Melalui Keajaiban Kecerdasan Buatan: Mengeksplorasi Potensi AI Dalam Project Management,” J. Publ. Ilmu Manaj., vol. 2, no. 2, pp. 363–392, 2023. </p>
+															<p>S. Suroto, “Mengoptimalkan Layanan Pendidikan di Sekolah Menengah Kejuruan melalui Perencanaan Strategis Sistem Informasi,” Seroja J. Pendidik., vol. 2, no. 3, pp. 245–261, 2023. </p>
+															<p>A. Syamil et al., AKUNTANSI MANAJEMEN: Konsep-konsep dasar Akuntansi Manajemen Era Digital. PT. Sonpedia Publishing Indonesia, 2023. </p>
+															<p>C. A. Tambos, “Insinyur Teknik Informatika: Kini dan Masa Depan,” J. Kependud. dan Pembang. Lingkung., vol. 4, no. 1, pp. 65–74, 2023. </p>
+															<p>R. N. Rizqiyah, R. Kriyantono, and A. Sujoko, “Literacy studies media relations studies on digitalization and artificial intelligence on company reputation in the digital era in 2008–2019,” Adv. Educ. Philos, vol. 5, pp. 236–248, 2021. </p>
+															<p>M. A. Yaqin, “OPTIMALISASI SISTEM INFORMASI MANAJEMEN PADA LEMBAGA PENDIDIKAN ISLAM,” J. Pendidik. dan Kebud., vol. 1, no. 1, pp. 12–22, 2021. </p>
+															<p>D. Manongga, U. Rahardja, I. Sembiring, N. Lutfiani, and A. B. Yadila, “Dampak Kecerdasan Buatan Bagi Pendidikan,” ADI Bisnis Digit. Interdisiplin J., vol. 3, no. 2, pp. 41–55, 2022. </p>
+															<p>D. S. S. Wuisan and T. Mariyanti, “Analisa Peran Triple Helik dalam Mengatasi Tantangan Pendidikan di Era Industri 4.0,” J. MENTARI Manajemen, Pendidik. dan Teknol. Inf., vol. 1, no. 2, pp. 123–132, 2023. </p>
+															<p>F. Yudianto, T. Herlambang, M. Y. Anshori, M. Adinugroho, A. Rulyansah, and L. Yuliana, “Innovation in Company Profit Management: Socialization of Numerical Calculation for Efficiency Improvement at PT AJISAKA,” Indones. J. Cult. Community Dev., vol. 14, no. 2, 2023. </p>
+															<p>F. al Schwendicke, W. Samek, and J. Krois, “Artificial intelligence in dentistry: chances and challenges,” J. Dent. Res., vol. 99, no. 7, pp. 769–774, 2020. </p>
+															<p>R. Cioffi, M. Travaglioni, G. Piscitelli, A. Petrillo, and F. De Felice, “Artificial intelligence and machine learning applications in smart production: Progress, trends, and directions,” Sustainability, vol. 12, no. 2, p. 492, 2020. </p>
+															<p>M.-H. Huang and R. T. Rust, “A strategic framework for artificial intelligence in marketing,” J. Acad. Mark. Sci., vol. 49, pp. 30–50, 2021. </p>
+															<p>M. Elahi, A. Beheshti, and S. R. Goluguri, “Recommender Systems: Challenges and Opportunities in the Age of Big Data and Artificial Intelligence,” Data Sci. Its Appl., no. 2011, pp. 15–39, 2021, doi: 10.1201/9781003102380-2. </p>
+															<p>S. B. Khanagar et al., “Developments, application, and performance of artificial intelligence in dentistry–A systematic review,” J. Dent. Sci., vol. 16, no. 1, pp. 508–522, 2021. </p>
+																		</div>
+				</section>
+			
+		</div><!-- .main_entry -->
+
+		<div class="entry_details">
+
+										<div class="item cover_image">
+					<div class="sub_item">
+													<a href="https://ijc.ilearning.co/index.php/ATM/issue/view/74">
+								<img src="https://ijc.ilearning.co/public/journals/6/cover_issue_74_en_US.png" alt="">
+							</a>
+											</div>
+				</div>
+			
+										<div class="item galleys">
+					<h2 class="pkp_screen_reader">
+						Downloads
+					</h2>
+					<ul class="value galleys_links">
+													<li>
+								
+	
+							
+
+<a class="obj_galley_link pdf" href="https://ijc.ilearning.co/index.php/ATM/article/view/2146/780">
+
+		
+	PDF
+
+	</a>
+							</li>
+											</ul>
+				</div>
+						
+						<div class="item published">
+				<section class="sub_item">
+					<h2 class="label">
+						Published
+					</h2>
+					<div class="value">
+																			<span>2023-09-28</span>
+																	</div>
+				</section>
+							</div>
+			
+										<div class="item citation">
+					<section class="sub_item citation_display">
+						<h2 class="label">
+							How to Cite
+						</h2>
+						<div class="value">
+							<div id="citationOutput" role="region" aria-live="polite">
+								<div class="csl-bib-body">
+  <div class="csl-entry">Bhima, B., Rahmania Az Zahra, A., Nurtino, T., &#38; Firli, M. Z. (2023). Enhancing Organizational Efficiency through the Integration of Artificial Intelligence in Management Information Systems. <i>APTISI Transactions on Management</i>, <i>7</i>(3), 275–282. https://doi.org/10.33050/atm.v7i3.2146</div>
+</div>
+							</div>
+							<div class="citation_formats">
+								<button class="cmp_button citation_formats_button" aria-controls="cslCitationFormats" aria-expanded="false" data-csl-dropdown="true">
+									More Citation Formats
+								</button>
+								<div id="cslCitationFormats" class="citation_formats_list" aria-hidden="true">
+									<ul class="citation_formats_styles">
+																					<li>
+												<a
+													aria-controls="citationOutput"
+													href="https://ijc.ilearning.co/index.php/ATM/citationstylelanguage/get/acm-sig-proceedings?submissionId=2146&amp;publicationId=1576"
+													data-load-citation
+													data-json-href="https://ijc.ilearning.co/index.php/ATM/citationstylelanguage/get/acm-sig-proceedings?submissionId=2146&amp;publicationId=1576&amp;return=json"
+												>
+													ACM
+												</a>
+											</li>
+																					<li>
+												<a
+													aria-controls="citationOutput"
+													href="https://ijc.ilearning.co/index.php/ATM/citationstylelanguage/get/acs-nano?submissionId=2146&amp;publicationId=1576"
+													data-load-citation
+													data-json-href="https://ijc.ilearning.co/index.php/ATM/citationstylelanguage/get/acs-nano?submissionId=2146&amp;publicationId=1576&amp;return=json"
+												>
+													ACS
+												</a>
+											</li>
+																					<li>
+												<a
+													aria-controls="citationOutput"
+													href="https://ijc.ilearning.co/index.php/ATM/citationstylelanguage/get/apa?submissionId=2146&amp;publicationId=1576"
+													data-load-citation
+													data-json-href="https://ijc.ilearning.co/index.php/ATM/citationstylelanguage/get/apa?submissionId=2146&amp;publicationId=1576&amp;return=json"
+												>
+													APA
+												</a>
+											</li>
+																					<li>
+												<a
+													aria-controls="citationOutput"
+													href="https://ijc.ilearning.co/index.php/ATM/citationstylelanguage/get/associacao-brasileira-de-normas-tecnicas?submissionId=2146&amp;publicationId=1576"
+													data-load-citation
+													data-json-href="https://ijc.ilearning.co/index.php/ATM/citationstylelanguage/get/associacao-brasileira-de-normas-tecnicas?submissionId=2146&amp;publicationId=1576&amp;return=json"
+												>
+													ABNT
+												</a>
+											</li>
+																					<li>
+												<a
+													aria-controls="citationOutput"
+													href="https://ijc.ilearning.co/index.php/ATM/citationstylelanguage/get/chicago-author-date?submissionId=2146&amp;publicationId=1576"
+													data-load-citation
+													data-json-href="https://ijc.ilearning.co/index.php/ATM/citationstylelanguage/get/chicago-author-date?submissionId=2146&amp;publicationId=1576&amp;return=json"
+												>
+													Chicago
+												</a>
+											</li>
+																					<li>
+												<a
+													aria-controls="citationOutput"
+													href="https://ijc.ilearning.co/index.php/ATM/citationstylelanguage/get/harvard-cite-them-right?submissionId=2146&amp;publicationId=1576"
+													data-load-citation
+													data-json-href="https://ijc.ilearning.co/index.php/ATM/citationstylelanguage/get/harvard-cite-them-right?submissionId=2146&amp;publicationId=1576&amp;return=json"
+												>
+													Harvard
+												</a>
+											</li>
+																					<li>
+												<a
+													aria-controls="citationOutput"
+													href="https://ijc.ilearning.co/index.php/ATM/citationstylelanguage/get/ieee?submissionId=2146&amp;publicationId=1576"
+													data-load-citation
+													data-json-href="https://ijc.ilearning.co/index.php/ATM/citationstylelanguage/get/ieee?submissionId=2146&amp;publicationId=1576&amp;return=json"
+												>
+													IEEE
+												</a>
+											</li>
+																					<li>
+												<a
+													aria-controls="citationOutput"
+													href="https://ijc.ilearning.co/index.php/ATM/citationstylelanguage/get/modern-language-association?submissionId=2146&amp;publicationId=1576"
+													data-load-citation
+													data-json-href="https://ijc.ilearning.co/index.php/ATM/citationstylelanguage/get/modern-language-association?submissionId=2146&amp;publicationId=1576&amp;return=json"
+												>
+													MLA
+												</a>
+											</li>
+																					<li>
+												<a
+													aria-controls="citationOutput"
+													href="https://ijc.ilearning.co/index.php/ATM/citationstylelanguage/get/turabian-fullnote-bibliography?submissionId=2146&amp;publicationId=1576"
+													data-load-citation
+													data-json-href="https://ijc.ilearning.co/index.php/ATM/citationstylelanguage/get/turabian-fullnote-bibliography?submissionId=2146&amp;publicationId=1576&amp;return=json"
+												>
+													Turabian
+												</a>
+											</li>
+																					<li>
+												<a
+													aria-controls="citationOutput"
+													href="https://ijc.ilearning.co/index.php/ATM/citationstylelanguage/get/vancouver?submissionId=2146&amp;publicationId=1576"
+													data-load-citation
+													data-json-href="https://ijc.ilearning.co/index.php/ATM/citationstylelanguage/get/vancouver?submissionId=2146&amp;publicationId=1576&amp;return=json"
+												>
+													Vancouver
+												</a>
+											</li>
+																			</ul>
+																			<div class="label">
+											Download Citation
+										</div>
+										<ul class="citation_formats_styles">
+																							<li>
+													<a href="https://ijc.ilearning.co/index.php/ATM/citationstylelanguage/download/ris?submissionId=2146&amp;publicationId=1576">
+														<span class="fa fa-download"></span>
+														Endnote/Zotero/Mendeley (RIS)
+													</a>
+												</li>
+																							<li>
+													<a href="https://ijc.ilearning.co/index.php/ATM/citationstylelanguage/download/bibtex?submissionId=2146&amp;publicationId=1576">
+														<span class="fa fa-download"></span>
+														BibTeX
+													</a>
+												</li>
+																					</ul>
+																	</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			
+										<div class="item issue">
+
+											<section class="sub_item">
+							<h2 class="label">
+								Issue
+							</h2>
+							<div class="value">
+								<a class="title" href="https://ijc.ilearning.co/index.php/ATM/issue/view/74">
+									Vol. 7 No. 3 (2023): ATM (APTISI Transactions on Management: September)
+								</a>
+							</div>
+						</section>
+					
+											<section class="sub_item">
+							<h2 class="label">
+								Section
+							</h2>
+							<div class="value">
+								Article
+							</div>
+						</section>
+									</div>
+			
+															
+										<div class="item copyright">
+					<h2 class="label">
+						License
+					</h2>
+																										<p>Copyright (c) 2023 Bhima, Achani Rahmania Az Zahra, Tio Nurtino, M. Zaki Firli (Author)</p>
+														<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" src="//i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><p>This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+																
+				</div>
+			
+			<div class="item addthis">
+	<div class="value">
+		<!-- AddThis Button BEGIN -->
+		 			<div class="addthis_toolbox addthis_default_style ">
+			<a class="addthis_button_preferred_1"></a>
+			<a class="addthis_button_preferred_2"></a>
+			<a class="addthis_button_preferred_3"></a>
+			<a class="addthis_button_preferred_4"></a>
+			<a class="addthis_button_compact"></a>
+			<a class="addthis_counter addthis_bubble_style"></a>
+			</div>
+			<script type="text/javascript" src="//s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+				<!-- AddThis Button END -->
+	</div>
+</div>
+
+
+		</div><!-- .entry_details -->
+	</div><!-- .row -->
+
+</article>
+
+	<div id="articlesBySameAuthorList">
+						<h3>Most read articles by the same author(s)</h3>
+
+			<ul>
+																													<li>
+													Eiser Aaron Beldiq,
+													Brigitta  Callula,
+													Natasya  Aprila Yusuf,
+													Achani Rahmania Az Zahra,
+												<a href="https://ijc.ilearning.co/index.php/ATM/article/view/2195">
+							Unlocking Organizational Potential: Assessing the Impact of Technology through SmartPLS in Advancing Management Excellence
+						</a>,
+						<a href="https://ijc.ilearning.co/index.php/ATM/issue/view/81">
+							APTISI Transactions on Management: Vol. 8 No. 1 (2024): ATM (APTISI Transactions on Management: January)
+						</a>
+					</li>
+																													<li>
+													Jerry Maratis,
+													Ahmad Ramadan,
+													Achani Rahmania Az Zahra,
+													Ridhuan Ahsanitaqwim,
+													Daniel Bennet,
+												<a href="https://ijc.ilearning.co/index.php/ATM/article/view/2349">
+							Navigating the Challenges of Digital Transformation in Traditional Organization
+						</a>,
+						<a href="https://ijc.ilearning.co/index.php/ATM/issue/view/88">
+							APTISI Transactions on Management: Vol. 8 No. 3 (2024): ATM (APTISI Transactions on Management: September)
+						</a>
+					</li>
+							</ul>
+			<div id="articlesBySameAuthorPages">
+				
+			</div>
+			</div>
+
+
+</div><!-- .page -->
+
+	</div><!-- pkp_structure_main -->
+
+									<div class="pkp_structure_sidebar left" role="complementary" aria-label="Sidebar">
+				 
+<div class="pkp_block block_custom" id="customblock-published-by">
+	<h2 class="title pkp_screen_reader">published by</h2>
+	<div class="content">
+		<p><span class="title">Published by</span></p>
+<p><a href="https://journal.pandawan.id/home/"><img class="img-animated" src="https://ijc.ilearning.co/public/site/images/admin/pandawan.png" alt="" width="513" height="171"></a></p>
+	</div>
+</div>
+<div class="pkp_block block_custom" id="customblock-makeasubmissions">
+	<h2 class="title pkp_screen_reader">make a submissions</h2>
+	<div class="content">
+		<p><span class="title">Fostering Worldwide Transformation with Your Research</span></p>
+<center><a href="https://ijc.ilearning.co/index.php/ATM/about/submissions"><img class="img-animated" src="https://drive.pastibisa.app/1719471039_667d0bbfbf3bb.png" alt="" width="513" height="160"></a></center>
+	</div>
+</div>
+<div class="pkp_block block_custom" id="customblock-sidebar">
+	<h2 class="title pkp_screen_reader">sidebar</h2>
+	<div class="content">
+		<table class="hover">
+<tbody>
+<tr>
+<th style="background: linear-gradient(#0b5484,#87CEEB,#0b5484); color: white;">ADDITIONAL MENU</th>
+</tr>
+<tr>
+<td bgcolor="#87CEEB"><a href="http://ijc.ilearning.co/index.php/ATM/about/editorialPolicies#focusAndScope">Focus &amp; Scope</a></td>
+</tr>
+<tr>
+<td bgcolor="#87CEEB"><a href="https://ijc.ilearning.co/index.php/ATM/about/editorialPolicies#Indexing">Indexing</a></td>
+</tr>
+<tr>
+<td bgcolor="#87CEEB"><a href="https://ijc.ilearning.co/index.php/ATM/PublicationEthics">Publication Ethics</a></td>
+</tr>
+<tr>
+<td bgcolor="#87CEEB"><a href="http://ijc.ilearning.co/index.php/ATM/about/editorialPolicies#peerReviewProcess">Peer Review Process</a></td>
+</tr>
+<tr>
+<td bgcolor="#87CEEB"><a href="http://ijc.ilearning.co/index.php/ATM/about/submissions#authorGuidelinesATM">Author Guidelines</a></td>
+</tr>
+<tr>
+<td bgcolor="#87CEEB"><a href="https://ijc.ilearning.co/index.php/ATM/about/editorialPolicies#AuthorFees">Author Fees</a></td>
+</tr>
+<tr>
+<td bgcolor="#87CEEB"><a href="https://ijc.ilearning.co/index.php/ATM/screeningforplagiarism">Screening For Plagiarism</a></td>
+</tr>
+<tr>
+<td bgcolor="#87CEEB"><a href="https://ijc.ilearning.co/index.php/ATM/about/editorialPolicies#publicationFrequency">Publication Frequency</a></td>
+</tr>
+<tr>
+<td bgcolor="#87CEEB"><a href="https://ijc.ilearning.co/index.php/ATM/visitorstatistics">Visitor Statistics</a></td>
+</tr>
+<tr>
+<td bgcolor="#87CEEB"><a href="https://ijc.ilearning.co/index.php/ATM/openaccessstatement">Open Access Statement</a></td>
+</tr>
+<tr>
+<td bgcolor="#87CEEB"><a href="https://ijc.ilearning.co/index.php/ATM/openaccessstatement">Copyright Notice</a></td>
+</tr>
+<tr>
+<td bgcolor="#87CEEB"><a href="https://ijc.ilearning.co/index.php/ATM/copyrightandlicensestatement" target="_blank" rel="noopener">Copyright and License Statement</a></td>
+</tr>
+</tbody>
+</table>
+	</div>
+</div>
+<div class="pkp_block block_custom" id="customblock-sinta">
+	<h2 class="title pkp_screen_reader">SINTA</h2>
+	<div class="content">
+		<table class="hover">
+<tbody>
+<tr>
+<th style="background: linear-gradient(#0b5484,#87CEEB,#0b5484); color: white;" align="center">ACCREDITED S4&nbsp;</th>
+</tr>
+<tr>
+<td style="background: white;">
+<p align="center"><a href="https://drive.google.com/file/d/1nJYMKYniR3Q-kzaW9chUaclXdKW4gvOz/view?usp=sharing"><img class="img-animated" src="https://ijc.ilearning.co/public/site/images/admin/whatsapp-image-2023-12-07-at-10.26.14-5e8de7a27984a5ed34563e00c3eacc6e.jpg" alt="" width="1112" height="745"></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+	</div>
+</div>
+<div class="pkp_block block_custom" id="customblock-template">
+	<h2 class="title pkp_screen_reader">template</h2>
+	<div class="content">
+		<table class="hover">
+<tbody>
+<tr>
+<th style="background: linear-gradient(#0b5484,#87CEEB,#0b5484); color: white;" align="center">TEMPLATE</th>
+</tr>
+<tr>
+<td style="background: white;">
+<p>&nbsp;</p>
+<p><a href="https://drive.usercontent.google.com/u/0/uc?id=1-21w2CcJWyGkXHHABNoUXhiNi4G8ES1y&amp;export=download"><img class="img-animated" src="https://ijc.ilearning.co/public/site/images/mulyati/latex.png" alt="" width="88" height="95"></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+	</div>
+</div>
+<div class="pkp_block block_custom" id="customblock-blockchain-verification">
+	<h2 class="title pkp_screen_reader">Blockchain Verification</h2>
+	<div class="content">
+		<table class="hover">
+<tbody>
+<tr>
+<th style="background: linear-gradient(#0b5484,#87CEEB,#0b5484); color: white;" align="center">BLOCKCHAIN VERIFICATION</th>
+</tr>
+</tbody>
+</table>
+<p align="center"><a href="https://authentication.alphabetincubator.id/"><strong><img class="img-animated" style="width: 199px; height: 195px; margin: 0px;" src="https://ijc.ilearning.co/public/site/images/admin/blockchain-verification-min-e9141413a33314e2a1e2f4991ccf479f.png"></strong></a></p>
+	</div>
+</div>
+<div class="pkp_block block_custom" id="customblock-plagiarism">
+	<h2 class="title pkp_screen_reader">plagiarism</h2>
+	<div class="content">
+		<table class="hover">
+<tbody>
+<tr>
+<th style="background: linear-gradient(#0b5484,#87CEEB,#0b5484); color: white;" align="center">TOOLS</th>
+</tr>
+<tr>
+<td style="background: white;">
+<p align="center">&nbsp;</p>
+<p align="center"><a href="https://www.mendeley.com/download-mendeley-desktop/"><img class="img-animated" src="https://ijc.ilearning.co/public/site/images/mulyati/gambar-mendeley-1.png" alt="" width="150" height="31"></a></p>
+<a href="https://www.grammarly.com/"><img class="img-animated" src="https://ijc.ilearning.co/public/site/images/mulyati/gambar-gramarly.png" alt="" width="150" height="41"></a><br>
+<p align="center"><a href="https://www.turnitin.com/" target="_blank" rel="noopener"><img class="img-animated" src="https://att.aptisi.or.id/public/site/images/marviolahardini/turnitin-resize.png" alt="" width="137" height="43"></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+	</div>
+</div>
+<div class="pkp_block block_custom" id="customblock-citation">
+	<h2 class="title pkp_screen_reader">citation</h2>
+	<div class="content">
+		<table id="gsc_rsb_st" cellpadding="10" align="center">
+<thead align="center">
+<tr>
+<th style="background: linear-gradient(#0b5484,#87CEEB,#0b5484); color: white;" colspan="3" align="center">GOOGLE SCHOLAR CITATION</th>
+</tr>
+<tr>
+<th class="gsc_rsb_sth">&nbsp;</th>
+<th class="gsc_rsb_sth">All</th>
+<th class="gsc_rsb_sth">Since 2019</th>
+</tr>
+</thead>
+<tbody align="center">
+<tr>
+<td class="gsc_rsb_sc1"><a class="gsc_rsb_f gs_ibl" title="This is the number of citations to all publications. The second column has the &quot;recent&quot; version of this metric which is the number of new citations in the last 5 years to all publications.">Citations</a></td>
+<td class="gsc_rsb_std">4622</td>
+<td class="gsc_rsb_std">4565</td>
+</tr>
+<tr>
+<td class="gsc_rsb_sc1"><a class="gsc_rsb_f gs_ibl" title="h-index is the largest number h such that h publications have at least h citations. The second column has the &quot;recent&quot; version of this metric which is the largest number h such that h publications have at least h new citations in the last 5 years.">h-index</a></td>
+<td class="gsc_rsb_std">32</td>
+<td class="gsc_rsb_std">32</td>
+</tr>
+<tr>
+<td class="gsc_rsb_sc1"><a class="gsc_rsb_f gs_ibl" title="i10-index is the number of publications with at least 10 citations. The second column has the &quot;recent&quot; version of this metric which is the number of publications that have received at least 10 new citations in the last 5 years.">i10-index</a></td>
+<td class="gsc_rsb_std">103</td>
+<td class="gsc_rsb_std">100</td>
+</tr>
+</tbody>
+</table>
+	</div>
+</div>
+<div class="pkp_block block_developed_by">
+	<div class="content">
+		<span class="title">MOST READ LAST WEEK</span>
+			<ul class="most_read">
+							<li class="most_read_article">
+					<div class="most_read_article_title"><a href="https://ijc.ilearning.co/index.php/ATM/article/view/1722">The Effect Of Job Satisfaction And Organizational Commitment On Turnover Intention With Person Organization Fit As Moderator Variable</a></div>
+					<div class="most_read_article_journal"><span class="fa fa-eye"></span> 80</div>
+				</li>
+							<li class="most_read_article">
+					<div class="most_read_article_title"><a href="https://ijc.ilearning.co/index.php/ATM/article/view/1737">Influence of Consumer Behavior and Marketing Mix on Product Purchasing Decisions</a></div>
+					<div class="most_read_article_journal"><span class="fa fa-eye"></span> 58</div>
+				</li>
+							<li class="most_read_article">
+					<div class="most_read_article_title"><a href="https://ijc.ilearning.co/index.php/ATM/article/view/2146">Enhancing Organizational Efficiency through the Integration of Artificial Intelligence in Management Information Systems</a></div>
+					<div class="most_read_article_journal"><span class="fa fa-eye"></span> 57</div>
+				</li>
+							<li class="most_read_article">
+					<div class="most_read_article_title"><a href="https://ijc.ilearning.co/index.php/ATM/article/view/1691">The  Theory of Planned Behavior Influences Online Shopping Behavior</a></div>
+					<div class="most_read_article_journal"><span class="fa fa-eye"></span> 36</div>
+				</li>
+							<li class="most_read_article">
+					<div class="most_read_article_title"><a href="https://ijc.ilearning.co/index.php/ATM/article/view/1488">Marketing Mix on Customer Loyalty at Coffee Shop in Bandung</a></div>
+					<div class="most_read_article_journal"><span class="fa fa-eye"></span> 36</div>
+				</li>
+						</ul>
+	</div>
+</div>
+<div class="pkp_block block_custom" id="customblock-visitor">
+	<h2 class="title pkp_screen_reader">visitor</h2>
+	<div class="content">
+		<table class="hover">
+<tbody>
+<tr>
+<th style="background: linear-gradient(#0b5484,#87CEEB,#0b5484); color: white;" align="center">VISITORS</th>
+</tr>
+<tr>
+<td style="background: white;">
+<p align="center">&nbsp;</p>
+<p style="text-align: center;">&nbsp;<a href="https://info.flagcounter.com/tQPF"><img src="https://s11.flagcounter.com/count2/tQPF/bg_87ceeb/txt_000000/border_FFD700/columns_2/maxflags_30/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" width="812" height="186" border="0"></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+	</div>
+</div>
+<div class="pkp_block block_Keywordcloud">
+	<h2 class="title">Keywords</h2>
+	<div class="content" id='wordcloud'></div>
+
+	<script>
+		function randomColor() {
+			var cores = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf'];
+			return cores[Math.floor(Math.random()*cores.length)];
+		}
+
+					document.addEventListener("DOMContentLoaded", function() {
+				var keywords = [{"text":"ai-powered automation","size":1},{"text":"capital adequacy ratio","size":1},{"text":"e-journal","size":1},{"text":"yamaha motorcycles","size":1},{"text":"marketing service","size":1},{"text":"application system","size":1},{"text":"learning","size":1},{"text":"technology","size":1},{"text":"digital certificate","size":1},{"text":"people\u2019s business credit","size":1},{"text":"return on asset","size":1},{"text":"non performing loan","size":1},{"text":"iphone","size":1},{"text":"universitas pramita indonesia","size":1},{"text":"value co-creation","size":1},{"text":"after sales service","size":1},{"text":"compensation","size":1},{"text":"work discipline","size":1},{"text":"strategic plan","size":1},{"text":"bureaucratic reform","size":1},{"text":"good governance","size":1},{"text":"implementation of sakip","size":1},{"text":"task complexity","size":1},{"text":"auditor ethics","size":1},{"text":"professional knowledge","size":1},{"text":"ijc","size":1},{"text":"distribution","size":1},{"text":"physical evidence","size":1},{"text":"accounting","size":1},{"text":"publication media","size":1},{"text":"uml","size":1},{"text":"information systems","size":1},{"text":"genetic metaheuristic methods","size":1},{"text":"marketing","size":1},{"text":"workforce management","size":1},{"text":"employee","size":1},{"text":"madura","size":1},{"text":"smes","size":1},{"text":"sales accounting system","size":1},{"text":"sales report","size":1},{"text":"e-journals","size":1},{"text":"mysql","size":1},{"text":"swot","size":1},{"text":"sales","size":1},{"text":"information and applicants","size":1},{"text":"recruitment","size":1},{"text":"control applications","size":1},{"text":"cost","size":1},{"text":"5r action plan","size":1},{"text":"open journal system","size":1}];
+				var totalWeight = 0;
+				var width = 300;
+				var height = 200;
+				var transitionDuration = 200;	
+				var length_keywords = keywords.length;
+				var layout = d3.layout.cloud();
+
+				layout.size([width, height])
+					.words(keywords)
+					.fontSize(function(d)
+					{
+						return fontSize(+d.size);
+					})
+					.on('end', draw);
+				
+				var svg = d3.select("#wordcloud").append("svg")
+					.attr("viewBox", "0 0 " + width + " " + height)	
+					.attr("width", '100%');		
+				
+				function update() {
+					var words = layout.words();
+					fontSize = d3.scaleLinear().range([16, 34]);
+					if (words.length) {
+						fontSize.domain([+words[words.length - 1].size || 1, +words[0].size]);
+					}
+				}
+				
+				keywords.forEach(function(item,index){totalWeight += item.size;});
+
+				update();
+
+				function draw(words, bounds) {
+					var w = layout.size()[0],
+						h = layout.size()[1];
+
+					scaling = bounds
+						? Math.min(
+							w / Math.abs(bounds[1].x - w / 2),
+							w / Math.abs(bounds[0].x - w / 2),
+							h / Math.abs(bounds[1].y - h / 2),
+							h / Math.abs(bounds[0].y - h / 2),
+						) / 2
+						: 1;
+
+					svg
+					.append("g")
+					.attr(
+						"transform",
+						"translate(" + [w >> 1, h >> 1] + ")scale(" + scaling + ")",
+					)
+					.selectAll("text")
+						.data(words)
+					.enter().append("text")
+						.style("font-size", function(d) { return d.size + "px"; })
+						.style("font-family", 'serif')
+						.style("fill", randomColor)
+						.style('cursor', 'pointer')
+						.style('opacity', 0.7)
+						.attr('class', 'keyword')
+						.attr("text-anchor", "middle")
+						.attr("transform", function(d) {
+							return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+						}) 
+						.text(function(d) { return d.text; })
+						.on("click", function(d, i){
+							window.location = "https://ijc.ilearning.co/index.php/ATM/search?query=QUERY_SLUG".replace(/QUERY_SLUG/, encodeURIComponent(''+d.text+''));
+						})
+						.on("mouseover", function(d, i) {
+							d3.select(this).transition()
+								.duration(transitionDuration)
+								.style('font-size',function(d) { return (d.size + 3) + "px"; })
+								.style('opacity', 1);
+						})
+						.on("mouseout", function(d, i) {
+							d3.select(this).transition()
+								.duration(transitionDuration)
+								.style('font-size',function(d) { return d.size + "px"; })
+								.style('opacity', 0.7);
+						})
+						.on('resize', function() { update() });
+				}
+
+				layout.start();
+
+			});
+			</script>
+</div>
+
+			</div><!-- pkp_sidebar.left -->
+			</div><!-- pkp_structure_content -->
+
+<div class="pkp_structure_footer_wrapper" role="contentinfo">
+	<a id="pkp_content_footer"></a>
+
+	<div class="pkp_structure_footer">
+
+					<div class="pkp_footer_content">
+				<div class="table-container">
+<table>
+<tbody>
+<tr>
+<td>
+<p align="center"><img class="img-animated" src="https://ijc.ilearning.co/public/site/images/admin/qr-code-26-3bfeca53828e06434f5e7bccc10a3220-removebg-preview-1.png" alt="" width="200" height="200" /></p>
+</td>
+<td>
+<p><strong>APTISI Transactions on Management<br /></strong><strong>ISSN</strong>: <a href="https://issn.brin.go.id/terbit/detail/1533291292">2622-6804</a> (Online) <a href="https://issn.brin.go.id/terbit/detail/1533309715">2622-6812</a> (Print)<br />APTISI &amp; Organized by BSPIT<br />Website : <a href="https://ijc.ilearning.co/index.php/ATM/">https://ijc.ilearning.co/index.php/ATM/</a><br />Email : atm@aptisi.or.id</p>
+<p><a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license"><img class="img-animated" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" alt="Creative Commons License" /></a> This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 (<a href="https://creativecommons.org/licenses/by-sa/4.0/"><strong>CC BY-SA 4.0</strong></a>) </p>
+<a title="Web Analytics Made Easy - StatCounter" href="http://statcounter.com/p11972345/summary/?guest=1" target="_blank" rel="noopener"><img class="img-animated" src="https://c.statcounter.com/11972345/0/16d9eade/0/" alt="Web Analytics Made Easy - StatCounter" /></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+			</div>
+		
+		<div class="pkp_brand_footer" role="complementary">
+			<a href="https://ijc.ilearning.co/index.php/ATM/about/aboutThisPublishingSystem">
+				<img alt="More information about the publishing system, Platform and Workflow by OJS/PKP." src="https://ijc.ilearning.co/templates/images/ojs_brand.png">
+			</a>
+		</div>
+	</div>
+</div><!-- pkp_structure_footer_wrapper -->
+
+</div><!-- pkp_structure_page -->
+
+<script src="https://ijc.ilearning.co/lib/pkp/lib/vendor/components/jquery/jquery.min.js?v=3.3.0.6" type="text/javascript"></script><script src="https://ijc.ilearning.co/lib/pkp/lib/vendor/components/jqueryui/jquery-ui.min.js?v=3.3.0.6" type="text/javascript"></script><script src="https://ijc.ilearning.co/plugins/themes/default/js/lib/popper/popper.js?v=3.3.0.6" type="text/javascript"></script><script src="https://ijc.ilearning.co/plugins/themes/default/js/lib/bootstrap/util.js?v=3.3.0.6" type="text/javascript"></script><script src="https://ijc.ilearning.co/plugins/themes/default/js/lib/bootstrap/dropdown.js?v=3.3.0.6" type="text/javascript"></script><script src="https://ijc.ilearning.co/plugins/themes/default/js/main.js?v=3.3.0.6" type="text/javascript"></script><script src="https://ijc.ilearning.co/plugins/generic/citationStyleLanguage/js/articleCitation.js?v=3.3.0.6" type="text/javascript"></script><script src="https://d3js.org/d3.v4.js?v=3.3.0.6" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js?v=3.3.0.6" type="text/javascript"></script><script type="text/javascript">var pkpUsageStats = pkpUsageStats || {};pkpUsageStats.data = pkpUsageStats.data || {};pkpUsageStats.data.Submission = pkpUsageStats.data.Submission || {};pkpUsageStats.data.Submission[2146] = {"data":{"2023":{"1":0,"2":0,"3":0,"4":0,"5":0,"6":0,"7":0,"8":0,"9":0,"10":24,"11":39,"12":109},"2024":{"1":166,"2":189,"3":168,"4":175,"5":167,"6":159,"7":153,"8":198,"9":198,"10":243,"11":218,"12":0}},"label":"All Downloads","color":"79,181,217","total":2206};</script><script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.0.1/Chart.js?v=3.3.0.6" type="text/javascript"></script><script type="text/javascript">var pkpUsageStats = pkpUsageStats || {};pkpUsageStats.locale = pkpUsageStats.locale || {};pkpUsageStats.locale.months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];pkpUsageStats.config = pkpUsageStats.config || {};pkpUsageStats.config.chartType = "bar";</script><script src="https://ijc.ilearning.co/plugins/generic/usageStats/js/UsageStatsFrontendHandler.js?v=3.3.0.6" type="text/javascript"></script><script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-136743487-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+</body>
+</html>
